@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/lovable-uploads/2912c4e7-9d2d-47db-95cc-d511a5ca659d.png" type="image/png" />
+    <title>Purdue Consulting Club</title>
+    <meta name="description" content="Where Strategy Meets Opportunity - Purdue University's Premier Consulting Club" />
+    <meta name="author" content="Purdue Elite Consulting Club" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="Purdue Elite Consulting Club" />
+    <meta property="og:description" content="Where Strategy Meets Opportunity - Purdue University's Premier Consulting Club" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <style>
+        /* Exact CSS Variables from index.css */
+        :root {
+            --background: 210 15% 8%;
+            --foreground: 0 0% 100%;
+            --card: 210 15% 12%;
+            --card-foreground: 0 0% 100%;
+            --popover: 210 15% 12%;
+            --popover-foreground: 0 0% 100%;
+            --primary: 195 85% 45%;
+            --primary-foreground: 0 0% 100%;
+            --secondary: 210 15% 18%;
+            --secondary-foreground: 0 0% 100%;
+            --muted: 210 15% 18%;
+            --muted-foreground: 0 0% 70%;
+            --accent: 220 90% 60%;
+            --accent-foreground: 0 0% 100%;
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 0 0% 100%;
+            --border: 210 15% 20%;
+            --input: 210 15% 20%;
+            --ring: 195 85% 45%;
+            --radius: 0.75rem;
+            --sidebar-background: 210 15% 8%;
+            --sidebar-foreground: 0 0% 100%;
+            --sidebar-primary: 195 85% 45%;
+            --sidebar-primary-foreground: 0 0% 100%;
+            --sidebar-accent: 210 15% 18%;
+            --sidebar-accent-foreground: 0 0% 100%;
+            --sidebar-border: 210 15% 20%;
+            --sidebar-ring: 195 85% 45%;
+            --gradient-primary: linear-gradient(135deg, hsl(195 85% 45%), hsl(220 90% 60%));
+            --gradient-secondary: linear-gradient(135deg, hsl(200 85% 60%), hsl(195 85% 45%));
+            --gradient-accent: linear-gradient(135deg, hsl(220 90% 60%), hsl(195 85% 45%));
+        }
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border-color: hsl(var(--border));
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: hsl(var(--background));
+            color: hsl(var(--foreground));
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: hsl(var(--background));
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: hsl(var(--primary));
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: hsl(var(--accent));
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Geometric Background */
+        .geometric-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .geometric-shape {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .geometric-shape:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .geometric-shape:nth-child(2) {
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .geometric-shape:nth-child(3) {
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        /* Gradient cards */
+        .gradient-card {
+            background: var(--gradient-primary);
+        }
+
+        .gradient-secondary-card {
+            background: var(--gradient-secondary);
+        }
+
+        .gradient-accent-card {
+            background: var(--gradient-accent);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        .animate-fade-in {
+            animation: fade-in 0.6s ease-out;
+        }
+
+        .animate-bounce {
+            animation: bounce 2s infinite;
+        }
+
+        /* Header Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background-color: hsla(var(--background), 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid hsla(var(--primary), 0.3);
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo {
+            width: 4rem;
+            height: 4rem;
+            object-fit: cover;
+        }
+
+        .brand-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: hsl(var(--foreground));
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav a {
+            color: hsl(var(--foreground));
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .nav a:hover {
+            color: hsl(var(--primary));
+        }
+
+        .btn {
+            background-color: hsl(var(--primary));
+            color: hsl(var(--primary-foreground));
+            border: none;
+            padding: 0.5rem 1.5rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn:hover {
+            background-color: hsla(var(--primary), 0.9);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: hsl(var(--accent));
+            border: 1px solid hsl(var(--accent));
+        }
+
+        .btn-outline:hover {
+            background-color: hsl(var(--accent));
+            color: hsl(var(--accent-foreground));
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: hsl(var(--primary));
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid hsla(var(--primary), 0.3);
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            padding: 0 1.5rem;
+            background-color: hsl(var(--background));
+        }
+
+        .hero-content {
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            color: hsl(var(--foreground));
+        }
+
+        .hero .accent-text {
+            color: hsl(var(--accent));
+            display: block;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: hsl(var(--muted-foreground));
+            margin-bottom: 2rem;
+            max-width: 32rem;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            color: hsl(var(--primary));
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 5rem 0;
+            position: relative;
+            z-index: 10;
+            background-color: hsl(var(--background));
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: hsl(var(--primary));
+        }
+
+        .section-subtitle {
+            width: 5rem;
+            height: 0.25rem;
+            background-color: hsl(var(--primary));
+            margin: 0 auto 1.5rem;
+        }
+
+        .section-description {
+            font-size: 1.125rem;
+            color: hsl(var(--foreground));
+            text-align: center;
+            max-width: 32rem;
+            margin: 0 auto 4rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Grid Layouts */
+        .grid {
+            display: grid;
+            gap: 3rem;
+        }
+
+        .grid-2 {
+            grid-template-columns: 1fr;
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: hsl(var(--card));
+            border: 1px solid hsl(var(--border));
+            border-radius: calc(var(--radius) * 2);
+            padding: 2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Stats */
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1.5rem;
+            text-align: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .stat-number {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: hsl(var(--accent));
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: hsl(var(--accent));
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Values List */
+        .values-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .values-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .values-bullet {
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: hsl(var(--accent));
+            border-radius: 50%;
+            margin-top: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        .value-title {
+            font-weight: 600;
+            color: hsl(var(--foreground));
+            margin-bottom: 0.25rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .value-description {
+            font-size: 0.875rem;
+            color: hsl(var(--muted-foreground));
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Team Cards */
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 72rem;
+            margin: 0 auto;
+        }
+
+        .team-card {
+            background-color: hsl(var(--card));
+            border: 1px solid hsl(var(--border));
+            border-radius: calc(var(--radius) * 2);
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 20rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .team-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .team-card:hover .team-front {
+            opacity: 0;
+        }
+
+        .team-card:hover .team-back {
+            opacity: 1;
+        }
+
+        .team-front {
+            transition: opacity 0.3s ease;
+        }
+
+        .team-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-primary);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .team-image {
+            width: 12rem;
+            height: 12rem;
+            object-fit: cover;
+            border-radius: calc(var(--radius) * 2);
+            border: 2px solid hsla(var(--primary), 0.3);
+            margin: 0 auto 1.5rem;
+            object-position: center 20%;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .team-image-small {
+            width: 6rem;
+            height: 6rem;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid hsl(var(--accent));
+            margin: 0 auto 1rem;
+            object-position: center 20%;
+        }
+
+        .team-position {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: hsl(var(--primary));
+            background-color: hsla(var(--primary), 0.2);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .team-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: hsl(var(--foreground));
+            margin-bottom: 0.5rem;
+            font-family: 'Space Grotesk', sans-serif;
+            line-height: 1.2;
+        }
+
+        .team-name-white {
+            color: white;
+        }
+
+        .team-major {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: hsl(var(--primary));
+            margin-bottom: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .team-major-white {
+            color: white;
+        }
+
+        .team-bio {
+            color: white;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .team-connect {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 0.875rem;
+        }
+
+        .team-connect:hover {
+            color: hsl(var(--accent));
+        }
+
+        .divider-white {
+            width: 3rem;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.5);
+            margin: 0 auto 1rem;
+        }
+
+        /* Admissions Timeline */
+        .timeline {
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .timeline-step {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 2rem;
+            top: 5rem;
+            width: 1px;
+            height: 6rem;
+            background: linear-gradient(to bottom, hsl(var(--primary)), hsla(var(--primary), 0.2));
+        }
+
+        .timeline-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        .timeline-number {
+            width: 4rem;
+            height: 4rem;
+            background-color: hsl(var(--accent));
+            color: hsl(var(--accent-foreground));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.125rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            flex-shrink: 0;
+        }
+
+        .timeline-card {
+            background-color: hsl(var(--secondary));
+            border: 1px solid hsla(var(--primary), 0.2);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            flex: 1;
+            margin-top: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: hsl(var(--primary));
+            margin-bottom: 0.75rem;
+        }
+
+        .timeline-description {
+            color: hsl(var(--foreground));
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-badge {
+            display: inline-block;
+            background-color: hsl(var(--accent));
+            color: hsl(var(--accent-foreground));
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .brand-name {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero h1 {
+                font-size: 4rem;
+            }
+
+            .hero-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero h1 {
+                font-size: 4.5rem;
+            }
+        }
+
+        @media (min-width: 1280px) {
+            .hero h1 {
+                font-size: 4.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Geometric Background -->
+    <div class="geometric-bg">
+        <div class="geometric-shape" style="width: 8rem; height: 8rem; border: 2px solid hsla(var(--primary), 0.2); transform: rotate(45deg);"></div>
+        <div class="geometric-shape" style="width: 6rem; height: 6rem; background-color: hsla(var(--primary), 0.1); border-radius: 50%;"></div>
+        <div class="geometric-shape" style="width: 5rem; height: 5rem; border: 1px solid hsla(var(--accent), 0.1); transform: rotate(12deg);"></div>
+        <div class="geometric-shape" style="width: 4rem; height: 4rem; border: 1px solid hsla(var(--primary), 0.15); border-radius: var(--radius); transform: rotate(30deg); top: 40%; right: 5%; animation-delay: 1s;"></div>
+        <div class="geometric-shape" style="width: 7rem; height: 7rem; background-color: hsla(var(--accent), 0.05); border-radius: 50%; top: 70%; left: 15%; animation-delay: 3s;"></div>
+        <div class="geometric-shape" style="width: 3rem; height: 3rem; border: 2px solid hsla(var(--accent), 0.2); transform: rotate(45deg); top: 25%; left: 80%; animation-delay: 5s;"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo and Brand -->
+                <div class="logo-section">
+                    <img src="/lovable-uploads/2912c4e7-9d2d-47db-95cc-d511a5ca659d.png" alt="Purdue Venture Consulting Logo" class="logo">
+                    <div class="brand-name">Purdue Venture Consulting</div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav">
+                    <a href="#about">About</a>
+                    <a href="#services">What We Do</a>
+                    <a href="#admissions">Admissions</a>
+                    <a href="#team">Team</a>
+                    <a href="#faculty-advisor">Faculty Advisor</a>
+                    <a href="#partners">Partners</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="nav">
+                    <button class="btn" onclick="scrollToApplication()">Apply Now</button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="#about" onclick="toggleMobileMenu()">About</a>
+                <a href="#services" onclick="toggleMobileMenu()">What We Do</a>
+                <a href="#admissions" onclick="toggleMobileMenu()">Admissions</a>
+                <a href="#team" onclick="toggleMobileMenu()">Team</a>
+                <a href="#faculty-advisor" onclick="toggleMobileMenu()">Faculty Advisor</a>
+                <a href="#partners" onclick="toggleMobileMenu()">Partners</a>
+                <button class="btn" onclick="scrollToApplication(); toggleMobileMenu()">Apply Now</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="animate-fade-in">
+                <h1>
+                    Where Strategy
+                    <span class="accent-text">Meets Opportunity</span>
+                </h1>
+                
+                <p>
+                    A club that helps motivated students connect with rising startups, 
+                    venture capital firms, and innovation leaders across the nation.
+                </p>
+
+                <div class="hero-buttons">
+                    <button class="btn" onclick="scrollToApplication()">Join Us</button>
+                    <button class="btn btn-outline" onclick="scrollToServices()">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="grid grid-2">
+                <!-- Left Column - Text -->
+                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div>
+                        <h2 style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 2.5rem; margin-bottom: 1rem; text-align: left; color: hsl(var(--primary));">
+                            About <span style="color: hsl(var(--accent));">Purdue Venture Consulting</span>
+                        </h2>
+                        <div style="width: 5rem; height: 0.25rem; background-color: hsl(var(--primary)); margin-bottom: 1.5rem;"></div>
+                    </div>
+                    
+                    <p style="font-size: 1.125rem; line-height: 1.5; color: hsl(var(--foreground)); font-family: 'Inter', sans-serif;">
+                        Purdue Venture Consulting is a student organization that helps motivated students 
+                        develop strategic thinking skills and connect with the startup ecosystem.
+                    </p>
+                    
+                    <p style="font-size: 1.125rem; line-height: 1.5; color: hsl(var(--foreground)); font-family: 'Inter', sans-serif;">
+                        Our mission is to bridge the gap between academic excellence and real-world 
+                        venture creation. We provide our members with unparalleled access to startup consulting 
+                        opportunities, venture capital mentorship, and a network that extends far beyond campus.
+                    </p>
+
+                    <div class="stats" style="padding-top: 1.5rem;">
+                        <div>
+                            <div class="stat-number">30+</div>
+                            <div class="stat-label">Active Members</div>
+                        </div>
+                        <div>
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Partner Companies</div>
+                        </div>
+                        <div>
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Partner Organizations</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Values -->
+                <div style="position: relative;">
+                    <div class="card">
+                        <div style="margin-bottom: 1rem;">
+                            <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1.25rem; color: hsl(var(--primary));">Our Values</h3>
+                        </div>
+                        
+                        <ul class="values-list">
+                            <li>
+                                <div class="values-bullet"></div>
+                                <div>
+                                    <div class="value-title">Excellence</div>
+                                    <div class="value-description">Pursuing the highest standards in everything we do</div>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="values-bullet"></div>
+                                <div>
+                                    <div class="value-title">Accessibility</div>
+                                    <div class="value-description">Welcoming all students eager to grow through hands-on experience</div>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="values-bullet"></div>
+                                <div>
+                                    <div class="value-title">Growth</div>
+                                    <div class="value-description">Equipping members with the tools to succeed in consulting and beyond</div>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="values-bullet"></div>
+                                <div>
+                                    <div class="value-title">Impact</div>
+                                    <div class="value-description">Creating meaningful change for our clients and community</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">What We Do</h2>
+            <div class="section-subtitle"></div>
+            <p class="section-description">
+                We provide comprehensive consulting services and professional development opportunities 
+                that prepare our members for success in the business world.
+            </p>
+
+            <div class="grid grid-3">
+                <div class="card">
+                    <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; color: hsl(var(--primary)); margin-bottom: 1rem;">Strategic Consulting</h3>
+                    <p style="color: hsl(var(--muted-foreground)); margin-bottom: 1.5rem; font-family: 'Inter', sans-serif;">
+                        Partner with real startups and growth companies to solve complex business challenges 
+                        and drive meaningful impact.
+                    </p>
+                    <ul style="list-style: none; padding: 0; font-family: 'Inter', sans-serif;">
+                        <li style="margin-bottom: 0.5rem; color: hsl(var(--foreground));">• Market analysis and competitive research</li>
+                        <li style="margin-bottom: 0.5rem; color: hsl(var(--foreground));">• Business model optimization</li>
+                        <li style="margin-bottom: 0.5rem; color: hsl(var(--foreground));">• Growth strategy development</li>
+                        <li style="margin-bottom: 0.5rem; color: hsl(var(--foreground));">• Financial modeling and projections</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; color: hsl(var(--primary)); margin-bottom: 1rem;">Case Interview Prep</h3>
+                    <p style="color: hsl(var(--muted-foreground)); margin-bottom: 1.5rem; font-family: 'Inter', sans-serif;">
+                        Intensive training program designed to prepare members for consulting interviews 
+                        at top-tier firms.
+                    </p>
+                    <ul style="list-style: none; padding: 0; font-family: 'Inter', sans-serif;">
+                        <li style="margin-bottom: 0.5rem; color: hsl(var(--foreground));">• Weekly case practice sessions</li>
+                        <li style="margin-bottom: 0.5rem; color: hsl(var(--foreground));">• Framework development workshops</li>
+                        <li style="margin-bottom: 0.5rem; color: hsl(var(--foreground));">• Mock interviews with industry professionals</li>
+                        <li style="margin-bottom: 0.5rem; color: hsl(var(--foreground));">• Behavioral interview coaching</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; color: hsl(var(--primary)); margin-bottom: 1rem;">Exclusive Networking</h3>
+                    <p style="color: hsl(var(--muted-foreground)); margin-bottom: 1.5rem; font-family: 'Inter', sans-serif;">
+                        Connect with industry leaders, alumni, and fellow members through curated 
+                        networking events and mentorship programs.
+                    </p>
+                    <ul style="list-style: none; padding: 0; font-family: 'Inter', sans-serif;">
+                        <li style="margin-bottom: 0.5rem; color: hsl(var(--foreground));">• Monthly speaker series</li>
+                        <li style="margin-bottom: 0.5rem; color: hsl(var(--foreground));">• Alumni mentorship program</li>
+                        <li style="margin-bottom: 0.5rem; color: hsl(var(--foreground));">• Industry networking events</li>
+                        <li style="margin-bottom: 0.5rem; color: hsl(var(--foreground));">• Professional development workshops</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Section -->
+    <section id="admissions" class="section">
+        <div class="container">
+            <div style="text-center: center; margin-bottom: 4rem;">
+                <h2 class="section-title">
+                    Admissions <span style="color: hsl(var(--accent));">Process</span>
+                </h2>
+                <div class="section-subtitle"></div>
+                <p class="section-description">
+                    Our open application process welcomes all students eager to grow, while our strike policy
+                    ensures commitment and accountability throughout their venture consulting journey.
+                </p>
+            </div>
+
+            <div class="timeline">
+                <!-- Step 1 -->
+                <div class="timeline-step">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-number">01</div>
+                        <div class="timeline-card">
+                            <h3 class="timeline-title">Application</h3>
+                            <p class="timeline-description">
+                                Submit your application including resume, and personal statement demonstrating your passion for consulting.
+                            </p>
+                            <div class="timeline-badge">Rolling Admissions</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="timeline-step">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-number">02</div>
+                        <div class="timeline-card">
+                            <h3 class="timeline-title">Interview</h3>
+                            <p class="timeline-description">
+                                Interview with the executive team to discuss your background, interests, and fit for our community.
+                            </p>
+                            <div class="timeline-badge">Approximately 1 Week After Application Submission</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="timeline-step">
+                    <div class="timeline-content">
+                        <div class="timeline-number">03</div>
+                        <div class="timeline-card">
+                            <h3 class="timeline-title">Final Selection</h3>
+                            <p class="timeline-description">
+                                Join our community after a final evaluation of your potential for leadership and commitment to growth.
+                            </p>
+                            <div class="timeline-badge">1 Week After Interview</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Admission Stats -->
+            <div style="margin-top: 4rem; text-align: center;">
+                <div class="card">
+                    <div class="grid grid-2">
+                        <div>
+                            <div class="stat-number">3.0+</div>
+                            <div class="stat-label">Average GPA</div>
+                        </div>
+                        <div>
+                            <div class="stat-number">2 weeks</div>
+                            <div class="stat-label">Application Review Time</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                Our <span style="color: hsl(var(--accent));">Team</span>
+            </h2>
+            <div class="section-subtitle"></div>
+            <p class="section-description">
+                Meet the exceptional leaders driving innovation and excellence at Purdue Venture Consulting. 
+                Our executive board brings diverse expertise and unwavering commitment to success.
+            </p>
+
+            <div class="team-grid">
+                <!-- Pedro Garcia Farias -->
+                <div class="team-card">
+                    <div class="team-front">
+                        <div class="team-position">Co-Founder</div>
+                        <img src="/lovable-uploads/pedro_walc2.JPG" alt="Pedro Garcia Farias" class="team-image">
+                        <h3 class="team-name">Pedro Garcia Farias</h3>
+                        <p class="team-major">Industrial Engineering • Junior</p>
+                    </div>
+                    <div class="team-back">
+                        <img src="/lovable-uploads/pedro_walc2.JPG" alt="Pedro Garcia Farias" class="team-image-small">
+                        <h3 class="team-name team-name-white">Pedro Garcia Farias</h3>
+                        <p class="team-major team-major-white">Co-Founder</p>
+                        <p style="color: white; font-size: 0.75rem; opacity: 0.8; margin-bottom: 1rem; font-family: 'Inter', sans-serif;">Industrial Engineering • Junior</p>
+                        <div class="divider-white"></div>
+                        <p class="team-bio">Former manufacturing engineering intern at Stellantis with expertise in business management, sales, and marketing.</p>
+                        <a href="https://www.linkedin.com/in/pgarciaf/" class="team-connect">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                            <span>Connect</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mehdi El Mansar -->
+                <div class="team-card">
+                    <div class="team-front">
+                        <div class="team-position">Co-Founder</div>
+                        <img src="/lovable-uploads/mehdi_walc1.JPG" alt="Mehdi El Mansar" class="team-image">
+                        <h3 class="team-name">Mehdi El Mansar</h3>
+                        <p class="team-major">Aerospace Engineering • Junior</p>
+                    </div>
+                    <div class="team-back">
+                        <img src="/lovable-uploads/mehdi_walc1.JPG" alt="Mehdi El Mansar" class="team-image-small">
+                        <h3 class="team-name team-name-white">Mehdi El Mansar</h3>
+                        <p class="team-major team-major-white">Co-Founder</p>
+                        <p style="color: white; font-size: 0.75rem; opacity: 0.8; margin-bottom: 1rem; font-family: 'Inter', sans-serif;">Aerospace Engineering • Junior</p>
+                        <div class="divider-white"></div>
+                        <p class="team-bio">Aerospace engineering student with award-winning design experience and passion for mission-driven, sustainable innovation.</p>
+                        <a href="https://www.linkedin.com/in/mehdi-el-mansar/" class="team-connect">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                            <span>Connect</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Nikhai Tonwar -->
+                <div class="team-card">
+                    <div class="team-front">
+                        <div class="team-position">Co-Founder</div>
+                        <img src="/lovable-uploads/nikhai_walc2.JPG" alt="Nikhai Tonwar" class="team-image">
+                        <h3 class="team-name">Nikhai Tonwar</h3>
+                        <p class="team-major">Industrial Engineering • Junior</p>
+                    </div>
+                    <div class="team-back">
+                        <img src="/lovable-uploads/nikhai_walc2.JPG" alt="Nikhai Tonwar" class="team-image-small">
+                        <h3 class="team-name team-name-white">Nikhai Tonwar</h3>
+                        <p class="team-major team-major-white">Co-Founder</p>
+                        <p style="color: white; font-size: 0.75rem; opacity: 0.8; margin-bottom: 1rem; font-family: 'Inter', sans-serif;">Industrial Engineering • Junior</p>
+                        <div class="divider-white"></div>
+                        <p class="team-bio">Former Energy Engineering Intern at Trane Technologies with experience in data analysis, marketing, and business logistics.</p>
+                        <a href="https://www.linkedin.com/in/nikhai-tonwar-a897a3294/" class="team-connect">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                            <span>Connect</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hassan Berbich -->
+                <div class="team-card">
+                    <div class="team-front">
+                        <div class="team-position">Co-Founder</div>
+                        <img src="/lovable-uploads/hassan_walc1.JPG" alt="Hassan Berbich" class="team-image">
+                        <h3 class="team-name">Hassan Berbich</h3>
+                        <p class="team-major">Industrial Engineering • Junior</p>
+                    </div>
+                    <div class="team-back">
+                        <img src="/lovable-uploads/hassan_walc1.JPG" alt="Hassan Berbich" class="team-image-small">
+                        <h3 class="team-name team-name-white">Hassan Berbich</h3>
+                        <p class="team-major team-major-white">Co-Founder</p>
+                        <p style="color: white; font-size: 0.75rem; opacity: 0.8; margin-bottom: 1rem; font-family: 'Inter', sans-serif;">Industrial Engineering • Junior</p>
+                        <div class="divider-white"></div>
+                        <p class="team-bio">Industrial engineering intern at Aramco with experience in research, teaching, and global supply chain innovation.</p>
+                        <a href="https://www.linkedin.com/in/hassan-berbich/" class="team-connect">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                            <span>Connect</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Advisor Section -->
+    <section id="faculty-advisor" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                Faculty <span style="color: hsl(var(--accent));">Advisor</span>
+            </h2>
+            <div class="section-subtitle"></div>
+            <p class="section-description">
+                Distinguished faculty member providing academic oversight and strategic guidance to our organization.
+            </p>
+
+            <div style="max-width: 48rem; margin: 0 auto;">
+                <div class="card">
+                    <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.5rem;">
+                        <div style="width: 8rem; height: 8rem; border-radius: 50%; overflow: hidden; border: 2px solid hsl(var(--primary));">
+                            <img src="/lovable-uploads/lucky_cho.jpeg" alt="Dr. Lucky Cho" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        
+                        <div>
+                            <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.5rem; color: hsl(var(--primary)); margin-bottom: 0.5rem;">Dr. Lucky Cho</h3>
+                            <p style="color: hsl(var(--muted-foreground)); font-family: 'Inter', sans-serif; margin-bottom: 1rem;">Associate Professor, Industrial Engineering</p>
+                            
+                            <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                                <div style="display: flex; align-items: center; gap: 0.5rem; color: hsl(var(--muted-foreground)); font-family: 'Inter', sans-serif; font-size: 0.875rem;">
+                                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                    <span>cho568@purdue.edu</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.5rem; color: hsl(var(--muted-foreground)); font-family: 'Inter', sans-serif; font-size: 0.875rem;">
+                                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                    <span>GRIS 347</span>
+                                </div>
+                            </div>
+                            
+                            <p style="color: hsl(var(--foreground)); line-height: 1.6; font-family: 'Inter', sans-serif;">
+                                Dr. Cho brings over 15 years of industry and academic experience in operations research, 
+                                supply chain management, and entrepreneurship. His expertise in venture capital and startup 
+                                ecosystem development provides invaluable guidance to our members pursuing careers in consulting 
+                                and innovation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advisory Board Section -->
+    <section id="advisory-board" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                Advisory <span style="color: hsl(var(--accent));">Board</span>
+            </h2>
+            <div class="section-subtitle"></div>
+            <p class="section-description">
+                Distinguished industry leaders and consulting veterans who guide our strategic direction 
+                and provide invaluable mentorship to our members.
+            </p>
+
+            <div class="team-grid">
+                <!-- Mike Iem -->
+                <div class="team-card">
+                    <div class="team-front">
+                        <div class="team-position">Mentor</div>
+                        <img src="/lovable-uploads/mike_iem.jpeg" alt="Mike Iem" class="team-image">
+                        <h3 class="team-name">Mike Iem</h3>
+                        <p class="team-major">The Ziem Group Inc</p>
+                    </div>
+                    <div class="team-back">
+                        <img src="/lovable-uploads/mike_iem.jpeg" alt="Mike Iem" class="team-image-small">
+                        <h3 class="team-name team-name-white">Mike Iem</h3>
+                        <p class="team-major team-major-white">Mentor</p>
+                        <p style="color: white; font-size: 0.75rem; opacity: 0.8; margin-bottom: 1rem; font-family: 'Inter', sans-serif;">The Ziem Group Inc</p>
+                        <div class="divider-white"></div>
+                        <p class="team-bio">Driving strategic growth, overseeing operations, and building strong client partnerships across industries.</p>
+                        <a href="https://www.linkedin.com/in/mikeiem/" class="team-connect">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                            <span>Connect</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tim Zhou -->
+                <div class="team-card">
+                    <div class="team-front">
+                        <div class="team-position">Mentor</div>
+                        <img src="/lovable-uploads/tim_zhou.jpeg" alt="Tim Zhou" class="team-image">
+                        <h3 class="team-name">Tim Zhou</h3>
+                        <p class="team-major">IBM</p>
+                    </div>
+                    <div class="team-back">
+                        <img src="/lovable-uploads/tim_zhou.jpeg" alt="Tim Zhou" class="team-image-small">
+                        <h3 class="team-name team-name-white">Tim Zhou</h3>
+                        <p class="team-major team-major-white">Mentor</p>
+                        <p style="color: white; font-size: 0.75rem; opacity: 0.8; margin-bottom: 1rem; font-family: 'Inter', sans-serif;">IBM</p>
+                        <div class="divider-white"></div>
+                        <p class="team-bio">IBM executive spearheading digital innovation and enterprise transformation initiatives.</p>
+                        <a href="https://www.linkedin.com/in/junshengzhou/" class="team-connect">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                            <span>Connect</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Lara Lubinsky -->
+                <div class="team-card">
+                    <div class="team-front">
+                        <div class="team-position">Mentor</div>
+                        <img src="/lovable-uploads/lara_lubinsky.jpeg" alt="Lara Lubinsky" class="team-image">
+                        <h3 class="team-name">Lara Lubinsky</h3>
+                        <p class="team-major">Medline Industries</p>
+                    </div>
+                    <div class="team-back">
+                        <img src="/lovable-uploads/lara_lubinsky.jpeg" alt="Lara Lubinsky" class="team-image-small">
+                        <h3 class="team-name team-name-white">Lara Lubinsky</h3>
+                        <p class="team-major team-major-white">Mentor</p>
+                        <p style="color: white; font-size: 0.75rem; opacity: 0.8; margin-bottom: 1rem; font-family: 'Inter', sans-serif;">Medline Industries</p>
+                        <div class="divider-white"></div>
+                        <p class="team-bio">Supply chain analyst at Medline Industries optimizing logistics and inventory management for efficiency.</p>
+                        <a href="https://www.linkedin.com/in/lara-lubinsky-71827922a/" class="team-connect">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                            <span>Connect</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mert Kumluca -->
+                <div class="team-card">
+                    <div class="team-front">
+                        <div class="team-position">Mentor</div>
+                        <img src="/lovable-uploads/mert_kumluca.jpeg" alt="Mert Kumluca" class="team-image">
+                        <h3 class="team-name">Mert Kumluca</h3>
+                        <p class="team-major">BCG</p>
+                    </div>
+                    <div class="team-back">
+                        <img src="/lovable-uploads/mert_kumluca.jpeg" alt="Mert Kumluca" class="team-image-small">
+                        <h3 class="team-name team-name-white">Mert Kumluca</h3>
+                        <p class="team-major team-major-white">Mentor</p>
+                        <p style="color: white; font-size: 0.75rem; opacity: 0.8; margin-bottom: 1rem; font-family: 'Inter', sans-serif;">BCG • KPMG • Deloitte</p>
+                        <div class="divider-white"></div>
+                        <p class="team-bio">Industrial Engineering student at Purdue joining BCG, with previous experience at KPMG and Deloitte.</p>
+                        <a href="https://www.linkedin.com/in/mehmet-mert-kumluca-410b3a247/" class="team-connect">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                            <span>Connect</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                Our <span style="color: hsl(var(--accent));">Partners</span>
+            </h2>
+            <div class="section-subtitle"></div>
+            <p class="section-description">
+                Collaborating with industry leaders and innovation hubs to provide unparalleled opportunities for our members.
+            </p>
+
+            <!-- Partner Logos -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 4rem; align-items: center;">
+                <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem;">
+                    <img src="/lovable-uploads/purdue_innovates_logo.jpeg" alt="Purdue Innovates" style="height: 4rem; object-fit: contain;">
+                    <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; color: hsl(var(--foreground));">Purdue Innovates</h3>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem;">
+                    <img src="/lovable-uploads/purdue-anvil.png" alt="Anvil" style="height: 4rem; object-fit: contain;">
+                    <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; color: hsl(var(--foreground));">Anvil</h3>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem;">
+                    <img src="/lovable-uploads/je_usa_logo.png" alt="JE USA" style="height: 4rem; object-fit: contain;">
+                    <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; color: hsl(var(--foreground));">JE USA</h3>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem;">
+                    <img src="/lovable-uploads/purdue_founders_logo.png" alt="Purdue Founders" style="height: 4rem; object-fit: contain;">
+                    <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; color: hsl(var(--foreground));">Purdue Founders</h3>
+                </div>
+            </div>
+
+            <!-- Partnership Benefits -->
+            <div class="card">
+                <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.5rem; color: hsl(var(--primary)); margin-bottom: 2rem; text-align: center;">Partnership Benefits</h3>
+                <div class="grid grid-3">
+                    <div style="text-align: center;">
+                        <h4 style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; color: hsl(var(--foreground)); margin-bottom: 0.5rem;">Direct Recruitment</h4>
+                        <p style="color: hsl(var(--muted-foreground)); font-family: 'Inter', sans-serif; font-size: 0.875rem;">Access to our talent pool for internships and full-time positions</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <h4 style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; color: hsl(var(--foreground)); margin-bottom: 0.5rem;">Real Projects</h4>
+                        <p style="color: hsl(var(--muted-foreground)); font-family: 'Inter', sans-serif; font-size: 0.875rem;">Collaborate on live consulting projects with our student teams</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <h4 style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; color: hsl(var(--foreground)); margin-bottom: 0.5rem;">Mentorship</h4>
+                        <p style="color: hsl(var(--muted-foreground)); font-family: 'Inter', sans-serif; font-size: 0.875rem;">Share expertise through speaking events and workshops</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Section -->
+    <section id="application" class="section">
+        <div class="container">
+            <div style="max-width: 64rem; margin: 0 auto;">
+                <!-- Header -->
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2 class="section-title">
+                        Ready to <span style="color: hsl(var(--accent));">Apply?</span>
+                    </h2>
+                    <div class="section-subtitle"></div>
+                    <p class="section-description">
+                        Take the first step toward joining Purdue's most welcoming venture consulting community. Our 
+                        application process encourages all motivated students to grow and contribute.
+                    </p>
+                </div>
+
+                <div class="grid grid-2">
+                    <!-- Application Info -->
+                    <div style="display: flex; flex-direction: column; gap: 2rem;">
+                        <div>
+                            <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1.5rem; color: hsl(var(--primary)); margin-bottom: 1rem;">Application Requirements</h3>
+                            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                                    <div style="width: 0.5rem; height: 0.5rem; background-color: hsl(var(--accent)); border-radius: 50%; margin-top: 0.5rem; flex-shrink: 0;"></div>
+                                    <div>
+                                        <h4 style="font-family: 'Inter', sans-serif; font-weight: 600; color: hsl(var(--primary));">Academic Excellence</h4>
+                                        <p style="color: hsl(var(--muted-foreground)); font-size: 0.875rem; font-family: 'Inter', sans-serif;">Minimum 3.0 GPA required</p>
+                                    </div>
+                                </div>
+                                
+                                <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                                    <div style="width: 0.5rem; height: 0.5rem; background-color: hsl(var(--accent)); border-radius: 50%; margin-top: 0.5rem; flex-shrink: 0;"></div>
+                                    <div>
+                                        <h4 style="font-family: 'Inter', sans-serif; font-weight: 600; color: hsl(var(--primary));">Leadership Experience</h4>
+                                        <p style="color: hsl(var(--muted-foreground)); font-size: 0.875rem; font-family: 'Inter', sans-serif;">Demonstrated leadership in academics, work, or extracurriculars</p>
+                                    </div>
+                                </div>
+                                
+                                <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                                    <div style="width: 0.5rem; height: 0.5rem; background-color: hsl(var(--accent)); border-radius: 50%; margin-top: 0.5rem; flex-shrink: 0;"></div>
+                                    <div>
+                                        <h4 style="font-family: 'Inter', sans-serif; font-weight: 600; color: hsl(var(--primary));">Professional Interest</h4>
+                                        <p style="color: hsl(var(--muted-foreground)); font-size: 0.875rem; font-family: 'Inter', sans-serif;">Genuine passion for venture consulting and business strategy</p>
+                                    </div>
+                                </div>
+                                
+                                <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                                    <div style="width: 0.5rem; height: 0.5rem; background-color: hsl(var(--accent)); border-radius: 50%; margin-top: 0.5rem; flex-shrink: 0;"></div>
+                                    <div>
+                                        <h4 style="font-family: 'Inter', sans-serif; font-weight: 600; color: hsl(var(--primary));">Commitment</h4>
+                                        <p style="color: hsl(var(--muted-foreground)); font-size: 0.875rem; font-family: 'Inter', sans-serif;">Ability to dedicate 6-10 hours per week to club activities</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="background-color: hsl(var(--secondary)); padding: 1.5rem; border-radius: var(--radius); border: 1px solid hsla(var(--primary), 0.2);">
+                            <h4 style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; color: hsl(var(--primary)); margin-bottom: 0.75rem;">Next Steps</h4>
+                            <p style="color: hsl(var(--foreground)); font-size: 0.875rem; font-family: 'Inter', sans-serif; margin-bottom: 1rem;">
+                                After submitting your application, you'll receive an email within 1 week 
+                                confirming the next steps in joining the team.
+                            </p>
+                            <p style="color: hsl(var(--accent)); font-size: 0.875rem; font-family: 'Inter', sans-serif; font-weight: 500;">
+                                Application Deadline: Rolling Admissions
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Application Portal -->
+                    <div style="background-color: hsl(var(--secondary)); border-radius: var(--radius); padding: 2rem; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: 1.5rem; border: 1px solid hsla(var(--primary), 0.2);">
+                        <div style="width: 10rem; height: 6rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                            <img 
+                                src="/lovable-uploads/2912c4e7-9d2d-47db-95cc-d511a5ca659d.png" 
+                                alt="Purdue Venture Consulting Logo" 
+                                style="width: 100%; height: 100%; object-fit: cover;"
+                            />
+                        </div>
+                        
+                        <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.5rem; color: hsl(var(--primary));">
+                            Official Application Portal
+                        </h3>
+                        
+                        <p style="color: hsl(var(--muted-foreground)); font-family: 'Inter', sans-serif; font-size: 0.875rem; line-height: 1.5;">
+                            Complete your application through our secure online portal. The form includes 
+                            sections for personal information, academic background, leadership experience, 
+                            and essay responses.
+                        </p>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; width: 100%; margin: 1.5rem 0;">
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: hsl(var(--accent));">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span style="color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Inter', sans-serif;">Secure</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: hsl(var(--accent));">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12,6 12,12 16,14"></polyline>
+                                </svg>
+                                <span style="color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Inter', sans-serif;">15 min</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: hsl(var(--accent));">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M23 21v-2a4 4 0 00-3-3.87"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 3.13a4 4 0 010 7.75"></path>
+                                </svg>
+                                <span style="color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Inter', sans-serif;">Inclusive</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: hsl(var(--accent));">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 18l4-4 4 4"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12h3m12 0h3"></path>
+                                </svg>
+                                <span style="color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Inter', sans-serif;">Excellence</span>
+                            </div>
+                        </div>
+
+                        <button 
+                            onclick="window.open('https://forms.cloud.microsoft/r/JCFPANQ1wu', '_blank')"
+                            style="width: 100%; background-color: hsl(var(--accent)); color: hsl(var(--accent-foreground)); border: none; padding: 1rem 1.5rem; border-radius: var(--radius); font-weight: 600; cursor: pointer; transition: all 0.3s ease; font-size: 1.125rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-family: 'Inter', sans-serif;"
+                            onmouseover="this.style.backgroundColor='hsla(var(--accent), 0.9)'"
+                            onmouseout="this.style.backgroundColor='hsl(var(--accent))'"
+                        >
+                            <span>Start Application</span>
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                        </button>
+
+                        <p style="color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Inter', sans-serif; opacity: 0.8;">
+                            Opens in a new window • Microsoft Forms
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: hsl(var(--secondary)); border-top: 1px solid hsl(var(--border)); padding: 3rem 0 1rem;">
+        <div class="container">
+            <div class="grid grid-3" style="margin-bottom: 2rem;">
+                <!-- Brand -->
+                <div>
+                    <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; margin-bottom: 1rem; color: hsl(var(--foreground));">Purdue Venture Consulting</h3>
+                    <p style="color: hsl(var(--muted-foreground)); margin-bottom: 1rem; font-family: 'Inter', sans-serif;">
+                        Developing the next generation of strategic thinkers and venture builders at Purdue University.
+                    </p>
+                    <a href="#" style="color: hsl(var(--primary)); text-decoration: none; font-family: 'Inter', sans-serif;">
+                        LinkedIn
+                    </a>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; margin-bottom: 1rem; color: hsl(var(--foreground));">Quick Links</h4>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <a href="#about" style="color: hsl(var(--muted-foreground)); text-decoration: none; font-family: 'Inter', sans-serif;">About</a>
+                        <a href="#services" style="color: hsl(var(--muted-foreground)); text-decoration: none; font-family: 'Inter', sans-serif;">Services</a>
+                        <a href="#team" style="color: hsl(var(--muted-foreground)); text-decoration: none; font-family: 'Inter', sans-serif;">Team</a>
+                        <a href="#application" style="color: hsl(var(--muted-foreground)); text-decoration: none; font-family: 'Inter', sans-serif;">Apply</a>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; margin-bottom: 1rem; color: hsl(var(--foreground));">Contact</h4>
+                    <div style="color: hsl(var(--muted-foreground)); line-height: 1.6; font-family: 'Inter', sans-serif;">
+                        <p>Purdue University</p>
+                        <p>West Lafayette, IN 47907</p>
+                        <p>info@purdueventureconsulting.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="border-top: 1px solid hsl(var(--border)); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <p style="color: hsl(var(--muted-foreground)); font-size: 0.875rem; font-family: 'Inter', sans-serif;">
+                    © 2024 Purdue Venture Consulting. All rights reserved.
+                </p>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="#" style="color: hsl(var(--muted-foreground)); text-decoration: none; font-size: 0.875rem; font-family: 'Inter', sans-serif;">Privacy Policy</a>
+                    <a href="#" style="color: hsl(var(--muted-foreground)); text-decoration: none; font-size: 0.875rem; font-family: 'Inter', sans-serif;">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+
+        // Smooth scrolling
+        function scrollToApplication() {
+            document.getElementById('application').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function scrollToServices() {
+            document.getElementById('services').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Smooth scrolling for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (mobileMenu && mobileMenuBtn && !mobileMenu.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

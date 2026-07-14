@@ -1,0 +1,177 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+
+@layer base {
+  :root {
+    --background: 210 15% 8%;
+    --foreground: 0 0% 100%;
+
+    --card: 210 15% 12%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 210 15% 12%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 195 85% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 15% 18%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 15% 18%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 220 90% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 15% 20%;
+    --input: 210 15% 20%;
+    --ring: 195 85% 45%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 210 15% 8%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 195 85% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 15% 18%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 15% 20%;
+    --sidebar-ring: 195 85% 45%;
+
+    /* Modern gradient colors */
+    --gradient-primary: linear-gradient(135deg, hsl(195 85% 45%), hsl(220 90% 60%));
+    --gradient-secondary: linear-gradient(135deg, hsl(200 85% 60%), hsl(195 85% 45%));
+    --gradient-accent: linear-gradient(135deg, hsl(220 90% 60%), hsl(195 85% 45%));
+  }
+
+  .dark {
+    --background: 25 20% 8%;
+    --foreground: 48 25% 97%;
+
+    --card: 25 20% 8%;
+    --card-foreground: 48 25% 97%;
+
+    --popover: 25 20% 8%;
+    --popover-foreground: 48 25% 97%;
+
+    --primary: 35 65% 45%;
+    --primary-foreground: 25 20% 8%;
+
+    --secondary: 30 15% 15%;
+    --secondary-foreground: 48 25% 97%;
+
+    --muted: 30 15% 15%;
+    --muted-foreground: 42 20% 65%;
+
+    --accent: 30 15% 15%;
+    --accent-foreground: 48 25% 97%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 48 25% 97%;
+
+    --border: 30 15% 20%;
+    --input: 30 15% 20%;
+    --ring: 35 65% 45%;
+    --sidebar-background: 25 20% 8%;
+    --sidebar-foreground: 48 25% 97%;
+    --sidebar-primary: 35 65% 45%;
+    --sidebar-primary-foreground: 48 25% 97%;
+    --sidebar-accent: 30 15% 15%;
+    --sidebar-accent-foreground: 48 25% 97%;
+    --sidebar-border: 30 15% 20%;
+    --sidebar-ring: 35 65% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-space-grotesk;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--accent));
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Geometric background patterns */
+.geometric-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.geometric-shape {
+  position: absolute;
+  opacity: 0.1;
+  animation: float 6s ease-in-out infinite;
+}
+
+.geometric-shape:nth-child(1) {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.geometric-shape:nth-child(2) {
+  top: 60%;
+  right: 10%;
+  animation-delay: 2s;
+}
+
+.geometric-shape:nth-child(3) {
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 4s;
+}
+
+/* Modern gradient cards */
+.gradient-card {
+  background: var(--gradient-primary);
+}
+
+.gradient-secondary-card {
+  background: var(--gradient-secondary);
+}
+
+.gradient-accent-card {
+  background: var(--gradient-accent);
+}
