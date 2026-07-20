@@ -3,6 +3,7 @@ import React from 'react';
 import { Linkedin } from 'lucide-react';
 import professionalPlaceholder from '@/assets/professional-placeholder.png';
 
+
 const leadership = [
   {
     name: "Victoria Mesropyan",
@@ -10,6 +11,7 @@ const leadership = [
     major: "Integrated Business & Engineering",
     bio: "Victoria leads PVC's strategy, operations, and client partnerships. She has consulted for venture-backed startups including Captain (Y Combinator–backed), driving market strategy and growth.",
     linkedin: "#",
+    image: "/victoria-mesropyan.jpg",
     initials: "VM"
   },
   {
@@ -67,6 +69,7 @@ interface LeadershipMember {
   major: string;
   bio: string;
   linkedin: string;
+  image?: string;
   initials: string;
 }
 
@@ -91,11 +94,20 @@ const LeadershipCard = ({ member }: { member: LeadershipMember }) => (
       </div>
 
       <div className="w-56 h-56 mx-auto mb-8 relative">
-        <div className="w-full h-full rounded-full border-2 border-accent/40 bg-secondary flex items-center justify-center shadow-md">
-          <span className="font-space-grotesk font-bold text-5xl text-accent">
-            {member.initials}
-          </span>
-        </div>
+        {member.image ? (
+          <img
+            src={member.image}
+            alt={member.name}
+            className="w-full h-full object-cover rounded-full border-2 border-accent/40 shadow-md"
+            style={{ objectPosition: 'center 20%' }}
+          />
+        ) : (
+          <div className="w-full h-full rounded-full border-2 border-accent/40 bg-secondary flex items-center justify-center shadow-md">
+            <span className="font-space-grotesk font-bold text-5xl text-accent">
+              {member.initials}
+            </span>
+          </div>
+        )}
       </div>
 
       <div className="text-center space-y-3">
@@ -112,11 +124,20 @@ const LeadershipCard = ({ member }: { member: LeadershipMember }) => (
     <div className="absolute inset-0 gradient-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-10 flex flex-col justify-center">
       <div className="text-center space-y-5">
         <div className="w-32 h-32 mx-auto">
-          <div className="w-full h-full rounded-full border-2 border-white/60 bg-white/10 flex items-center justify-center">
-            <span className="font-space-grotesk font-bold text-4xl text-white">
-              {member.initials}
-            </span>
-          </div>
+          {member.image ? (
+            <img
+              src={member.image}
+              alt={member.name}
+              className="w-full h-full object-cover rounded-full border-2 border-white/60"
+              style={{ objectPosition: 'center 20%' }}
+            />
+          ) : (
+            <div className="w-full h-full rounded-full border-2 border-white/60 bg-white/10 flex items-center justify-center">
+              <span className="font-space-grotesk font-bold text-4xl text-white">
+                {member.initials}
+              </span>
+            </div>
+          )}
         </div>
 
         <div className="space-y-2">
