@@ -2,7 +2,6 @@
 import React from 'react';
 import { Linkedin } from 'lucide-react';
 import professionalPlaceholder from '@/assets/professional-placeholder.png';
-import victoriaAsset from '@/assets/victoria-mesropyan.jpg.asset.json';
 
 
 const leadership = [
