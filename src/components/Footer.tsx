@@ -47,7 +47,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-foreground text-sm font-inter">
-            © 2024 Purdue Venture Consulting. All rights reserved.
+            © 2026 Purdue Venture Consulting. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-foreground hover:text-primary transition-colors duration-300 text-sm font-inter">Privacy Policy</a>
