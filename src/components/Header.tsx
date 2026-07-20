@@ -36,7 +36,7 @@ const Header = () => {
               className="w-16 h-16 object-cover"
             />
             {/* Text - hidden on mobile, visible on desktop */}
-            <div className="hidden md:block font-space-grotesk font-bold text-xl text-foreground">
+            <div className="hidden lg:block font-space-grotesk font-bold text-lg text-foreground whitespace-nowrap">
               Purdue Venture Consulting
             </div>
           </div>
