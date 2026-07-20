@@ -229,12 +229,8 @@ const Team = () => {
             Our <span className="text-accent">Team</span>
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="text-muted-foreground text-base max-w-2xl mx-auto font-inter mb-6">
+          <p className="text-muted-foreground text-base max-w-2xl mx-auto font-inter">
             Our executive board is growing — more team members coming soon.
-          </p>
-          <p className="text-foreground text-lg max-w-2xl mx-auto font-inter">
-            Meet the exceptional leaders driving innovation and excellence at Purdue Venture Consulting.
-            Our executive board brings diverse expertise and unwavering commitment to success.
           </p>
         </div>
 
