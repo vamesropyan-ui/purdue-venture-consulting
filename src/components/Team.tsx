@@ -70,6 +70,7 @@ interface LeadershipMember {
   major: string;
   bio: string;
   linkedin: string;
+  image?: string;
   initials: string;
 }
 
