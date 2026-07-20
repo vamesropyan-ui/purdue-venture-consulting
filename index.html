@@ -615,6 +615,119 @@
             margin: 0 auto 1rem;
         }
 
+        /* Leadership Tier */
+        .leadership-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2.5rem;
+            max-width: 72rem;
+            margin: 0 auto 4rem;
+        }
+
+        .leadership-card {
+            max-width: 26rem;
+            padding: 2.5rem;
+        }
+
+        .leadership-avatar {
+            width: 14rem;
+            height: 14rem;
+            border-radius: 50%;
+            background: var(--gradient-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            border: 2px solid hsla(var(--primary), 0.3);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .leadership-avatar span {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .leadership-avatar-small {
+            width: 7rem;
+            height: 7rem;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .leadership-avatar-small span {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .founding-heading {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            color: hsl(var(--primary));
+        }
+
+        /* FAQ Accordion */
+        .faq-list {
+            max-width: 48rem;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: hsl(var(--secondary));
+            border: 1px solid hsla(var(--primary), 0.2);
+            border-radius: var(--radius);
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .faq-item summary {
+            padding: 1.25rem 1.5rem;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            color: hsl(var(--foreground));
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item summary::after {
+            content: '+';
+            color: hsl(var(--accent));
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-left: 1rem;
+        }
+
+        .faq-item[open] summary::after {
+            content: '−';
+        }
+
+        .faq-item p {
+            padding: 0 1.5rem 1.25rem;
+            color: hsl(var(--muted-foreground));
+            font-family: 'Inter', sans-serif;
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
         /* Admissions Timeline */
         .timeline {
             max-width: 64rem;
