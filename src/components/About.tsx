@@ -28,12 +28,16 @@ const About = () => {
 
             <div className="flex items-center space-x-8 pt-6">
               <div className="text-center">
-                <div className="text-3xl font-space-grotesk font-bold text-accent">30+</div>
+                <div className="text-3xl font-space-grotesk font-bold text-accent">50+</div>
                 <div className="text-accent text-sm">Active Members</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-space-grotesk font-bold text-accent">10+</div>
                 <div className="text-accent text-sm">Startups Served</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-space-grotesk font-bold text-accent">4</div>
+                <div className="text-accent text-sm">Partner Organizations</div>
               </div>
             </div>
           </div>
