@@ -199,7 +199,7 @@ const Projects = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="mailto:pecc@purdue.edu"
+              href="mailto:info@purdueventureconsulting.com"
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-inter font-semibold px-6 py-3 rounded-md transition-all duration-300"
             >
               Work With Us
