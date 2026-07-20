@@ -7,75 +7,94 @@ const stats = [
   { number: '50+', label: 'Deliverables Shipped' },
 ];
 
-const clients = [
-  { name: 'Captain', badge: 'Y COMBINATOR–BACKED' },
-  { name: 'Gaus' },
-  { name: 'Zuri Technologies' },
-  { name: 'Elisyan Wealth Ventures' },
-  { name: 'KOVA' },
-  { name: 'BeWealther' },
-  { name: 'Rounds' },
+// Set `logo` to an imported image path when real logos are available.
+const marqueeClients: { name: string; logo: string | null; badge?: string }[] = [
+  { name: 'Captain', logo: null, badge: 'YC' },
+  { name: 'Astor', logo: null },
+  { name: 'Zuri Technologies', logo: null },
+  { name: 'Elisyan Wealth Ventures', logo: null },
+  { name: 'KOVA', logo: null },
+  { name: 'BeWealther', logo: null },
+  { name: 'Rounds', logo: null },
+  { name: 'PoliStock', logo: null },
 ];
 
-const caseStudies = [
+const quadrants: {
+  name: string;
+  logo: string | null;
+  category: string;
+  sentence: string;
+  tags: string[];
+  yc?: boolean;
+}[] = [
   {
     name: 'Captain',
+    logo: null,
     yc: true,
-    category: 'AI Retrieval / RAG Infrastructure',
-    body: "Captain is a Y Combinator–backed startup building AI retrieval that truly understands company data — going beyond standard RAG. PVC ran a market-entry and channel-partnership engagement: we researched the RAG landscape (Vector RAG, GraphRAG, Late Chunking), built and vetted a pipeline of 100 target companies, and drove outreach to surface partnership and go-to-market opportunities, synthesized into a benchmarks technical report.",
-    tags: ['Market Research', 'Channel Strategy', 'Technical Benchmarking', 'GTM Outreach'],
-    caption: 'RAG landscape analysis · 100-company outreach pipeline · benchmark comparison',
+    category: 'AI Infrastructure',
+    sentence:
+      'Market-entry and channel strategy — RAG landscape research, a vetted 100-company partner pipeline, and a technical benchmarks report.',
+    tags: ['Market Research', 'GTM'],
   },
   {
-    name: 'Gaus',
-    category: 'AI Financial Intelligence · Fintech',
-    body: "Gaus is an AI investment analyst giving retail investors institutional-grade research. PVC delivered a full competitive and go-to-market analysis — benchmarking Gaus's model outputs against real market performance across major equities, mapping the competitive landscape with Porter's Five Forces, and building a marketing and GTM plan to sharpen differentiation.",
-    tags: ['Competitive Analysis', 'Financial Benchmarking', 'GTM Strategy', 'Kano Model'],
-    caption: "Porter's Five Forces · competitor positioning matrix · financial accuracy benchmark",
+    name: 'Astor',
+    logo: null,
+    category: 'AI Fintech',
+    sentence:
+      "Competitive and go-to-market analysis, benchmarking model accuracy against real market data using Porter's Five Forces.",
+    tags: ['Competitive Analysis', 'GTM'],
   },
   {
     name: 'Zuri Technologies',
-    category: 'Consumer Social · EdTech',
-    body: "Zuri turns public speaking into a daily, gamified habit. PVC ran a full three-stage engagement — market intelligence, business-model validation, and product feedback. We sized the market, built the competitor matrix and ICP, validated the model with a Lean Canvas and revenue model, and delivered MVP feature prioritization with UX recommendations.",
-    tags: ['Market Research', 'Business Model Validation', 'Product & UX', 'SWOT / PESTEL'],
-    caption: 'TAM/SAM/SOM market funnel · competitor matrix · ICP persona · Lean Canvas',
+    logo: null,
+    category: 'Consumer Social',
+    sentence:
+      'Full three-stage engagement — market sizing, ICP and competitor matrix, business-model validation, and MVP prioritization.',
+    tags: ['Market Research', 'Product'],
   },
   {
     name: 'Elisyan Wealth Ventures',
+    logo: null,
     category: 'Global WealthTech',
-    body: "Elisyan Wealth Ventures is a privacy-first global wealth-management platform for cross-border assets. PVC partnered with the founder and CTO on two fronts: we built a full brand and go-to-market strategy, an SEO program, and a content engine — then designed and prototyped an AI wealth-assistant MVP alongside a technical implementation roadmap.",
-    tags: ['GTM & Marketing', 'SEO Strategy', 'AI Product / MVP', 'Technical Roadmap'],
-    caption: 'ICP segmentation · content theme map · SEO pillar plan · AI assistant MVP mockups',
-  },
-];
-
-const additional = [
-  {
-    name: 'KOVA',
-    tags: ['Marketplace', 'GTM'],
-    body: 'A peer-to-peer ridesharing marketplace built by and for students. PVC delivered a scale strategy covering driver supply, rider demand, trust & safety, and a go-to-market plan timed to peak-travel moments.',
-  },
-  {
-    name: 'BeWealther',
-    tags: ['FinTech', 'Market Research'],
-    body: 'A Duolingo-style financial-education platform for young users. PVC delivered market sizing, competitive positioning against Acorns and Robinhood, and a Gen-Z user acquisition and retention strategy.',
-  },
-  {
-    name: 'Rounds',
-    tags: ['HR Tech', 'Outreach'],
-    body: 'An AI interview platform making hiring faster and skills-based. PVC built the ICP and market analysis, then ran a student outreach and social media growth campaign to drive early adoption.',
+    sentence:
+      'Marketing, SEO, and AI product strategy — we built the GTM and content engine, then prototyped an AI wealth-assistant MVP.',
+    tags: ['GTM & SEO', 'AI Product'],
   },
 ];
 
 const stages = [
-  { title: 'Stage 1 — Market Intelligence', body: 'Market sizing, competitive analysis, and customer discovery to frame the real problem.' },
-  { title: 'Stage 2 — Strategy & Validation', body: 'Business model, positioning, and financial validation — pressure-testing the path forward.' },
-  { title: 'Stage 3 — Go-To-Market & Product', body: 'Actionable GTM, product, and execution plans the founder can run with immediately.' },
+  { title: 'Stage 1 — Market Intelligence', body: 'Market sizing, competitive analysis, and customer discovery.' },
+  { title: 'Stage 2 — Strategy & Validation', body: 'Business model, positioning, and financial validation.' },
+  { title: 'Stage 3 — Go-To-Market & Product', body: 'Actionable GTM and product plans founders can execute.' },
 ];
+
+const LogoSlot: React.FC<{ name: string; logo: string | null; size?: number }> = ({ name, logo, size = 56 }) => (
+  <div
+    className="flex items-center justify-center rounded-full bg-background border border-primary/30 overflow-hidden flex-shrink-0"
+    style={{ width: size, height: size }}
+  >
+    {logo ? (
+      <img src={logo} alt={`${name} logo`} className="w-full h-full object-cover" />
+    ) : (
+      <span className="font-space-grotesk font-bold text-accent" style={{ fontSize: size * 0.4 }}>
+        {name.charAt(0)}
+      </span>
+    )}
+  </div>
+);
 
 const Projects = () => {
   return (
     <section id="projects" className="py-20 bg-background">
+      <style>{`
+        @keyframes pvc-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+        .pvc-marquee-track { animation: pvc-marquee 40s linear infinite; }
+        .pvc-marquee:hover .pvc-marquee-track { animation-play-state: paused; }
+        @media (prefers-reduced-motion: reduce) {
+          .pvc-marquee-track { animation: none; }
+        }
+      `}</style>
+
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
@@ -85,7 +104,7 @@ const Projects = () => {
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-foreground text-lg max-w-3xl mx-auto font-inter">
-            We've partnered with founders across AI, fintech, and consumer — including a Y Combinator–backed company — to solve the problems that decide whether a startup scales.
+            We work with venture-backed founders across AI, fintech, and consumer.
           </p>
         </div>
 
@@ -99,75 +118,56 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Logo wall */}
-        <div className="flex flex-wrap justify-center gap-3 mb-20 max-w-4xl mx-auto">
-          {clients.map((c) => (
-            <div
-              key={c.name}
-              className="bg-secondary border border-primary/30 rounded-md px-5 py-3 flex flex-col items-center hover:border-accent hover:transform hover:scale-105 transition-all duration-300"
-            >
-              <span className="font-space-grotesk font-semibold text-foreground">{c.name}</span>
-              {c.badge && (
-                <span className="text-[0.6rem] font-inter font-bold tracking-widest text-accent mt-1">{c.badge}</span>
-              )}
-            </div>
-          ))}
-        </div>
-
-        {/* Case Studies */}
-        <div className="space-y-16 mb-20">
-          {caseStudies.map((cs, i) => {
-            const reverse = i % 2 === 1;
-            return (
-              <div
-                key={cs.name}
-                className={`grid grid-cols-1 md:grid-cols-2 gap-8 items-center ${reverse ? 'md:[&>*:first-child]:order-2' : ''}`}
-              >
-                {/* Visual */}
-                <div className="bg-secondary border border-primary/20 rounded-lg p-8 min-h-[240px] flex items-center justify-center text-center">
-                  <div>
-                    <div className="w-12 h-12 mx-auto mb-4 border-2 border-accent/40 rounded-full flex items-center justify-center">
-                      <div className="w-4 h-4 bg-accent rounded-sm rotate-45"></div>
-                    </div>
-                    <p className="text-muted-foreground text-sm font-inter italic">{cs.caption}</p>
-                  </div>
-                </div>
-                {/* Text */}
-                <div>
-                  {cs.yc && (
-                    <div className="inline-block mb-3 text-[0.65rem] font-inter font-bold tracking-widest text-accent border border-accent/60 rounded-full px-3 py-1">
+        {/* Featured quadrants */}
+        <div className="mb-20 max-w-6xl mx-auto border border-primary/30 rounded-2xl overflow-hidden bg-secondary/40">
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            {quadrants.map((q, i) => {
+              const isRight = i % 2 === 1;
+              const isBottom = i >= 2;
+              return (
+                <div
+                  key={q.name}
+                  className={[
+                    'p-8 flex flex-col items-center text-center',
+                    !isRight ? 'md:border-r md:border-primary/30' : '',
+                    !isBottom ? 'border-b border-primary/30' : '',
+                    isBottom && i === 2 ? 'md:border-b-0' : '',
+                  ].join(' ')}
+                >
+                  <LogoSlot name={q.name} logo={q.logo} />
+                  {q.yc && (
+                    <div className="mt-3 text-[0.6rem] font-inter font-bold tracking-widest text-accent border border-accent/60 rounded-full px-3 py-1">
                       Y COMBINATOR–BACKED
                     </div>
                   )}
-                  <h3 className="font-space-grotesk font-bold text-3xl text-primary mb-2">{cs.name}</h3>
-                  <div className="text-accent font-inter text-sm mb-4">{cs.category}</div>
-                  <p className="text-foreground font-inter leading-relaxed mb-5">{cs.body}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {cs.tags.map((t) => (
+                  <h3 className="font-space-grotesk font-bold text-2xl text-primary mt-4">{q.name}</h3>
+                  <div className="text-accent font-inter text-sm mt-1 mb-3">{q.category}</div>
+                  <p className="text-foreground font-inter text-sm leading-relaxed max-w-sm">{q.sentence}</p>
+                  <div className="flex flex-wrap gap-2 justify-center mt-4">
+                    {q.tags.map((t) => (
                       <span key={t} className="text-xs font-inter text-muted-foreground border border-primary/30 rounded-full px-3 py-1">
                         {t}
                       </span>
                     ))}
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
 
-        {/* Additional Projects */}
-        <div className="mb-20">
-          <h3 className="font-space-grotesk font-bold text-2xl md:text-3xl text-primary text-center mb-10">Additional Projects</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {additional.map((a) => (
-              <div key={a.name} className="bg-secondary border border-primary/20 rounded-lg p-6 hover:border-accent/60 hover:transform hover:scale-[1.02] transition-all duration-300">
-                <h4 className="font-space-grotesk font-semibold text-xl text-primary mb-3">{a.name}</h4>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {a.tags.map((t) => (
-                    <span key={t} className="text-xs font-inter text-accent border border-accent/40 rounded-full px-2.5 py-0.5">{t}</span>
-                  ))}
-                </div>
-                <p className="text-muted-foreground text-sm font-inter leading-relaxed">{a.body}</p>
+        {/* Revolving logo marquee */}
+        <div className="pvc-marquee overflow-hidden mb-20 max-w-6xl mx-auto border-y border-primary/20 py-6">
+          <div className="pvc-marquee-track flex gap-10 w-max">
+            {[...marqueeClients, ...marqueeClients].map((c, i) => (
+              <div key={`${c.name}-${i}`} className="flex items-center gap-3 flex-shrink-0 px-2">
+                <LogoSlot name={c.name} logo={c.logo} size={44} />
+                <span className="font-space-grotesk font-semibold text-foreground whitespace-nowrap">{c.name}</span>
+                {c.badge && (
+                  <span className="text-[0.55rem] font-inter font-bold tracking-widest text-accent border border-accent/60 rounded-full px-2 py-0.5">
+                    {c.badge}
+                  </span>
+                )}
               </div>
             ))}
           </div>
@@ -178,7 +178,7 @@ const Projects = () => {
           <h3 className="font-space-grotesk font-bold text-2xl md:text-3xl text-primary text-center mb-10">Our Engagement Process</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {stages.map((s, i) => (
-              <div key={s.title} className="bg-secondary border border-primary/20 rounded-lg p-6 relative">
+              <div key={s.title} className="bg-secondary border border-primary/20 rounded-lg p-6 relative mt-4">
                 <div className="absolute -top-4 left-6 w-8 h-8 bg-accent text-background font-space-grotesk font-bold rounded-full flex items-center justify-center text-sm">
                   {i + 1}
                 </div>
@@ -195,7 +195,7 @@ const Projects = () => {
             Have a startup that needs a strategy team?
           </h3>
           <p className="text-foreground font-inter mb-6 max-w-2xl mx-auto">
-            We take on a limited number of engagements each semester. Founders and VCs — let's talk.
+            We take on a limited number of engagements each semester.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
