@@ -1,12 +1,45 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 import { ExternalLink, CheckCircle, Clock, Users, Trophy } from 'lucide-react';
 
 const Application = () => {
   const handleApplicationClick = () => {
     window.open('https://forms.cloud.microsoft/r/JCFPANQ1wu', '_blank');
   };
+
+  const whatWeLookFor = [
+    "Sharp, structured thinking over polished résumés",
+    "Genuine curiosity about startups and venture",
+    "Ownership — you follow through on what you start",
+    "Coachability and a team-first attitude",
+    "All majors welcome — we value diverse perspectives"
+  ];
+
+  const faqs = [
+    {
+      question: "Do I need a business major?",
+      answer: "No. Our consultants come from engineering, business, computer science, and more. What matters is how you think."
+    },
+    {
+      question: "What's the time commitment?",
+      answer: "Plan for roughly 5–8 hours per week during an active project, including team meetings."
+    },
+    {
+      question: "Do I need consulting experience?",
+      answer: "Not at all. We train every member in the frameworks and skills you'll use on real client work."
+    },
+    {
+      question: "What will I actually work on?",
+      answer: "Live engagements for real startups — market research, competitive strategy, go-to-market, product, and more."
+    }
+  ];
 
   return (
     <section id="application" className="py-20 bg-background">
@@ -71,7 +104,7 @@ const Application = () => {
                   confirming the next steps in joining the team.
                 </p>
                 <p className="text-accent text-sm font-inter font-medium">
-                  Application Deadline: Rolling Admissions
+                  Application Window: August 17 – September 4
                 </p>
               </div>
             </div>
@@ -126,6 +159,39 @@ const Application = () => {
               <p className="text-muted-foreground text-xs font-inter opacity-80">
                 Opens in a new window • Microsoft Forms
               </p>
+            </div>
+          </div>
+
+          {/* What We Look For & FAQ */}
+          <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* What We Look For */}
+            <div className="bg-secondary rounded-lg p-8 border border-primary/20">
+              <h3 className="font-space-grotesk font-semibold text-2xl text-primary mb-6">What We Look For</h3>
+              <ul className="space-y-4">
+                {whatWeLookFor.map((item, index) => (
+                  <li key={index} className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground font-inter">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* FAQ */}
+            <div className="bg-secondary rounded-lg p-8 border border-primary/20">
+              <h3 className="font-space-grotesk font-semibold text-2xl text-primary mb-6">FAQ</h3>
+              <Accordion type="single" collapsible className="w-full">
+                {faqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`} className="border-border">
+                    <AccordionTrigger className="text-left text-foreground font-inter font-medium hover:text-accent hover:no-underline">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground font-inter">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
           </div>
         </div>
