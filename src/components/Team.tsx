@@ -10,7 +10,7 @@ const leadership = [
     position: "President",
     major: "Integrated Business & Engineering",
     bio: "Victoria leads PVC's strategy, operations, and client partnerships. She has consulted for venture-backed startups including Captain (Y Combinator–backed), driving market strategy and growth.",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/victoria-mesropyan/",
     image: "/victoria-mesropyan.jpg",
     initials: "VM"
   },
