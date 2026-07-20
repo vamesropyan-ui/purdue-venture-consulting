@@ -11,7 +11,7 @@ const Header = () => {
     { name: 'Our Work', href: '#projects' },
     { name: 'Admissions', href: '#admissions' },
     { name: 'Team', href: '#team' },
-    { name: 'Faculty Advisor', href: '#faculty-advisor' },
+    { name: 'Advisors', href: '#faculty-advisor' },
     // { name: 'Alumni', href: '#alumni' },
     { name: 'Partners', href: '#partners' },
   ];
@@ -36,18 +36,18 @@ const Header = () => {
               className="w-16 h-16 object-cover"
             />
             {/* Text - hidden on mobile, visible on desktop */}
-            <div className="hidden md:block font-space-grotesk font-bold text-xl text-foreground">
+            <div className="hidden lg:block font-space-grotesk font-bold text-lg text-foreground whitespace-nowrap">
               Purdue Venture Consulting
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-5">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-300 font-inter font-medium"
+                className="text-foreground hover:text-primary transition-colors duration-300 font-inter font-medium text-sm whitespace-nowrap"
               >
                 {item.name}
               </a>
@@ -55,10 +55,10 @@ const Header = () => {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block flex-shrink-0">
             <Button 
               onClick={scrollToApplication}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-2 rounded-md transition-all duration-300"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-5 py-2 rounded-md transition-all duration-300 whitespace-nowrap flex-shrink-0"
             >
               Apply Now
             </Button>
@@ -66,7 +66,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-primary"
+            className="lg:hidden text-primary flex-shrink-0"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -77,7 +77,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 py-4 border-t border-primary/30">
+          <div className="lg:hidden mt-4 py-4 border-t border-primary/30">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <a
@@ -94,7 +94,7 @@ const Header = () => {
                   scrollToApplication();
                   setIsMenuOpen(false);
                 }}
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-2 rounded-md transition-all duration-300 w-fit"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-2 rounded-md transition-all duration-300 w-fit whitespace-nowrap"
               >
                 Apply Now
               </Button>

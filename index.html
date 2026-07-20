@@ -207,6 +207,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            flex-wrap: nowrap;
         }
 
         .logo-section {
@@ -224,33 +225,41 @@
         .brand-name {
             font-family: 'Space Grotesk', sans-serif;
             font-weight: 700;
-            font-size: 1.25rem;
+            font-size: 1.125rem;
             color: hsl(var(--foreground));
+            white-space: nowrap;
         }
 
         .nav {
             display: flex;
             align-items: center;
-            gap: 2rem;
+            gap: 1.25rem;
         }
 
         .nav a {
             color: hsl(var(--foreground));
             text-decoration: none;
             font-weight: 500;
+            font-size: 0.875rem;
             transition: color 0.3s ease;
             font-family: 'Inter', sans-serif;
+            white-space: nowrap;
         }
 
         .nav a:hover {
             color: hsl(var(--primary));
         }
 
+        .header-cta {
+            display: flex;
+            align-items: center;
+        }
+
         .btn {
             background-color: hsl(var(--primary));
             color: hsl(var(--primary-foreground));
             border: none;
-            padding: 0.5rem 1.5rem;
+            padding: 0.5rem 1.25rem;
             border-radius: var(--radius);
             font-weight: 600;
             cursor: pointer;
@@ -258,6 +267,8 @@
             text-decoration: none;
             display: inline-block;
             font-family: 'Inter', sans-serif;
+            white-space: nowrap;
+            flex-shrink: 0;
         }
 
         .btn:hover {
@@ -832,8 +843,9 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav {
+        @media (max-width: 1023px) {
+            .nav,
+            .header-cta {
                 display: none;
             }
 
@@ -870,6 +882,12 @@
 
             .section-title {
                 font-size: 2rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .mobile-menu {
+                display: none !important;
             }
         }
 
@@ -930,12 +948,12 @@
                     <a href="#projects">Our Work</a>
                     <a href="#admissions">Admissions</a>
                     <a href="#team">Team</a>
-                    <a href="#faculty-advisor">Faculty Advisor</a>
+                    <a href="#faculty-advisor">Advisors</a>
                     <a href="#partners">Partners</a>
                 </nav>
 
                 <!-- CTA Button -->
-                <div class="nav">
+                <div class="header-cta">
                     <button class="btn" onclick="scrollToApplication()">Apply Now</button>
                 </div>
 
@@ -954,7 +972,7 @@
                 <a href="#projects" onclick="toggleMobileMenu()">Our Work</a>
                 <a href="#admissions" onclick="toggleMobileMenu()">Admissions</a>
                 <a href="#team" onclick="toggleMobileMenu()">Team</a>
-                <a href="#faculty-advisor" onclick="toggleMobileMenu()">Faculty Advisor</a>
+                <a href="#faculty-advisor" onclick="toggleMobileMenu()">Advisors</a>
                 <a href="#partners" onclick="toggleMobileMenu()">Partners</a>
                 <button class="btn" onclick="scrollToApplication(); toggleMobileMenu()">Apply Now</button>
             </div>
