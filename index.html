@@ -927,6 +927,7 @@
                 <nav class="nav">
                     <a href="#about">About</a>
                     <a href="#services">What We Do</a>
+                    <a href="#projects">Our Work</a>
                     <a href="#admissions">Admissions</a>
                     <a href="#team">Team</a>
                     <a href="#faculty-advisor">Faculty Advisor</a>
@@ -950,6 +951,7 @@
             <div class="mobile-menu" id="mobileMenu">
                 <a href="#about" onclick="toggleMobileMenu()">About</a>
                 <a href="#services" onclick="toggleMobileMenu()">What We Do</a>
+                <a href="#projects" onclick="toggleMobileMenu()">Our Work</a>
                 <a href="#admissions" onclick="toggleMobileMenu()">Admissions</a>
                 <a href="#team" onclick="toggleMobileMenu()">Team</a>
                 <a href="#faculty-advisor" onclick="toggleMobileMenu()">Faculty Advisor</a>
@@ -1018,8 +1020,8 @@
                             <div class="stat-label">Active Members</div>
                         </div>
                         <div>
-                            <div class="stat-number">5+</div>
-                            <div class="stat-label">Partner Companies</div>
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Startups Served</div>
                         </div>
                         <div>
                             <div class="stat-number">10+</div>
@@ -1125,6 +1127,178 @@
                         <li style="margin-bottom: 0.5rem; color: hsl(var(--foreground));">• Industry networking events</li>
                         <li style="margin-bottom: 0.5rem; color: hsl(var(--foreground));">• Professional development workshops</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Work / Projects Section -->
+    <style>
+        .pr-eyebrow { color: hsl(var(--accent)); font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: 0.3em; font-size: 0.875rem; text-align: center; margin-bottom: 1rem; }
+        .pr-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; max-width: 60rem; margin: 0 auto 4rem; }
+        @media (min-width: 768px) { .pr-stats { grid-template-columns: repeat(4, 1fr); } }
+        .pr-stat { background: hsl(var(--secondary)); border: 1px solid hsl(var(--primary) / 0.2); border-radius: calc(var(--radius) * 1.5); padding: 1.5rem; text-align: center; transition: all .3s ease; }
+        .pr-stat:hover { border-color: hsl(var(--accent) / 0.6); }
+        .pr-stat-num { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 2.25rem; color: hsl(var(--accent)); margin-bottom: .25rem; }
+        .pr-stat-label { color: hsl(var(--muted-foreground)); font-family: 'Inter', sans-serif; font-size: .875rem; }
+        .pr-logos { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; max-width: 64rem; margin: 0 auto 5rem; }
+        .pr-chip { background: hsl(var(--secondary)); border: 1px solid hsl(var(--primary) / 0.3); border-radius: .5rem; padding: .75rem 1.25rem; display: flex; flex-direction: column; align-items: center; transition: all .3s ease; }
+        .pr-chip:hover { border-color: hsl(var(--accent)); transform: scale(1.05); }
+        .pr-chip-name { font-family: 'Space Grotesk', sans-serif; font-weight: 600; color: hsl(var(--foreground)); }
+        .pr-chip-badge { font-size: .6rem; font-family: 'Inter', sans-serif; font-weight: 700; letter-spacing: .15em; color: hsl(var(--accent)); margin-top: .25rem; }
+        .pr-cases { display: flex; flex-direction: column; gap: 4rem; margin-bottom: 5rem; }
+        .pr-case { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; }
+        @media (min-width: 768px) { .pr-case { grid-template-columns: 1fr 1fr; } .pr-case.reverse .pr-visual { order: 2; } }
+        .pr-visual { background: hsl(var(--secondary)); border: 1px solid hsl(var(--primary) / 0.2); border-radius: calc(var(--radius) * 1.5); padding: 2rem; min-height: 240px; display: flex; align-items: center; justify-content: center; text-align: center; }
+        .pr-visual-icon { width: 3rem; height: 3rem; border: 2px solid hsl(var(--accent) / 0.4); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; }
+        .pr-visual-dot { width: 1rem; height: 1rem; background: hsl(var(--accent)); transform: rotate(45deg); }
+        .pr-visual-caption { color: hsl(var(--muted-foreground)); font-family: 'Inter', sans-serif; font-size: .875rem; font-style: italic; }
+        .pr-yc { display: inline-block; margin-bottom: .75rem; font-size: .65rem; font-family: 'Inter', sans-serif; font-weight: 700; letter-spacing: .2em; color: hsl(var(--accent)); border: 1px solid hsl(var(--accent) / 0.6); border-radius: 9999px; padding: .25rem .75rem; }
+        .pr-case-name { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.875rem; color: hsl(var(--primary)); margin-bottom: .25rem; }
+        .pr-case-cat { color: hsl(var(--accent)); font-family: 'Inter', sans-serif; font-size: .875rem; margin-bottom: 1rem; }
+        .pr-case-body { color: hsl(var(--foreground)); font-family: 'Inter', sans-serif; line-height: 1.7; margin-bottom: 1.25rem; }
+        .pr-tags { display: flex; flex-wrap: wrap; gap: .5rem; }
+        .pr-tag { font-size: .75rem; font-family: 'Inter', sans-serif; color: hsl(var(--muted-foreground)); border: 1px solid hsl(var(--primary) / 0.3); border-radius: 9999px; padding: .25rem .75rem; }
+        .pr-sub { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.75rem; color: hsl(var(--primary)); text-align: center; margin-bottom: 2.5rem; }
+        .pr-small-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 5rem; }
+        @media (min-width: 768px) { .pr-small-grid { grid-template-columns: repeat(3, 1fr); } }
+        .pr-small { background: hsl(var(--secondary)); border: 1px solid hsl(var(--primary) / 0.2); border-radius: calc(var(--radius) * 1.5); padding: 1.5rem; transition: all .3s ease; }
+        .pr-small:hover { border-color: hsl(var(--accent) / 0.6); transform: scale(1.02); }
+        .pr-small-name { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1.25rem; color: hsl(var(--primary)); margin-bottom: .75rem; }
+        .pr-small-tag { font-size: .75rem; font-family: 'Inter', sans-serif; color: hsl(var(--accent)); border: 1px solid hsl(var(--accent) / 0.4); border-radius: 9999px; padding: .125rem .625rem; margin-right: .5rem; }
+        .pr-small-body { color: hsl(var(--muted-foreground)); font-family: 'Inter', sans-serif; font-size: .875rem; line-height: 1.6; margin-top: 1rem; }
+        .pr-stage { background: hsl(var(--secondary)); border: 1px solid hsl(var(--primary) / 0.2); border-radius: calc(var(--radius) * 1.5); padding: 1.5rem 1.5rem 1.5rem 1.5rem; position: relative; margin-top: 1rem; }
+        .pr-stage-num { position: absolute; top: -1rem; left: 1.5rem; width: 2rem; height: 2rem; background: hsl(var(--accent)); color: hsl(var(--background)); font-family: 'Space Grotesk', sans-serif; font-weight: 700; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .875rem; }
+        .pr-stage-title { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1.125rem; color: hsl(var(--primary)); margin: .5rem 0 .5rem; }
+        .pr-cta { background: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--background))); border: 1px solid hsl(var(--accent) / 0.4); border-radius: calc(var(--radius) * 1.5); padding: 2.5rem; text-align: center; max-width: 56rem; margin: 0 auto; }
+        .pr-cta h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.875rem; color: hsl(var(--primary)); margin-bottom: .75rem; }
+        .pr-cta p { color: hsl(var(--foreground)); font-family: 'Inter', sans-serif; margin-bottom: 1.5rem; max-width: 42rem; margin-left: auto; margin-right: auto; }
+        .pr-cta-btns { display: flex; flex-direction: column; gap: .75rem; justify-content: center; }
+        @media (min-width: 640px) { .pr-cta-btns { flex-direction: row; } }
+        .pr-btn-primary { background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); font-family: 'Inter', sans-serif; font-weight: 600; padding: .75rem 1.5rem; border-radius: .375rem; text-decoration: none; transition: all .3s ease; }
+        .pr-btn-primary:hover { background: hsl(var(--primary) / 0.9); }
+        .pr-btn-outline { border: 1px solid hsl(var(--accent)); color: hsl(var(--accent)); font-family: 'Inter', sans-serif; font-weight: 600; padding: .75rem 1.5rem; border-radius: .375rem; text-decoration: none; transition: all .3s ease; }
+        .pr-btn-outline:hover { background: hsl(var(--accent)); color: hsl(var(--background)); }
+    </style>
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="pr-eyebrow">OUR WORK</div>
+            <h2 class="section-title">Real strategy. Real startups. <span style="color: hsl(var(--accent));">Real results.</span></h2>
+            <div class="section-subtitle"></div>
+            <p class="section-description" style="max-width: 48rem;">
+                We've partnered with founders across AI, fintech, and consumer — including a Y Combinator–backed company — to solve the problems that decide whether a startup scales.
+            </p>
+
+            <!-- Stats -->
+            <div class="pr-stats">
+                <div class="pr-stat"><div class="pr-stat-num">10+</div><div class="pr-stat-label">Startups Served</div></div>
+                <div class="pr-stat"><div class="pr-stat-num">1</div><div class="pr-stat-label">YC-Backed Client</div></div>
+                <div class="pr-stat"><div class="pr-stat-num">7</div><div class="pr-stat-label">Industries</div></div>
+                <div class="pr-stat"><div class="pr-stat-num">50+</div><div class="pr-stat-label">Deliverables Shipped</div></div>
+            </div>
+
+            <!-- Logo wall -->
+            <div class="pr-logos">
+                <div class="pr-chip"><span class="pr-chip-name">Captain</span><span class="pr-chip-badge">Y COMBINATOR–BACKED</span></div>
+                <div class="pr-chip"><span class="pr-chip-name">Gaus</span></div>
+                <div class="pr-chip"><span class="pr-chip-name">Zuri Technologies</span></div>
+                <div class="pr-chip"><span class="pr-chip-name">Elisyan Wealth Ventures</span></div>
+                <div class="pr-chip"><span class="pr-chip-name">KOVA</span></div>
+                <div class="pr-chip"><span class="pr-chip-name">BeWealther</span></div>
+                <div class="pr-chip"><span class="pr-chip-name">Rounds</span></div>
+            </div>
+
+            <!-- Case Studies -->
+            <div class="pr-cases">
+                <div class="pr-case">
+                    <div class="pr-visual"><div><div class="pr-visual-icon"><div class="pr-visual-dot"></div></div><p class="pr-visual-caption">RAG landscape analysis · 100-company outreach pipeline · benchmark comparison</p></div></div>
+                    <div>
+                        <div class="pr-yc">Y COMBINATOR–BACKED</div>
+                        <h3 class="pr-case-name">Captain</h3>
+                        <div class="pr-case-cat">AI Retrieval / RAG Infrastructure</div>
+                        <p class="pr-case-body">Captain is a Y Combinator–backed startup building AI retrieval that truly understands company data — going beyond standard RAG. PVC ran a market-entry and channel-partnership engagement: we researched the RAG landscape (Vector RAG, GraphRAG, Late Chunking), built and vetted a pipeline of 100 target companies, and drove outreach to surface partnership and go-to-market opportunities, synthesized into a benchmarks technical report.</p>
+                        <div class="pr-tags"><span class="pr-tag">Market Research</span><span class="pr-tag">Channel Strategy</span><span class="pr-tag">Technical Benchmarking</span><span class="pr-tag">GTM Outreach</span></div>
+                    </div>
+                </div>
+
+                <div class="pr-case reverse">
+                    <div class="pr-visual"><div><div class="pr-visual-icon"><div class="pr-visual-dot"></div></div><p class="pr-visual-caption">Porter's Five Forces · competitor positioning matrix · financial accuracy benchmark</p></div></div>
+                    <div>
+                        <h3 class="pr-case-name">Gaus</h3>
+                        <div class="pr-case-cat">AI Financial Intelligence · Fintech</div>
+                        <p class="pr-case-body">Gaus is an AI investment analyst giving retail investors institutional-grade research. PVC delivered a full competitive and go-to-market analysis — benchmarking Gaus's model outputs against real market performance across major equities, mapping the competitive landscape with Porter's Five Forces, and building a marketing and GTM plan to sharpen differentiation.</p>
+                        <div class="pr-tags"><span class="pr-tag">Competitive Analysis</span><span class="pr-tag">Financial Benchmarking</span><span class="pr-tag">GTM Strategy</span><span class="pr-tag">Kano Model</span></div>
+                    </div>
+                </div>
+
+                <div class="pr-case">
+                    <div class="pr-visual"><div><div class="pr-visual-icon"><div class="pr-visual-dot"></div></div><p class="pr-visual-caption">TAM/SAM/SOM market funnel · competitor matrix · ICP persona · Lean Canvas</p></div></div>
+                    <div>
+                        <h3 class="pr-case-name">Zuri Technologies</h3>
+                        <div class="pr-case-cat">Consumer Social · EdTech</div>
+                        <p class="pr-case-body">Zuri turns public speaking into a daily, gamified habit. PVC ran a full three-stage engagement — market intelligence, business-model validation, and product feedback. We sized the market, built the competitor matrix and ICP, validated the model with a Lean Canvas and revenue model, and delivered MVP feature prioritization with UX recommendations.</p>
+                        <div class="pr-tags"><span class="pr-tag">Market Research</span><span class="pr-tag">Business Model Validation</span><span class="pr-tag">Product & UX</span><span class="pr-tag">SWOT / PESTEL</span></div>
+                    </div>
+                </div>
+
+                <div class="pr-case reverse">
+                    <div class="pr-visual"><div><div class="pr-visual-icon"><div class="pr-visual-dot"></div></div><p class="pr-visual-caption">ICP segmentation · content theme map · SEO pillar plan · AI assistant MVP mockups</p></div></div>
+                    <div>
+                        <h3 class="pr-case-name">Elisyan Wealth Ventures</h3>
+                        <div class="pr-case-cat">Global WealthTech</div>
+                        <p class="pr-case-body">Elisyan Wealth Ventures is a privacy-first global wealth-management platform for cross-border assets. PVC partnered with the founder and CTO on two fronts: we built a full brand and go-to-market strategy, an SEO program, and a content engine — then designed and prototyped an AI wealth-assistant MVP alongside a technical implementation roadmap.</p>
+                        <div class="pr-tags"><span class="pr-tag">GTM & Marketing</span><span class="pr-tag">SEO Strategy</span><span class="pr-tag">AI Product / MVP</span><span class="pr-tag">Technical Roadmap</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Projects -->
+            <h3 class="pr-sub">Additional Projects</h3>
+            <div class="pr-small-grid">
+                <div class="pr-small">
+                    <div class="pr-small-name">KOVA</div>
+                    <div><span class="pr-small-tag">Marketplace</span><span class="pr-small-tag">GTM</span></div>
+                    <p class="pr-small-body">A peer-to-peer ridesharing marketplace built by and for students. PVC delivered a scale strategy covering driver supply, rider demand, trust & safety, and a go-to-market plan timed to peak-travel moments.</p>
+                </div>
+                <div class="pr-small">
+                    <div class="pr-small-name">BeWealther</div>
+                    <div><span class="pr-small-tag">FinTech</span><span class="pr-small-tag">Market Research</span></div>
+                    <p class="pr-small-body">A Duolingo-style financial-education platform for young users. PVC delivered market sizing, competitive positioning against Acorns and Robinhood, and a Gen-Z user acquisition and retention strategy.</p>
+                </div>
+                <div class="pr-small">
+                    <div class="pr-small-name">Rounds</div>
+                    <div><span class="pr-small-tag">HR Tech</span><span class="pr-small-tag">Outreach</span></div>
+                    <p class="pr-small-body">An AI interview platform making hiring faster and skills-based. PVC built the ICP and market analysis, then ran a student outreach and social media growth campaign to drive early adoption.</p>
+                </div>
+            </div>
+
+            <!-- Engagement Process -->
+            <h3 class="pr-sub">Our Engagement Process</h3>
+            <div class="pr-small-grid">
+                <div class="pr-stage">
+                    <div class="pr-stage-num">1</div>
+                    <div class="pr-stage-title">Stage 1 — Market Intelligence</div>
+                    <p class="pr-small-body" style="margin-top: 0;">Market sizing, competitive analysis, and customer discovery to frame the real problem.</p>
+                </div>
+                <div class="pr-stage">
+                    <div class="pr-stage-num">2</div>
+                    <div class="pr-stage-title">Stage 2 — Strategy & Validation</div>
+                    <p class="pr-small-body" style="margin-top: 0;">Business model, positioning, and financial validation — pressure-testing the path forward.</p>
+                </div>
+                <div class="pr-stage">
+                    <div class="pr-stage-num">3</div>
+                    <div class="pr-stage-title">Stage 3 — Go-To-Market & Product</div>
+                    <p class="pr-small-body" style="margin-top: 0;">Actionable GTM, product, and execution plans the founder can run with immediately.</p>
+                </div>
+            </div>
+
+            <!-- Closing CTA -->
+            <div class="pr-cta">
+                <h3>Have a startup that needs a strategy team?</h3>
+                <p>We take on a limited number of engagements each semester. Founders and VCs — let's talk.</p>
+                <div class="pr-cta-btns">
+                    <a href="mailto:pecc@purdue.edu" class="pr-btn-primary">Work With Us</a>
+                    <a href="#application" class="pr-btn-outline">Want to do this work? Apply</a>
                 </div>
             </div>
         </div>
