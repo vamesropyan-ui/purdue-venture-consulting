@@ -29,7 +29,7 @@ const Application = () => {
     },
     {
       question: "What's the time commitment?",
-      answer: "Plan for roughly 5–8 hours per week during an active project, including team meetings."
+      answer: "Plan for roughly 6–10 hours per week during an active project, including team meetings."
     },
     {
       question: "Do I need consulting experience?",
@@ -52,8 +52,7 @@ const Application = () => {
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
             <p className="text-foreground text-lg max-w-2xl mx-auto font-inter">
-              Take the first step toward joining Purdue's most welcoming venture consulting community. Our 
-              application process encourages all motivated students to grow and contribute.
+              We select one cohort each fall. If you want to do real strategy work for venture-backed startups — and be held to a professional standard while doing it — we want to hear from you.
             </p>
           </div>
 
@@ -91,7 +90,7 @@ const Application = () => {
                     <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
                     <div>
                       <h4 className="font-inter font-semibold text-primary">Commitment</h4>
-                      <p className="text-muted-foreground text-sm">Ability to dedicate 8-10 hours per week to club activities</p>
+                      <p className="text-muted-foreground text-sm">Ability to dedicate 6-10 hours per week to club activities</p>
                     </div>
                   </div>
                 </div>
