@@ -72,7 +72,7 @@ export default {
 				'tech-accent': 'hsl(320 85% 65%)',
 			},
 			fontFamily: {
-				'space-grotesk': ['Space Grotesk', 'sans-serif'],
+				'space-grotesk': ['Plus Jakarta Sans', 'sans-serif'],
 				'inter': ['Inter', 'sans-serif'],
 			},
 			borderRadius: {
