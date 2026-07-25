@@ -72,9 +72,9 @@ const quadrants: {
 ];
 
 const stages = [
-  { title: 'Stage 1 — Market Intelligence', body: 'Market sizing, competitive analysis, and customer discovery.' },
-  { title: 'Stage 2 — Strategy & Validation', body: 'Business model, positioning, and financial validation.' },
-  { title: 'Stage 3 — Go-To-Market & Product', body: 'Actionable GTM and product plans founders can execute.' },
+  { part: 'Part 1', title: 'Market Intelligence', body: 'Market sizing, competitive analysis, and customer discovery.' },
+  { part: 'Part 2', title: 'Strategy & Validation', body: 'Business model, positioning, and financial validation.' },
+  { part: 'Part 3', title: 'Go-To-Market & Product', body: 'Actionable GTM and product plans founders can execute.' },
 ];
 
 // Zoom applied to logo images to crop out screenshot padding.
@@ -198,15 +198,28 @@ const Projects = () => {
 
         {/* Engagement Process */}
         <div className="mb-20">
-          <h3 className="font-space-grotesk font-bold text-2xl md:text-3xl text-primary text-center mb-10">Our Engagement Process</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <h3 className="font-space-grotesk font-bold text-2xl md:text-3xl text-primary text-center mb-10">
+            Our Engagement Process
+          </h3>
+          <div className="max-w-2xl mx-auto flex flex-col gap-10 relative">
             {stages.map((s, i) => (
-              <div key={s.title} className="bg-secondary border border-primary/20 rounded-lg p-6 relative mt-4">
-                <div className="absolute -top-4 left-6 w-8 h-8 bg-accent text-accent-foreground font-space-grotesk font-bold rounded-full flex items-center justify-center text-sm shadow-sm">
+              <div key={s.title} className="flex gap-6 relative">
+                {i < stages.length - 1 && (
+                  <div
+                    className="absolute left-[22px] top-[22px] w-px bg-border z-0"
+                    style={{ height: 'calc(100% + 2.5rem)' }}
+                  />
+                )}
+                <div className="w-11 h-11 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-space-grotesk font-bold text-sm z-10 flex-shrink-0">
                   {i + 1}
                 </div>
-                <h4 className="font-space-grotesk font-semibold text-lg text-primary mb-2 mt-2">{s.title}</h4>
-                <p className="text-muted-foreground text-sm font-inter leading-relaxed">{s.body}</p>
+                <div className="flex-1 pt-1">
+                  <div className="text-xs font-inter font-semibold tracking-wider text-accent uppercase mb-1">
+                    {s.part}
+                  </div>
+                  <h4 className="font-space-grotesk font-bold text-lg text-primary mb-1">{s.title}</h4>
+                  <p className="text-muted-foreground text-sm font-inter leading-relaxed">{s.body}</p>
+                </div>
               </div>
             ))}
           </div>
