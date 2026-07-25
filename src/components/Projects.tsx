@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const stats = [
   { number: '10+', label: 'Startups Served' },
@@ -204,12 +205,12 @@ const Projects = () => {
             >
               Work With Us
             </a>
-            <a
-              href="#application"
+            <Link
+              to="/apply"
               className="border border-accent text-accent hover:bg-accent hover:text-background font-inter font-semibold px-6 py-3 rounded-md transition-all duration-300"
             >
               Want to do this work? Apply
-            </a>
+            </Link>
           </div>
         </div>
       </div>
