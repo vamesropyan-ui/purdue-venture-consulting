@@ -1,5 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import captainLogo from '@/assets/clients/captain.png.asset.json';
+import astorLogo from '@/assets/clients/astor.png.asset.json';
+import zuriLogo from '@/assets/clients/zuri.png.asset.json';
+import elisyanLogo from '@/assets/clients/elisyan.png.asset.json';
+import kovaLogo from '@/assets/clients/kova.png.asset.json';
 
 const stats = [
   { number: '10+', label: 'Startups Served' },
