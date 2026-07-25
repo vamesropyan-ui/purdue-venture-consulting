@@ -46,13 +46,14 @@ const Partners = () => {
           {partners.map((partner, index) => (
             <div
               key={index}
-              className="group bg-secondary rounded-lg p-6 hover:transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl w-48 border border-primary/20"
+              className="group bg-secondary rounded-lg p-6 hover:transform hover:scale-105 hover:border-accent transition-all duration-300 shadow-lg hover:shadow-xl w-48 border border-primary/20"
             >
               <div className="text-center">
                 <div className="w-16 h-16 bg-background rounded-lg flex items-center justify-center mx-auto mb-4 transition-all duration-300 overflow-hidden">
-                  <img 
-                    src={partner.logo} 
+                  <img
+                    src={partner.logo}
                     alt={partner.name}
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <h3 className="font-inter font-medium text-foreground text-sm group-hover:text-accent transition-colors duration-300">
