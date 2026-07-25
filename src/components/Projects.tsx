@@ -1,5 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import captainLogo from '@/assets/clients/captain.png.asset.json';
+import astorLogo from '@/assets/clients/astor.png.asset.json';
+import zuriLogo from '@/assets/clients/zuri.png.asset.json';
+import elisyanLogo from '@/assets/clients/elisyan.png.asset.json';
+import kovaLogo from '@/assets/clients/kova.png.asset.json';
 
 const stats = [
   { number: '10+', label: 'Startups Served' },
@@ -10,11 +15,11 @@ const stats = [
 
 // Set `logo` to an imported image path when real logos are available.
 const marqueeClients: { name: string; logo: string | null; badge?: string }[] = [
-  { name: 'Captain', logo: null, badge: 'YC' },
-  { name: 'Astor', logo: null },
-  { name: 'Zuri Technologies', logo: null },
-  { name: 'Elisyan Wealth Ventures', logo: null },
-  { name: 'KOVA', logo: null },
+  { name: 'Captain', logo: captainLogo.url, badge: 'YC' },
+  { name: 'Astor', logo: astorLogo.url },
+  { name: 'Zuri Technologies', logo: zuriLogo.url },
+  { name: 'Elisyan Wealth Ventures', logo: elisyanLogo.url },
+  { name: 'KOVA', logo: kovaLogo.url },
   { name: 'BeWealther', logo: null },
   { name: 'Rounds', logo: null },
   { name: 'PoliStock', logo: null },
@@ -30,7 +35,7 @@ const quadrants: {
 }[] = [
   {
     name: 'Captain',
-    logo: null,
+    logo: captainLogo.url,
     yc: true,
     category: 'AI Infrastructure',
     sentence:
@@ -39,7 +44,7 @@ const quadrants: {
   },
   {
     name: 'Astor',
-    logo: null,
+    logo: astorLogo.url,
     category: 'AI Fintech',
     sentence:
       "Competitive and go-to-market analysis, benchmarking model accuracy against real market data using Porter's Five Forces.",
@@ -47,7 +52,7 @@ const quadrants: {
   },
   {
     name: 'Zuri Technologies',
-    logo: null,
+    logo: zuriLogo.url,
     category: 'Consumer Social',
     sentence:
       'Full three-stage engagement — market sizing, ICP and competitor matrix, business-model validation, and MVP prioritization.',
@@ -55,7 +60,7 @@ const quadrants: {
   },
   {
     name: 'Elisyan Wealth Ventures',
-    logo: null,
+    logo: elisyanLogo.url,
     category: 'Global WealthTech',
     sentence:
       'Marketing, SEO, and AI product strategy — we built the GTM and content engine, then prototyped an AI wealth-assistant MVP.',
