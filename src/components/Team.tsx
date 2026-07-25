@@ -23,7 +23,7 @@ const leadership = [
     major: "Industrial Engineering & Integrated Business",
     bio: "Sam oversees PVC's consulting projects and delivery quality. He has led engagements for startups including Zuri Technologies and BeWealther across market strategy, business modeling, and product.",
     linkedin: "https://www.linkedin.com/in/samuelpaul31/",
-    image: "",
+    image: samPaulAsset.url,
     initials: "SP"
   }
 ];
