@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Linkedin } from 'lucide-react';
-import samPaulAsset from '@/assets/sam-paul.jpg.asset.json';
+
 
 
 const leadership = [
@@ -20,7 +20,7 @@ const leadership = [
     major: "Industrial Engineering & Integrated Business",
     bio: "Sam oversees PVC's consulting projects and delivery quality. He has led engagements for startups including Zuri Technologies and BeWealther across market strategy, business modeling, and product.",
     linkedin: "https://www.linkedin.com/in/samuelpaul31/",
-    image: samPaulAsset.url,
+    image: "",
     initials: "SP"
   }
 ];
@@ -104,7 +104,7 @@ const LeadershipCard = ({ member }: { member: LeadershipMember }) => (
           />
         ) : (
           <div className="w-full h-full rounded-full border-2 border-accent/40 bg-secondary flex items-center justify-center shadow-md">
-            <span className="font-space-grotesk font-bold text-5xl text-accent">
+            <span className="font-space-grotesk font-bold text-5xl text-primary">
               {member.initials}
             </span>
           </div>

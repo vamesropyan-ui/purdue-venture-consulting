@@ -10,9 +10,9 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center bg-background">
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         <div className="animate-fade-in">
-          <h1 className="font-space-grotesk font-bold text-5xl md:text-7xl mb-6 leading-tight text-foreground">
+          <h1 className="font-space-grotesk font-semibold text-5xl md:text-7xl mb-6 leading-tight text-foreground">
             Where Strategy
-            <span className="block text-accent">Meets Opportunity</span>
+            <span className="block text-primary">Meets Opportunity</span>
           </h1>
 
           <p className="text-muted-foreground text-lg md:text-xl mb-8 max-w-2xl mx-auto font-inter">
@@ -30,8 +30,7 @@ const Hero = () => {
             <Button
               onClick={() => navigate('/work')}
               variant="outline"
-              size="sm"
-              className="border-accent text-accent hover:bg-accent hover:text-accent-foreground font-semibold rounded-md transition-all duration-300 w-full sm:w-auto"
+              className="border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary font-semibold px-6 sm:px-8 py-3 rounded-md transition-all duration-300 text-base sm:text-lg w-full sm:w-auto"
             >
               Learn More
             </Button>

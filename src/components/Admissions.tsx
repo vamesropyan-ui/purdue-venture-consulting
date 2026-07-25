@@ -96,11 +96,11 @@ const Admissions = () => {
             <div className="bg-secondary p-8 rounded-lg shadow-lg border border-primary/20">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                  <div className="text-3xl font-space-grotesk font-bold text-accent mb-2">3.0+</div>
+                  <div className="text-3xl font-space-grotesk font-bold text-primary mb-2">3.0+</div>
                   <div className="text-muted-foreground text-sm font-inter">Average GPA</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-space-grotesk font-bold text-accent mb-2">2 weeks</div>
+                  <div className="text-3xl font-space-grotesk font-bold text-primary mb-2">2 weeks</div>
                   <div className="text-muted-foreground text-sm font-inter">Application Review Time</div>
                 </div>
               </div>

@@ -101,7 +101,7 @@ const Projects = () => {
         <div className="text-center mb-16">
           <div className="text-accent font-inter font-semibold tracking-[0.3em] text-sm mb-4">OUR WORK</div>
           <h2 className="font-space-grotesk font-bold text-4xl md:text-5xl mb-4 text-primary">
-            Real strategy. Real startups. <span className="text-accent">Real results.</span>
+            Real strategy. Real startups. Real results.
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-foreground text-lg max-w-3xl mx-auto font-inter">
@@ -113,7 +113,7 @@ const Projects = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16 max-w-5xl mx-auto">
           {stats.map((s) => (
             <div key={s.label} className="bg-secondary border border-primary/20 rounded-lg p-6 text-center hover:border-accent/60 transition-all duration-300">
-              <div className="font-space-grotesk font-bold text-4xl text-accent mb-1">{s.number}</div>
+              <div className="font-space-grotesk font-bold text-4xl text-primary mb-1">{s.number}</div>
               <div className="text-muted-foreground text-sm font-inter">{s.label}</div>
             </div>
           ))}
@@ -180,7 +180,7 @@ const Projects = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {stages.map((s, i) => (
               <div key={s.title} className="bg-secondary border border-primary/20 rounded-lg p-6 relative mt-4">
-                <div className="absolute -top-4 left-6 w-8 h-8 bg-accent text-background font-space-grotesk font-bold rounded-full flex items-center justify-center text-sm">
+                <div className="absolute -top-4 left-6 w-8 h-8 bg-accent text-accent-foreground font-space-grotesk font-bold rounded-full flex items-center justify-center text-sm shadow-sm">
                   {i + 1}
                 </div>
                 <h4 className="font-space-grotesk font-semibold text-lg text-primary mb-2 mt-2">{s.title}</h4>
@@ -207,7 +207,7 @@ const Projects = () => {
             </a>
             <Link
               to="/apply"
-              className="border border-accent text-accent hover:bg-accent hover:text-background font-inter font-semibold px-6 py-3 rounded-md transition-all duration-300"
+              className="border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary font-inter font-semibold px-6 py-3 rounded-md transition-all duration-300"
             >
               Want to do this work? Apply
             </Link>
