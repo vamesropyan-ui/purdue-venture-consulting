@@ -104,7 +104,7 @@ const LeadershipCard = ({ member }: { member: LeadershipMember }) => (
           />
         ) : (
           <div className="w-full h-full rounded-full border-2 border-accent/40 bg-secondary flex items-center justify-center shadow-md">
-            <span className="font-space-grotesk font-bold text-5xl text-accent">
+            <span className="font-space-grotesk font-bold text-5xl text-primary">
               {member.initials}
             </span>
           </div>
