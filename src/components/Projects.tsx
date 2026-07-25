@@ -35,7 +35,7 @@ const quadrants: {
 }[] = [
   {
     name: 'Captain',
-    logo: null,
+    logo: captainLogo.url,
     yc: true,
     category: 'AI Infrastructure',
     sentence:
@@ -44,7 +44,7 @@ const quadrants: {
   },
   {
     name: 'Astor',
-    logo: null,
+    logo: astorLogo.url,
     category: 'AI Fintech',
     sentence:
       "Competitive and go-to-market analysis, benchmarking model accuracy against real market data using Porter's Five Forces.",
@@ -52,7 +52,7 @@ const quadrants: {
   },
   {
     name: 'Zuri Technologies',
-    logo: null,
+    logo: zuriLogo.url,
     category: 'Consumer Social',
     sentence:
       'Full three-stage engagement — market sizing, ICP and competitor matrix, business-model validation, and MVP prioritization.',
@@ -60,7 +60,7 @@ const quadrants: {
   },
   {
     name: 'Elisyan Wealth Ventures',
-    logo: null,
+    logo: elisyanLogo.url,
     category: 'Global WealthTech',
     sentence:
       'Marketing, SEO, and AI product strategy — we built the GTM and content engine, then prototyped an AI wealth-assistant MVP.',
