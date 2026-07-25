@@ -78,12 +78,12 @@ const stages = [
 ];
 
 // Zoom applied to logo images to crop out screenshot padding.
-// Tune this single value to make logos fill their circular slots.
-const LOGO_ZOOM = 1.5;
+// Tune this single value to make logos fill their square slots.
+const LOGO_ZOOM = 1.2;
 
-const LogoSlot: React.FC<{ name: string; logo: string | null; size?: number }> = ({ name, logo, size = 56 }) => (
+const LogoSlot: React.FC<{ name: string; logo: string | null; size?: number }> = ({ name, logo, size = 64 }) => (
   <div
-    className="flex items-center justify-center rounded-full bg-white border border-primary/30 overflow-hidden flex-shrink-0"
+    className="flex items-center justify-center rounded-lg bg-white border border-primary/30 overflow-hidden flex-shrink-0"
     style={{ width: size, height: size }}
   >
     {logo ? (
