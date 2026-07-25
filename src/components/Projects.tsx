@@ -77,6 +77,10 @@ const stages = [
   { title: 'Stage 3 — Go-To-Market & Product', body: 'Actionable GTM and product plans founders can execute.' },
 ];
 
+// Zoom applied to logo images to crop out screenshot padding.
+// Tune this single value to make logos fill their circular slots.
+const LOGO_ZOOM = 1.5;
+
 const LogoSlot: React.FC<{ name: string; logo: string | null; size?: number }> = ({ name, logo, size = 56 }) => (
   <div
     className="flex items-center justify-center rounded-full bg-white border border-primary/30 overflow-hidden flex-shrink-0"
@@ -86,8 +90,13 @@ const LogoSlot: React.FC<{ name: string; logo: string | null; size?: number }> =
       <img
         src={logo}
         alt={`${name} logo`}
-        className="object-contain"
-        style={{ width: '75%', height: '75%' }}
+        className="w-full h-full"
+        style={{
+          objectFit: 'cover',
+          objectPosition: 'center',
+          transform: `scale(${LOGO_ZOOM})`,
+          transformOrigin: 'center',
+        }}
       />
     ) : (
       <span className="font-space-grotesk font-bold text-accent" style={{ fontSize: size * 0.4 }}>
