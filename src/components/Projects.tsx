@@ -15,11 +15,11 @@ const stats = [
 
 // Set `logo` to an imported image path when real logos are available.
 const marqueeClients: { name: string; logo: string | null; badge?: string }[] = [
-  { name: 'Captain', logo: null, badge: 'YC' },
-  { name: 'Astor', logo: null },
-  { name: 'Zuri Technologies', logo: null },
-  { name: 'Elisyan Wealth Ventures', logo: null },
-  { name: 'KOVA', logo: null },
+  { name: 'Captain', logo: captainLogo.url, badge: 'YC' },
+  { name: 'Astor', logo: astorLogo.url },
+  { name: 'Zuri Technologies', logo: zuriLogo.url },
+  { name: 'Elisyan Wealth Ventures', logo: elisyanLogo.url },
+  { name: 'KOVA', logo: kovaLogo.url },
   { name: 'BeWealther', logo: null },
   { name: 'Rounds', logo: null },
   { name: 'PoliStock', logo: null },
