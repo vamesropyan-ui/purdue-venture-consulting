@@ -23,8 +23,8 @@ const marqueeClients: { name: string; logo: string | null; badge?: string }[] = 
   { name: 'Elisyan Wealth Ventures', logo: elisyanLogo.url },
   { name: 'KOVA', logo: kovaLogo.url },
   { name: 'BeWealther', logo: null },
-  { name: 'Rounds', logo: null },
-  { name: 'PoliStock', logo: null },
+  { name: 'Rounds', logo: roundsLogo.url },
+  { name: 'PoliStock', logo: polistockLogo.url },
 ];
 
 const quadrants: {
