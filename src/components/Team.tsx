@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Linkedin } from 'lucide-react';
-import professionalPlaceholder from '@/assets/professional-placeholder.png';
 import samPaulAsset from '@/assets/sam-paul.jpg.asset.json';
 
 
@@ -34,7 +33,7 @@ const foundingTeam = [
     year: "Junior",
     bio: "Former manufacturing engineering intern at Stellantis with expertise in business management, sales, and marketing.",
     linkedin: "https://www.linkedin.com/in/pgarciaf/",
-    image: professionalPlaceholder
+    image: "/lovable-uploads/pedro_walc2.JPG"
   },
   {
     name: "Mehdi El Mansar",
@@ -43,7 +42,7 @@ const foundingTeam = [
     year: "Junior",
     bio: "Aerospace engineering student with award-winning design experience and passion for mission-driven, sustainable innovation.",
     linkedin: "https://www.linkedin.com/in/mehdi-el-mansar/",
-    image: professionalPlaceholder
+    image: "/lovable-uploads/mehdi_walc1.JPG"
   },
   {
     name: "Nikhai Tonwar",
@@ -52,7 +51,7 @@ const foundingTeam = [
     year: "Junior",
     bio: "Former Energy Engineering Intern at Trane Technologies with experience in data analysis, marketing, and business logistics.",
     linkedin: "https://www.linkedin.com/in/nikhai-tonwar-a897a3294/",
-    image: professionalPlaceholder
+    image: "/lovable-uploads/nikhai_walc2.JPG"
   },
   {
     name: "Hassan Berbich",
@@ -61,7 +60,7 @@ const foundingTeam = [
     year: "Junior",
     bio: "Industrial engineering intern at Aramco with experience in research, teaching, and global supply chain innovation.",
     linkedin: "https://www.linkedin.com/in/hassan-berbich/",
-    image: professionalPlaceholder
+    image: "/lovable-uploads/hassan_walc1.JPG"
   }
 ];
 
