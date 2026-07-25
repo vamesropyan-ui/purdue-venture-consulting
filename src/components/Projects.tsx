@@ -7,6 +7,7 @@ import elisyanLogo from '@/assets/clients/elisyan.png.asset.json';
 import kovaLogo from '@/assets/clients/kova.png.asset.json';
 import polistockLogo from '@/assets/clients/polistock.png.asset.json';
 import roundsLogo from '@/assets/clients/rounds.png.asset.json';
+import bewealtherLogo from '@/assets/clients/bewealther.png.asset.json';
 
 const stats = [
   { number: '10+', label: 'Startups Served' },
@@ -22,7 +23,7 @@ const marqueeClients: { name: string; logo: string | null; badge?: string }[] = 
   { name: 'Zuri Technologies', logo: zuriLogo.url },
   { name: 'Elisyan Wealth Ventures', logo: elisyanLogo.url },
   { name: 'KOVA', logo: kovaLogo.url },
-  { name: 'BeWealther', logo: null },
+  { name: 'BeWealther', logo: bewealtherLogo.url },
   { name: 'Rounds', logo: roundsLogo.url },
   { name: 'PoliStock', logo: polistockLogo.url },
 ];
