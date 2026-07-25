@@ -79,11 +79,16 @@ const stages = [
 
 const LogoSlot: React.FC<{ name: string; logo: string | null; size?: number }> = ({ name, logo, size = 56 }) => (
   <div
-    className="flex items-center justify-center rounded-full bg-background border border-primary/30 overflow-hidden flex-shrink-0"
+    className="flex items-center justify-center rounded-full bg-white border border-primary/30 overflow-hidden flex-shrink-0"
     style={{ width: size, height: size }}
   >
     {logo ? (
-      <img src={logo} alt={`${name} logo`} className="w-full h-full object-cover" />
+      <img
+        src={logo}
+        alt={`${name} logo`}
+        className="object-contain"
+        style={{ width: '75%', height: '75%' }}
+      />
     ) : (
       <span className="font-space-grotesk font-bold text-accent" style={{ fontSize: size * 0.4 }}>
         {name.charAt(0)}
