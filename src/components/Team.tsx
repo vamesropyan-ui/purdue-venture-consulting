@@ -172,9 +172,9 @@ const LeadershipCard = ({ member }: { member: LeadershipMember }) => (
 
 
     {/* Back of Card */}
-    <div className="absolute inset-0 gradient-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-10 flex flex-col justify-center">
-      <div className="text-center space-y-5">
-        <div className="w-32 h-32 mx-auto">
+    <div className="absolute inset-0 gradient-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-center">
+      <div className="text-center space-y-3">
+        <div className="w-20 h-20 mx-auto">
           {member.image ? (
             <img
               src={member.image}
@@ -184,42 +184,43 @@ const LeadershipCard = ({ member }: { member: LeadershipMember }) => (
             />
           ) : (
             <div className="w-full h-full rounded-full border-2 border-white/60 bg-white/10 flex items-center justify-center">
-              <span className="font-space-grotesk font-bold text-4xl text-white">
+              <span className="font-space-grotesk font-bold text-2xl text-white">
                 {member.initials}
               </span>
             </div>
           )}
         </div>
 
-        <div className="space-y-2">
-          <h3 className="font-space-grotesk font-bold text-2xl text-white">
+        <div className="space-y-1">
+          <h3 className="font-space-grotesk font-bold text-lg text-white">
             {member.name}
           </h3>
-          <p className="text-white font-inter font-semibold">
+          <p className="text-white font-inter font-semibold text-sm">
             {member.position}
           </p>
-          <p className="text-white font-inter text-sm opacity-80">
+          <p className="text-white font-inter text-xs opacity-80">
             {member.major}
           </p>
         </div>
 
-        <div className="w-12 h-px bg-white/50 mx-auto"></div>
+        <div className="w-10 h-px bg-white/50 mx-auto"></div>
 
-        <p className="text-white text-base font-inter leading-relaxed">
+        <p className="text-white text-xs font-inter leading-relaxed">
           {member.bio}
         </p>
 
         <a
           href={member.linkedin}
-          className="inline-flex items-center space-x-2 text-white hover:text-accent transition-colors duration-300 mt-4"
+          className="inline-flex items-center space-x-2 text-white hover:text-accent transition-colors duration-300 mt-2"
         >
-          <Linkedin className="w-5 h-5" />
-          <span className="text-base font-inter font-medium">Connect</span>
+          <Linkedin className="w-4 h-4" />
+          <span className="text-sm font-inter font-medium">Connect</span>
         </a>
       </div>
     </div>
   </div>
 );
+
 
 const ExecutiveBoardCard = ({ member }: { member: ExecutiveMember }) => (
   <div className="group relative bg-card rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl border border-border w-full">
