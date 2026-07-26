@@ -1,5 +1,5 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { EASE_OUT_EXPO, DURATION, prefersReducedMotion } from '@/lib/motion';
 
 type Tag = keyof JSX.IntrinsicElements;
@@ -30,7 +30,7 @@ const RevealText: React.FC<RevealTextProps> = ({
   const containerRef = useRef<HTMLElement | null>(null);
   const wordRefs = useRef<Array<HTMLSpanElement | null>>([]);
   const [lines, setLines] = useState<number[][] | null>(null);
-  const inView = useInView(containerRef, { once: true, amount: 0.15 });
+  const [visible, setVisible] = useState(false);
   const reduced = prefersReducedMotion();
 
   const words = text.split(/\s+/).filter(Boolean);
@@ -50,26 +50,67 @@ const RevealText: React.FC<RevealTextProps> = ({
   };
 
   useIsoLayoutEffect(() => {
-    // Run measurement whenever we're in the measurement pass (lines === null).
     if (lines === null) measure();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lines, text]);
 
   useEffect(() => {
-    const onResize = () => setLines(null); // re-enter measurement pass
+    const onResize = () => setLines(null);
     window.addEventListener('resize', onResize);
     return () => window.removeEventListener('resize', onResize);
   }, []);
 
-  // Measurement pass: render words inline so we can compute offsetTop per word.
-  // Once we have line groupings, render animated masked lines.
+  // Visibility trigger: IntersectionObserver against the viewport, plus a
+  // safety fallback that always reveals the text after a short timeout so
+  // headings can NEVER remain invisible.
+  useEffect(() => {
+    if (reduced) {
+      setVisible(true);
+      return;
+    }
+    const node = containerRef.current;
+    if (!node || typeof IntersectionObserver === 'undefined') {
+      setVisible(true);
+      return;
+    }
+
+    let done = false;
+    const reveal = () => {
+      if (done) return;
+      done = true;
+      setVisible(true);
+    };
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            reveal();
+            io.disconnect();
+            break;
+          }
+        }
+      },
+      { root: null, threshold: 0.15 }
+    );
+    io.observe(node);
+
+    // Fallback: if IO hasn't fired shortly after mount (e.g. Lenis timing,
+    // hidden ancestor, or element already fully in view but not triggering),
+    // force-reveal so the heading is never left blank.
+    const t = window.setTimeout(reveal, 600);
+
+    return () => {
+      io.disconnect();
+      window.clearTimeout(t);
+    };
+  }, [reduced]);
+
   return (
     <Tag ref={containerRef as any} className={className}>
-      {/* Screen-reader accessible full text */}
       <span className="sr-only">{text}</span>
 
       {lines === null ? (
-        // Measurement render — invisible but laid out identically to final content
         <span aria-hidden="true" style={{ visibility: 'hidden' }}>
           {words.map((w, i) => (
             <React.Fragment key={i}>
@@ -97,7 +138,7 @@ const RevealText: React.FC<RevealTextProps> = ({
               <motion.span
                 style={{ display: 'inline-block', willChange: 'transform' }}
                 initial={reduced ? { y: 0 } : { y: '110%' }}
-                animate={inView || reduced ? { y: 0 } : { y: '110%' }}
+                animate={visible || reduced ? { y: 0 } : { y: '110%' }}
                 transition={{
                   duration: reduced ? 0 : DURATION.slow * 0.8,
                   ease: [...EASE_OUT_EXPO] as [number, number, number, number],
