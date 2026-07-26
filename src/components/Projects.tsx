@@ -74,9 +74,11 @@ const quadrants: {
 ];
 
 const stages = [
-  { part: 'Part 1', title: 'Market Intelligence', body: 'Market sizing, competitive analysis, and customer discovery.' },
-  { part: 'Part 2', title: 'Strategy & Validation', body: 'Business model, positioning, and financial validation.' },
-  { part: 'Part 3', title: 'Go-To-Market & Product', body: 'Actionable GTM and product plans founders can execute.' },
+  { part: 'Part 1', title: 'Discovery & Scoping', body: 'We align with the founder on the core problem, goals, and success metrics before any work begins.' },
+  { part: 'Part 2', title: 'Market Intelligence', body: 'Market sizing, competitive analysis, and customer discovery to ground the strategy in evidence.' },
+  { part: 'Part 3', title: 'Strategy & Validation', body: "Business model, positioning, and financial validation — pressure-testing the path forward." },
+  { part: 'Part 4', title: 'Go-To-Market & Product', body: "Actionable GTM, product, and growth recommendations tailored to the startup's stage." },
+  { part: 'Part 5', title: 'Delivery & Handoff', body: 'A final presentation and implementation-ready deliverables the founder can execute immediately.' },
 ];
 
 // Zoom applied to logo images to crop out screenshot padding.
