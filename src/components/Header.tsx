@@ -16,11 +16,11 @@ const Header = () => {
 
   const linkClass = ({ isActive }: { isActive: boolean }) =>
     `transition-colors duration-300 font-inter font-medium text-sm whitespace-nowrap ${
-      isActive ? 'text-accent' : 'text-foreground hover:text-primary'
+      isActive ? 'text-accent' : 'text-white/90 hover:text-accent'
     }`;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/85 backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[hsl(216,42%,32%)] backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-3">
