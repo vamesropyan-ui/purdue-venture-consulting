@@ -1,12 +1,6 @@
 import React from 'react';
 import About from '@/components/About';
-import Partners from '@/components/Partners';
 
-const AboutPage = () => (
-  <>
-    <About />
-    <Partners />
-  </>
-);
+const AboutPage = () => <About />;
 
 export default AboutPage;
