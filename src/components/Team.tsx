@@ -134,16 +134,16 @@ interface FoundingMember {
 }
 
 const LeadershipCard = ({ member }: { member: LeadershipMember }) => (
-  <div className="group relative bg-card rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl border border-border w-full sm:w-96 lg:w-[26rem]">
+  <div className="group relative bg-card rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl border border-border w-full sm:w-72 lg:w-80">
     {/* Front of Card */}
-    <div className="group-hover:opacity-0 transition-opacity duration-300 p-10">
-      <div className="text-center mb-6">
-        <span className="text-sm font-inter font-semibold text-primary uppercase tracking-wider bg-primary/20 px-4 py-1.5 rounded-full">
+    <div className="group-hover:opacity-0 transition-opacity duration-300 p-6">
+      <div className="text-center mb-4">
+        <span className="text-xs font-inter font-semibold text-primary uppercase tracking-wider bg-primary/20 px-3 py-1 rounded-full">
           {member.position}
         </span>
       </div>
 
-      <div className="w-56 h-56 mx-auto mb-8 relative">
+      <div className="w-36 h-36 mx-auto mb-5 relative">
         {member.image ? (
           <img
             src={member.image}
@@ -153,22 +153,23 @@ const LeadershipCard = ({ member }: { member: LeadershipMember }) => (
           />
         ) : (
           <div className="w-full h-full rounded-full border-2 border-accent/40 bg-secondary flex items-center justify-center shadow-md">
-            <span className="font-space-grotesk font-bold text-5xl text-primary">
+            <span className="font-space-grotesk font-bold text-4xl text-primary">
               {member.initials}
             </span>
           </div>
         )}
       </div>
 
-      <div className="text-center space-y-3">
-        <h3 className="font-space-grotesk font-bold text-2xl text-foreground leading-tight">
+      <div className="text-center space-y-1.5">
+        <h3 className="font-space-grotesk font-bold text-xl text-foreground leading-tight">
           {member.name}
         </h3>
-        <p className="text-primary font-inter font-semibold">
+        <p className="text-primary font-inter font-semibold text-sm">
           {member.major}
         </p>
       </div>
     </div>
+
 
     {/* Back of Card */}
     <div className="absolute inset-0 gradient-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-10 flex flex-col justify-center">
