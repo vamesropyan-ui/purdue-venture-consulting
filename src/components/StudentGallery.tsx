@@ -15,20 +15,22 @@ const StudentGallery = () => (
           <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent mb-2">Life at PVC</p>
           <h2 className="text-2xl md:text-3xl font-space-grotesk font-semibold text-foreground">Students in Action</h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          {photos.map((p, i) => (
-            <Reveal key={p.src} delay={i * 100}>
-              <div className="group relative aspect-[4/3] overflow-hidden rounded-xl border border-border shadow-sm bg-muted">
-                <img
-                  src={p.src}
-                  alt={p.alt}
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-                />
-              </div>
-            </Reveal>
+        <Reveal
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
+          direction="scale"
+          stagger={0.1}
+        >
+          {photos.map((p) => (
+            <div key={p.src} className="group relative aspect-[4/3] overflow-hidden rounded-xl border border-border shadow-sm bg-muted">
+              <img
+                src={p.src}
+                alt={p.alt}
+                loading="lazy"
+                className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+              />
+            </div>
           ))}
-        </div>
+        </Reveal>
       </div>
     </Reveal>
   </section>

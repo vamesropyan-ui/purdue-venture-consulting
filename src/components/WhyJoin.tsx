@@ -30,20 +30,22 @@ const WhyJoin = () => (
         </div>
       </Reveal>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
-        {reasons.map((reason, i) => (
-          <Reveal key={reason.label} delay={i * 100}>
-            <div className="text-center md:text-left">
-              <h3 className="font-space-grotesk font-bold text-xl text-primary mb-3">
-                {reason.label}
-              </h3>
-              <p className="text-muted-foreground font-inter leading-relaxed">
-                {reason.body}
-              </p>
-            </div>
-          </Reveal>
+      <Reveal
+        className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8"
+        direction="up"
+        stagger={0.1}
+      >
+        {reasons.map((reason) => (
+          <div key={reason.label} className="text-center md:text-left">
+            <h3 className="font-space-grotesk font-bold text-xl text-primary mb-3">
+              {reason.label}
+            </h3>
+            <p className="text-muted-foreground font-inter leading-relaxed">
+              {reason.body}
+            </p>
+          </div>
         ))}
-      </div>
+      </Reveal>
     </div>
   </section>
 );
