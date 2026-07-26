@@ -99,7 +99,7 @@ const RevealText: React.FC<RevealTextProps> = ({
                 animate={inView || reduced ? { y: 0 } : { y: '110%' }}
                 transition={{
                   duration: reduced ? 0 : DURATION.slow * 0.8,
-                  ease: EASE_OUT_EXPO as unknown as number[],
+                  ease: [...EASE_OUT_EXPO] as [number, number, number, number],
                   delay: reduced ? 0 : delay + lineIdx * 0.09,
                 }}
               >
