@@ -10,7 +10,7 @@ const StudentsInAction = () => (
     <div
       className="absolute inset-0 z-0 bg-cover bg-no-repeat"
       style={{
-        backgroundImage: `url('/lovable-uploads/504d70be-bef1-4524-bcd3-328680f0bc66.png')`,
+        backgroundImage: `url('/lovable-uploads/504d70be-bef1-4524-bcd3-328680f0bc66-cropped.png')`,
         backgroundPosition: 'center 55%',
       }}
       aria-hidden="true"
