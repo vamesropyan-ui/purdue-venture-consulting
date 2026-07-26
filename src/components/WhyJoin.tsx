@@ -22,9 +22,11 @@ const WhyJoin = () => (
     <div className="container mx-auto px-6 max-w-5xl">
       <Reveal>
         <div className="text-center mb-14">
-          <h2 className="font-space-grotesk font-bold text-4xl md:text-5xl mb-4 text-primary">
-            Why Join PVC
-          </h2>
+          <RevealText
+            as="h2"
+            text="Why Join PVC"
+            className="font-space-grotesk font-bold text-4xl md:text-5xl mb-4 text-primary"
+          />
           <p className="text-muted-foreground text-lg font-inter max-w-2xl mx-auto">
             We built this club for students who want to learn by doing, alongside people who take the work seriously.
           </p>
