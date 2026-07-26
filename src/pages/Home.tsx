@@ -2,47 +2,16 @@ import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import RevealText from '@/components/RevealText';
-import { EASE_OUT_EXPO } from '@/lib/motion';
-
-const EASE = [...EASE_OUT_EXPO] as [number, number, number, number];
-
-const HEAD_SIZE = 'clamp(1.9rem, 3.8vw, 3rem)';
-const HERO_SIZE = 'clamp(2.5rem, 5.5vw, 5rem)';
-const ROW_TITLE = 'clamp(1.4rem, 2.6vw, 2.1rem)';
-const METRIC_SIZE = 'clamp(2.25rem, 4vw, 3.25rem)';
-
-/** Structural page frame: centered ~1300px, hairline left/right edges,
- *  a vertical rule ~4.5rem from the left. Children sit to the right of the rule. */
-const Frame: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <div className="relative mx-auto w-full max-w-[1300px] border-x border-border">
-    {/* Interior vertical rule */}
-    <div
-      aria-hidden="true"
-      className="pointer-events-none absolute top-0 bottom-0 hidden md:block border-l border-border"
-      style={{ left: '4.5rem' }}
-    />
-    {children}
-  </div>
-);
-
-const Section: React.FC<{
-  children: React.ReactNode;
-  className?: string;
-  bordered?: boolean;
-}> = ({ children, className = '', bordered = true }) => (
-  <section
-    className={`relative ${bordered ? 'border-t border-border' : ''} pl-6 pr-6 md:pl-[6.5rem] md:pr-10 ${className}`}
-  >
-    {children}
-  </section>
-);
-
-const fadeUp = (delay = 0) => ({
-  initial: { opacity: 0, y: 16 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, amount: 0.3 },
-  transition: { duration: 0.9, delay, ease: EASE },
-});
+import Frame from '@/components/editorial/Frame';
+import Section from '@/components/editorial/Section';
+import {
+  HEAD_SIZE,
+  HERO_SIZE,
+  ROW_TITLE,
+  METRIC_SIZE,
+  EASE,
+  fadeUp,
+} from '@/components/editorial/tokens';
 
 /* -------------------- HERO -------------------- */
 const Hero = () => {
