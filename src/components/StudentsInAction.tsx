@@ -6,12 +6,12 @@ const StudentsInAction = () => (
     className="relative w-full min-h-[70vh] flex items-end overflow-hidden"
     aria-label="PVC students at final presentations"
   >
-    {/* Background image */}
+    {/* Background image — cropped to focus on the students */}
     <div
       className="absolute inset-0 z-0 bg-cover bg-no-repeat"
       style={{
         backgroundImage: `url('/lovable-uploads/504d70be-bef1-4524-bcd3-328680f0bc66.png')`,
-        backgroundPosition: 'center 85%',
+        backgroundPosition: 'center 55%',
       }}
       aria-hidden="true"
     />
