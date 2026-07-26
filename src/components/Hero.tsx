@@ -33,12 +33,13 @@ const Hero = () => {
             </span>
           </div>
 
-          <h1
+          <RevealText
+            as="h1"
+            text="Where strategy meets opportunity."
+            accentWords={['opportunity']}
             className="font-space-grotesk font-bold text-foreground leading-[0.95] tracking-tight"
-            style={{ fontSize: 'clamp(2.75rem, 8vw, 6rem)', letterSpacing: '-0.03em' }}
-          >
-            Where strategy meets <span className="text-accent">opportunity</span>.
-          </h1>
+          />
+
 
           <p className="mt-8 max-w-2xl text-lg md:text-xl text-muted-foreground font-inter leading-relaxed">
             A student-led consulting group partnering with venture-backed startups
