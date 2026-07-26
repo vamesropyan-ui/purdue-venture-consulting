@@ -10,9 +10,12 @@ const About = () => {
           {/* Left Column - Text */}
           <div className="space-y-6">
             <div>
-              <h2 className="font-space-grotesk font-bold text-4xl md:text-5xl mb-4 text-primary">
-                About <span className="text-accent">Purdue Venture Consulting</span>
-              </h2>
+              <RevealText
+                as="h2"
+                text="About Purdue Venture Consulting"
+                accentWords={['Purdue', 'Venture', 'Consulting']}
+                className="font-space-grotesk font-bold text-4xl md:text-5xl mb-4 text-primary"
+              />
               <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
             </div>
             
