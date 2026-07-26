@@ -16,7 +16,7 @@ const Header = () => {
 
   const linkClass = ({ isActive }: { isActive: boolean }) =>
     `transition-colors duration-300 font-inter font-medium text-sm whitespace-nowrap ${
-      isActive ? 'text-accent' : 'text-foreground hover:text-accent'
+      isActive ? 'text-accent' : 'text-foreground hover:text-primary'
     }`;
 
   return (
@@ -52,7 +52,7 @@ const Header = () => {
           </div>
 
           <button
-            className="lg:hidden text-foreground flex-shrink-0"
+            className="lg:hidden text-primary flex-shrink-0"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -63,7 +63,7 @@ const Header = () => {
         </div>
 
         {isMenuOpen && (
-          <div className="lg:hidden mt-4 py-4 border-t border-border">
+          <div className="lg:hidden mt-4 py-4 border-t border-primary/30">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <NavLink
