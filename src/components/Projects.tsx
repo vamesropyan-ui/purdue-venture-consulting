@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Reveal from './Reveal';
+import RevealText from './RevealText';
 import captainLogo from '@/assets/clients/captain.png.asset.json';
 import astorLogo from '@/assets/clients/astor.png.asset.json';
 import zuriLogo from '@/assets/clients/zuri.png.asset.json';
