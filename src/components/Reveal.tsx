@@ -74,7 +74,7 @@ const Reveal: React.FC<RevealProps> = ({
   const delaySec = (delay || 0) / 1000;
   const transition = {
     duration: DURATION.base + 0.1, // ~0.8s
-    ease: EASE_OUT_EXPO as unknown as number[],
+    ease: [...EASE_OUT_EXPO] as [number, number, number, number],
   };
 
   // Staggered mode: wrap each direct child individually.
