@@ -28,6 +28,45 @@ const leadership = [
   }
 ];
 
+const executiveBoard = [
+  {
+    name: "Siddhant Haralkar",
+    position: "Director of Operations",
+    initials: "SH",
+    linkedin: "#"
+  },
+  {
+    name: "Shariq Kapadia",
+    position: "Director of Finance",
+    initials: "SK",
+    linkedin: "#"
+  },
+  {
+    name: "Adrian Valdez",
+    position: "Director of External Relations",
+    initials: "AV",
+    linkedin: "#"
+  },
+  {
+    name: "Jordan Hanford",
+    position: "Director of Venture Operations",
+    initials: "JH",
+    linkedin: "#"
+  },
+  {
+    name: "Letizia Echevarria",
+    position: "Director of Talent",
+    initials: "LE",
+    linkedin: "#"
+  },
+  {
+    name: "Noah Brucculeri",
+    position: "Director of Growth",
+    initials: "NB",
+    linkedin: "#"
+  }
+];
+
 const foundingTeam = [
   {
     name: "Pedro Garcia Farias",
@@ -75,6 +114,13 @@ interface LeadershipMember {
   linkedin: string;
   image?: string;
   initials: string;
+}
+
+interface ExecutiveMember {
+  name: string;
+  position: string;
+  initials: string;
+  linkedin: string;
 }
 
 interface FoundingMember {
@@ -174,6 +220,68 @@ const LeadershipCard = ({ member }: { member: LeadershipMember }) => (
   </div>
 );
 
+const ExecutiveBoardCard = ({ member }: { member: ExecutiveMember }) => (
+  <div className="group relative bg-card rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl border border-border w-full">
+    {/* Front of Card */}
+    <div className="group-hover:opacity-0 transition-opacity duration-300 p-8">
+      <div className="text-center mb-5">
+        <span className="text-xs font-inter font-semibold text-primary uppercase tracking-wider bg-primary/20 px-3 py-1 rounded-full">
+          {member.position}
+        </span>
+      </div>
+
+      <div className="w-32 h-32 mx-auto mb-5 relative">
+        <div className="w-full h-full rounded-full border-2 border-accent/40 bg-secondary flex items-center justify-center shadow-md">
+          <span className="font-space-grotesk font-bold text-4xl text-primary">
+            {member.initials}
+          </span>
+        </div>
+      </div>
+
+      <div className="text-center space-y-2">
+        <h3 className="font-space-grotesk font-bold text-xl text-foreground leading-tight">
+          {member.name}
+        </h3>
+        <p className="text-primary font-inter font-semibold text-sm">
+          {member.position}
+        </p>
+      </div>
+    </div>
+
+    {/* Back of Card */}
+    <div className="absolute inset-0 gradient-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-8 flex flex-col justify-center">
+      <div className="text-center space-y-4">
+        <div className="w-24 h-24 mx-auto">
+          <div className="w-full h-full rounded-full border-2 border-white/60 bg-white/10 flex items-center justify-center">
+            <span className="font-space-grotesk font-bold text-3xl text-white">
+              {member.initials}
+            </span>
+          </div>
+        </div>
+
+        <div className="space-y-1">
+          <h3 className="font-space-grotesk font-bold text-xl text-white">
+            {member.name}
+          </h3>
+          <p className="text-white font-inter font-semibold text-sm">
+            {member.position}
+          </p>
+        </div>
+
+        <div className="w-12 h-px bg-white/50 mx-auto"></div>
+
+        <a
+          href={member.linkedin}
+          className="inline-flex items-center space-x-2 text-white hover:text-accent transition-colors duration-300 mt-2"
+        >
+          <Linkedin className="w-4 h-4" />
+          <span className="text-sm font-inter font-medium">Connect</span>
+        </a>
+      </div>
+    </div>
+  </div>
+);
+
 const FoundingCard = ({ member }: { member: FoundingMember }) => (
   <div className="group relative bg-card rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl border border-border w-full sm:w-64 lg:w-60 xl:w-64">
     {/* Front of Card */}
@@ -254,9 +362,6 @@ const Team = () => {
             Our <span className="text-accent">Team</span>
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="text-muted-foreground text-base max-w-2xl mx-auto font-inter">
-            Our executive board is growing — more team members coming soon.
-          </p>
         </div>
 
         {/* Tier 1 — Leadership */}
@@ -266,7 +371,21 @@ const Team = () => {
           ))}
         </div>
 
-        {/* Tier 2 — Founding Team */}
+        {/* Tier 2 — Executive Board */}
+        <div className="text-center mb-12">
+          <h3 className="font-space-grotesk font-semibold text-2xl md:text-3xl text-primary">
+            Executive <span className="text-accent">Board</span>
+          </h3>
+          <div className="w-16 h-1 bg-primary mx-auto mt-4"></div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-20">
+          {executiveBoard.map((member, index) => (
+            <ExecutiveBoardCard key={index} member={member} />
+          ))}
+        </div>
+
+        {/* Tier 3 — Founding Team */}
         <div className="text-center mb-12">
           <h3 className="font-space-grotesk font-semibold text-2xl md:text-3xl text-primary">
             Founding <span className="text-accent">Team</span>
