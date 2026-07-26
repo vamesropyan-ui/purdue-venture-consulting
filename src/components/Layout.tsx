@@ -14,6 +14,7 @@ const Layout = () => {
   return (
     <div className="min-h-screen bg-background relative overflow-x-hidden flex flex-col">
       <AnimatedBackground />
+      <PageTransition />
       <div className="relative z-10 flex flex-col min-h-screen">
         <Header />
         <main className="flex-1 pt-20">
