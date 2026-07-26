@@ -12,8 +12,8 @@ const StudentGallery = () => (
     <Reveal>
       <div className="max-w-6xl mx-auto">
         <div className="mb-10 md:mb-12 text-center">
-          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gold mb-2">Life at PVC</p>
-          <h2 className="text-2xl md:text-3xl font-heading font-semibold text-foreground">Students in Action</h2>
+          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent mb-2">Life at PVC</p>
+          <h2 className="text-2xl md:text-3xl font-space-grotesk font-semibold text-foreground">Students in Action</h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {photos.map((p, i) => (
