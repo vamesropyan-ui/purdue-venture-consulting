@@ -44,7 +44,7 @@ const quadrants: {
     yc: true,
     category: 'AI Infrastructure',
     sentence:
-      'Market-entry and channel strategy — RAG landscape research, a vetted 100-company partner pipeline, and a technical benchmarks report.',
+      'Market-entry and channel strategy: RAG landscape research, a vetted 100-company partner pipeline, and a technical benchmarks report.',
     tags: ['Market Research', 'GTM'],
   },
   {
@@ -60,7 +60,7 @@ const quadrants: {
     logo: zuriLogo.url,
     category: 'Consumer Social',
     sentence:
-      'Full three-stage engagement — market sizing, ICP and competitor matrix, business-model validation, and MVP prioritization.',
+      'Full three-stage engagement covering market sizing, ICP and competitor matrix, business-model validation, and MVP prioritization.',
     tags: ['Market Research', 'Product'],
   },
   {
@@ -68,7 +68,7 @@ const quadrants: {
     logo: elisyanLogo.url,
     category: 'Global WealthTech',
     sentence:
-      'Marketing, SEO, and AI product strategy — we built the GTM and content engine, then prototyped an AI wealth-assistant MVP.',
+      'Marketing, SEO, and AI product strategy. We built the GTM and content engine, then prototyped an AI wealth-assistant MVP.',
     tags: ['GTM & SEO', 'AI Product'],
   },
 ];
@@ -76,7 +76,7 @@ const quadrants: {
 const stages = [
   { part: 'Part 1', title: 'Discovery & Scoping', body: 'We align with the founder on the core problem, goals, and success metrics before any work begins.' },
   { part: 'Part 2', title: 'Market Intelligence', body: 'Market sizing, competitive analysis, and customer discovery to ground the strategy in evidence.' },
-  { part: 'Part 3', title: 'Strategy & Validation', body: "Business model, positioning, and financial validation — pressure-testing the path forward." },
+  { part: 'Part 3', title: 'Strategy & Validation', body: "Business model, positioning, and financial validation, pressure-testing the path forward." },
   { part: 'Part 4', title: 'Go-To-Market & Product', body: "Actionable GTM, product, and growth recommendations tailored to the startup's stage." },
   { part: 'Part 5', title: 'Delivery & Handoff', body: 'A final presentation and implementation-ready deliverables the founder can execute immediately.' },
 ];

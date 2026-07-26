@@ -12,7 +12,7 @@ const Admissions = () => {
     {
       step: "02",
       title: "Group Case Study",
-      description: "Work through a real business problem alongside other candidates. We're evaluating how you think, structure ambiguity, and collaborate — not whether you've memorized frameworks."
+      description: "Work through a real business problem alongside other candidates. We're evaluating how you think, structure ambiguity, and collaborate, not whether you've memorized frameworks."
     },
     {
       step: "03",
