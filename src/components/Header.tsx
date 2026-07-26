@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 const navItems = [
   { name: 'About', to: '/about' },
@@ -18,16 +19,6 @@ const Header = () => {
       isActive ? 'text-accent' : 'text-foreground hover:text-primary'
     }`;
 
-  const WorkWithUsButton = ({ onClick, className = '' }: { onClick?: () => void; className?: string }) => (
-    <button
-      onClick={onClick ?? (() => navigate('/apply'))}
-      className={`group inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground pl-1.5 pr-5 py-1.5 font-inter font-semibold text-sm whitespace-nowrap transition-all duration-300 hover:bg-primary/90 hover:shadow-md ${className}`}
-    >
-      <span className="inline-flex items-center justify-center w-6 h-6 rounded-md bg-accent text-accent-foreground text-base leading-none font-bold">+</span>
-      <span>Work With Us</span>
-    </button>
-  );
-
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/85 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-4">
@@ -36,14 +27,14 @@ const Header = () => {
             <img
               src="/lovable-uploads/2912c4e7-9d2d-47db-95cc-d511a5ca659d.png"
               alt="Purdue Venture Consulting Logo"
-              className="w-14 h-14 object-cover"
+              className="w-16 h-16 object-cover"
             />
-            <div className="hidden lg:block font-space-grotesk font-extrabold text-lg text-foreground tracking-tight whitespace-nowrap">
+            <div className="hidden lg:block font-space-grotesk font-bold text-lg text-foreground whitespace-nowrap">
               Purdue Venture Consulting
             </div>
           </Link>
 
-          <nav className="hidden lg:flex items-center space-x-6">
+          <nav className="hidden lg:flex items-center space-x-5">
             {navItems.map((item) => (
               <NavLink key={item.name} to={item.to} className={linkClass}>
                 {item.name}
@@ -52,7 +43,12 @@ const Header = () => {
           </nav>
 
           <div className="hidden lg:block flex-shrink-0">
-            <WorkWithUsButton />
+            <Button
+              onClick={() => navigate('/apply')}
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-5 py-2 rounded-md transition-all duration-300 whitespace-nowrap flex-shrink-0"
+            >
+              Apply Now
+            </Button>
           </div>
 
           <button
@@ -67,7 +63,7 @@ const Header = () => {
         </div>
 
         {isMenuOpen && (
-          <div className="lg:hidden mt-4 py-4 border-t border-border">
+          <div className="lg:hidden mt-4 py-4 border-t border-primary/30">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <NavLink
@@ -79,13 +75,15 @@ const Header = () => {
                   {item.name}
                 </NavLink>
               ))}
-              <WorkWithUsButton
+              <Button
                 onClick={() => {
                   setIsMenuOpen(false);
                   navigate('/apply');
                 }}
-                className="w-fit"
-              />
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-2 rounded-md transition-all duration-300 w-fit whitespace-nowrap"
+              >
+                Apply Now
+              </Button>
             </div>
           </div>
         )}

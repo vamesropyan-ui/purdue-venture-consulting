@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Light theme design tokens, clean modern consulting aesthetic */
+/* Light theme design tokens — clean, modern consulting aesthetic */
 
 @layer base {
   :root {
-    --background: 37 33% 97%;
+    --background: 0 0% 100%;
     --foreground: 216 50% 12%;
 
     --card: 0 0% 100%;
@@ -18,11 +18,11 @@
     --primary: 216 60% 18%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 37 30% 95%;
+    --secondary: 220 14% 97%;
     --secondary-foreground: 216 50% 12%;
 
-    --muted: 37 30% 95%;
-    --muted-foreground: 218 11% 45%;
+    --muted: 220 14% 97%;
+    --muted-foreground: 218 11% 55%;
 
     --accent: 40 54% 50%;
     --accent-foreground: 41 76% 8%;
@@ -30,7 +30,7 @@
     --destructive: 0 72% 45%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 35 20% 90%;
+    --border: 218 20% 92%;
     --input: 218 20% 92%;
     --ring: 216 60% 18%;
 
