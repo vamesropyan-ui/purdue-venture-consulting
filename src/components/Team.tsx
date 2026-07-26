@@ -28,6 +28,45 @@ const leadership = [
   }
 ];
 
+const executiveBoard = [
+  {
+    name: "Siddhant Haralkar",
+    position: "Director of Operations",
+    initials: "SH",
+    linkedin: "#"
+  },
+  {
+    name: "Shariq Kapadia",
+    position: "Director of Finance",
+    initials: "SK",
+    linkedin: "#"
+  },
+  {
+    name: "Adrian Valdez",
+    position: "Director of External Relations",
+    initials: "AV",
+    linkedin: "#"
+  },
+  {
+    name: "Jordan Hanford",
+    position: "Director of Venture Operations",
+    initials: "JH",
+    linkedin: "#"
+  },
+  {
+    name: "Letizia Echevarria",
+    position: "Director of Talent",
+    initials: "LE",
+    linkedin: "#"
+  },
+  {
+    name: "Noah Brucculeri",
+    position: "Director of Growth",
+    initials: "NB",
+    linkedin: "#"
+  }
+];
+
 const foundingTeam = [
   {
     name: "Pedro Garcia Farias",
@@ -75,6 +114,13 @@ interface LeadershipMember {
   linkedin: string;
   image?: string;
   initials: string;
+}
+
+interface ExecutiveMember {
+  name: string;
+  position: string;
+  initials: string;
+  linkedin: string;
 }
 
 interface FoundingMember {
