@@ -29,7 +29,7 @@ const Header = () => {
               alt="Purdue Venture Consulting Logo"
               className="w-16 h-16 object-cover"
             />
-            <div className="hidden lg:block font-space-grotesk font-bold text-lg text-foreground whitespace-nowrap">
+            <div className="hidden lg:block font-space-grotesk font-bold text-lg text-white whitespace-nowrap">
               Purdue Venture Consulting
             </div>
           </Link>
