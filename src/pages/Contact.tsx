@@ -11,7 +11,7 @@ const Contact = () => {
           </h1>
           <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
           <p className="text-foreground font-inter text-lg mb-10">
-            Founders, partners, and prospective members — we'd love to hear from you.
+            Founders, partners, and prospective members, we'd love to hear from you.
           </p>
 
           <div className="bg-secondary rounded-lg p-8 border border-primary/20 shadow-lg space-y-6 text-left">

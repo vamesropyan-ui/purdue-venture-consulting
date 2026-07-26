@@ -4,7 +4,7 @@ import Reveal from './Reveal';
 const reasons = [
   {
     label: 'Real client work',
-    body: 'You consult for actual startups, including a Y Combinator–backed company — not hypothetical cases.',
+    body: 'You consult for actual startups, including a Y Combinator-backed company, not hypothetical cases.',
   },
   {
     label: 'Real training',
@@ -25,7 +25,7 @@ const WhyJoin = () => (
             Why Join PVC
           </h2>
           <p className="text-muted-foreground text-lg font-inter max-w-2xl mx-auto">
-            We built this club for students who want to learn by doing — alongside people who take the work seriously.
+            We built this club for students who want to learn by doing, alongside people who take the work seriously.
           </p>
         </div>
       </Reveal>
