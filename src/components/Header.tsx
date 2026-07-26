@@ -16,11 +16,11 @@ const Header = () => {
 
   const linkClass = ({ isActive }: { isActive: boolean }) =>
     `transition-colors duration-300 font-inter font-medium text-sm whitespace-nowrap ${
-      isActive ? 'text-accent' : 'text-white/90 hover:text-accent'
+      isActive ? 'text-accent' : 'text-foreground hover:text-accent'
     }`;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[hsl(216,42%,32%)] backdrop-blur-md border-b border-white/10">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/85 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-3">
@@ -29,7 +29,7 @@ const Header = () => {
               alt="Purdue Venture Consulting Logo"
               className="w-16 h-16 object-cover"
             />
-            <div className="hidden lg:block font-space-grotesk font-bold text-lg text-white whitespace-nowrap">
+            <div className="hidden lg:block font-space-grotesk font-bold text-lg text-foreground whitespace-nowrap">
               Purdue Venture Consulting
             </div>
           </Link>
@@ -52,7 +52,7 @@ const Header = () => {
           </div>
 
           <button
-            className="lg:hidden text-white flex-shrink-0"
+            className="lg:hidden text-foreground flex-shrink-0"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -63,7 +63,7 @@ const Header = () => {
         </div>
 
         {isMenuOpen && (
-          <div className="lg:hidden mt-4 py-4 border-t border-white/10">
+          <div className="lg:hidden mt-4 py-4 border-t border-border">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <NavLink
