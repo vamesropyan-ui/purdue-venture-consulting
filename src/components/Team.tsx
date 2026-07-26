@@ -225,56 +225,56 @@ const LeadershipCard = ({ member }: { member: LeadershipMember }) => (
 const ExecutiveBoardCard = ({ member }: { member: ExecutiveMember }) => (
   <div className="group relative bg-card rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl border border-border w-full">
     {/* Front of Card */}
-    <div className="group-hover:opacity-0 transition-opacity duration-300 p-8">
-      <div className="text-center mb-5">
-        <span className="text-xs font-inter font-semibold text-primary uppercase tracking-wider bg-primary/20 px-3 py-1 rounded-full">
+    <div className="group-hover:opacity-0 transition-opacity duration-300 p-5">
+      <div className="text-center mb-4">
+        <span className="text-[0.65rem] font-inter font-semibold text-primary uppercase tracking-wider bg-primary/20 px-2.5 py-0.5 rounded-full">
           {member.position}
         </span>
       </div>
 
-      <div className="w-32 h-32 mx-auto mb-5 relative">
+      <div className="w-24 h-24 mx-auto mb-4 relative">
         <div className="w-full h-full rounded-full border-2 border-accent/40 bg-secondary flex items-center justify-center shadow-md">
-          <span className="font-space-grotesk font-bold text-4xl text-primary">
+          <span className="font-space-grotesk font-bold text-3xl text-primary">
             {member.initials}
           </span>
         </div>
       </div>
 
-      <div className="text-center space-y-2">
-        <h3 className="font-space-grotesk font-bold text-xl text-foreground leading-tight">
+      <div className="text-center space-y-1">
+        <h3 className="font-space-grotesk font-bold text-base text-foreground leading-tight">
           {member.name}
         </h3>
-        <p className="text-primary font-inter font-semibold text-sm">
+        <p className="text-primary font-inter font-semibold text-xs">
           {member.position}
         </p>
       </div>
     </div>
 
     {/* Back of Card */}
-    <div className="absolute inset-0 gradient-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-8 flex flex-col justify-center">
-      <div className="text-center space-y-4">
-        <div className="w-24 h-24 mx-auto">
+    <div className="absolute inset-0 gradient-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-center">
+      <div className="text-center space-y-3">
+        <div className="w-20 h-20 mx-auto">
           <div className="w-full h-full rounded-full border-2 border-white/60 bg-white/10 flex items-center justify-center">
-            <span className="font-space-grotesk font-bold text-3xl text-white">
+            <span className="font-space-grotesk font-bold text-2xl text-white">
               {member.initials}
             </span>
           </div>
         </div>
 
         <div className="space-y-1">
-          <h3 className="font-space-grotesk font-bold text-xl text-white">
+          <h3 className="font-space-grotesk font-bold text-base text-white">
             {member.name}
           </h3>
-          <p className="text-white font-inter font-semibold text-sm">
+          <p className="text-white font-inter font-semibold text-xs">
             {member.position}
           </p>
         </div>
 
-        <div className="w-12 h-px bg-white/50 mx-auto"></div>
+        <div className="w-10 h-px bg-white/50 mx-auto"></div>
 
         <a
           href={member.linkedin}
-          className="inline-flex items-center space-x-2 text-white hover:text-accent transition-colors duration-300 mt-2"
+          className="inline-flex items-center space-x-2 text-white hover:text-accent transition-colors duration-300 mt-1"
         >
           <Linkedin className="w-4 h-4" />
           <span className="text-sm font-inter font-medium">Connect</span>
@@ -283,6 +283,7 @@ const ExecutiveBoardCard = ({ member }: { member: ExecutiveMember }) => (
     </div>
   </div>
 );
+
 
 const FoundingCard = ({ member }: { member: FoundingMember }) => (
   <div className="group relative bg-card rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl border border-border w-full sm:w-64 lg:w-60 xl:w-64">
