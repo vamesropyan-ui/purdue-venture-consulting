@@ -4,6 +4,8 @@ import Header from './Header';
 import Footer from './Footer';
 import AnimatedBackground from './AnimatedBackground';
 import PageTransition from './PageTransition';
+import SmoothScroll from './SmoothScroll';
+import 'lenis/dist/lenis.css';
 
 const Layout = () => {
   const { pathname } = useLocation();
