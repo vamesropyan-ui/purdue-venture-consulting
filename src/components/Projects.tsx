@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Reveal from './Reveal';
+import RevealText from './RevealText';
 import captainLogo from '@/assets/clients/captain.png.asset.json';
 import astorLogo from '@/assets/clients/astor.png.asset.json';
 import zuriLogo from '@/assets/clients/zuri.png.asset.json';
@@ -126,9 +127,11 @@ const Projects = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="text-accent font-inter font-semibold tracking-[0.3em] text-sm mb-4">OUR WORK</div>
-          <h2 className="font-space-grotesk font-bold text-4xl md:text-5xl mb-4 text-primary">
-            Real strategy. Real startups. Real results.
-          </h2>
+          <RevealText
+            as="h2"
+            text="Real strategy. Real startups. Real results."
+            className="font-space-grotesk font-bold text-4xl md:text-5xl mb-4 text-primary"
+          />
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-foreground text-lg max-w-3xl mx-auto font-inter">
             We work with venture-backed founders across AI, fintech, and consumer.

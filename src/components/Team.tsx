@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Linkedin } from 'lucide-react';
+import RevealText from './RevealText';
 import samPaulAsset from '@/assets/sam-paul.jpg.asset.json';
 
 
@@ -362,9 +363,12 @@ const Team = () => {
     <section id="team" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="font-space-grotesk font-bold text-4xl md:text-5xl mb-4 text-primary">
-            Our <span className="text-accent">Team</span>
-          </h2>
+          <RevealText
+            as="h2"
+            text="Our Team"
+            accentWords={['Team']}
+            className="font-space-grotesk font-bold text-4xl md:text-5xl mb-4 text-primary"
+          />
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
         </div>
 
