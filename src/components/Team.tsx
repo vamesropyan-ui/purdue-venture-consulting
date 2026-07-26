@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Linkedin } from 'lucide-react';
+import RevealText from './RevealText';
 import samPaulAsset from '@/assets/sam-paul.jpg.asset.json';
 
 
