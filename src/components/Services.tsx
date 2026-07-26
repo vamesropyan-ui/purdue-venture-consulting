@@ -38,7 +38,11 @@ const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Reveal key={index} delay={index * 120}>
+            <Reveal
+              key={index}
+              direction={index === 0 ? 'left' : index === 2 ? 'right' : 'up'}
+              delay={index * 100}
+            >
               <div
                 className="bg-secondary rounded-lg p-8 hover:transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl border border-primary/20 h-full"
               >
