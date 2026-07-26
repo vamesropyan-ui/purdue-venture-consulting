@@ -353,7 +353,7 @@ const Team: React.FC = () => {
         </Section>
 
         {/* bottom spacer */}
-        <Section bordered className="py-16" />
+        <Section bordered className="py-16"><div /></Section>
       </Frame>
     </div>
   );
