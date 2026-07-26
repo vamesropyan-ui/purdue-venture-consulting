@@ -237,8 +237,6 @@ const Projects = () => {
               </div>
             ))}
           </Reveal>
-
-          </div>
         </div>
 
         {/* Closing CTA */}
