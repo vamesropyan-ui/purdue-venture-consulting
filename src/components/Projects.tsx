@@ -135,13 +135,16 @@ const Projects = () => {
 
         {/* Stat bar */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16 max-w-5xl mx-auto">
-          {stats.map((s) => (
-            <div key={s.label} className="bg-secondary border border-primary/20 rounded-lg p-6 text-center hover:border-accent/60 transition-all duration-300">
-              <div className="font-space-grotesk font-bold text-4xl text-primary mb-1">{s.number}</div>
-              <div className="text-muted-foreground text-sm font-inter">{s.label}</div>
-            </div>
+          {stats.map((s, i) => (
+            <Reveal key={s.label} delay={i * 80}>
+              <div className="bg-secondary border border-primary/20 rounded-lg p-6 text-center hover:border-accent/60 transition-all duration-300 h-full">
+                <div className="font-space-grotesk font-bold text-4xl text-primary mb-1">{s.number}</div>
+                <div className="text-muted-foreground text-sm font-inter">{s.label}</div>
+              </div>
+            </Reveal>
           ))}
         </div>
+
 
         {/* Featured quadrants */}
         <div className="mb-20 max-w-6xl mx-auto border border-primary/30 rounded-2xl overflow-hidden bg-secondary/40">
