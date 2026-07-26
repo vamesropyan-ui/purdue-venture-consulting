@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
+import RevealText from './RevealText';
 
 const heroBackgroundImage = '';
 
