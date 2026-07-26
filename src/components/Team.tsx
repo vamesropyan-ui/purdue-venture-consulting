@@ -362,9 +362,6 @@ const Team = () => {
             Our <span className="text-accent">Team</span>
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="text-muted-foreground text-base max-w-2xl mx-auto font-inter">
-            Our executive board is growing — more team members coming soon.
-          </p>
         </div>
 
         {/* Tier 1 — Leadership */}
@@ -374,7 +371,21 @@ const Team = () => {
           ))}
         </div>
 
-        {/* Tier 2 — Founding Team */}
+        {/* Tier 2 — Executive Board */}
+        <div className="text-center mb-12">
+          <h3 className="font-space-grotesk font-semibold text-2xl md:text-3xl text-primary">
+            Executive <span className="text-accent">Board</span>
+          </h3>
+          <div className="w-16 h-1 bg-primary mx-auto mt-4"></div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-20">
+          {executiveBoard.map((member, index) => (
+            <ExecutiveBoardCard key={index} member={member} />
+          ))}
+        </div>
+
+        {/* Tier 3 — Founding Team */}
         <div className="text-center mb-12">
           <h3 className="font-space-grotesk font-semibold text-2xl md:text-3xl text-primary">
             Founding <span className="text-accent">Team</span>
