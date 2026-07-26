@@ -160,8 +160,10 @@ const Projects = () => {
               const isRight = i % 2 === 1;
               const isBottom = i >= 2;
               return (
-                <div
+                <Reveal
                   key={q.name}
+                  direction={isRight ? 'right' : 'left'}
+                  delay={i * 80}
                   className={[
                     'p-8 flex flex-col items-center text-center',
                     !isRight ? 'md:border-r md:border-primary/30' : '',
@@ -185,7 +187,7 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
-                </div>
+                </Reveal>
               );
             })}
           </div>
