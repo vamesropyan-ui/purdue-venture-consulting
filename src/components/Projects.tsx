@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Reveal from './Reveal';
 import captainLogo from '@/assets/clients/captain.png.asset.json';
 import astorLogo from '@/assets/clients/astor.png.asset.json';
 import zuriLogo from '@/assets/clients/zuri.png.asset.json';
@@ -8,6 +9,7 @@ import kovaLogo from '@/assets/clients/kova.png.asset.json';
 import polistockLogo from '@/assets/clients/polistock.png.asset.json';
 import roundsLogo from '@/assets/clients/rounds.png.asset.json';
 import bewealtherLogo from '@/assets/clients/bewealther.png.asset.json';
+
 
 const stats = [
   { number: '10+', label: 'Startups Served' },
@@ -133,13 +135,16 @@ const Projects = () => {
 
         {/* Stat bar */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16 max-w-5xl mx-auto">
-          {stats.map((s) => (
-            <div key={s.label} className="bg-secondary border border-primary/20 rounded-lg p-6 text-center hover:border-accent/60 transition-all duration-300">
-              <div className="font-space-grotesk font-bold text-4xl text-primary mb-1">{s.number}</div>
-              <div className="text-muted-foreground text-sm font-inter">{s.label}</div>
-            </div>
+          {stats.map((s, i) => (
+            <Reveal key={s.label} delay={i * 80}>
+              <div className="bg-secondary border border-primary/20 rounded-lg p-6 text-center hover:border-accent/60 transition-all duration-300 h-full">
+                <div className="font-space-grotesk font-bold text-4xl text-primary mb-1">{s.number}</div>
+                <div className="text-muted-foreground text-sm font-inter">{s.label}</div>
+              </div>
+            </Reveal>
           ))}
         </div>
+
 
         {/* Featured quadrants */}
         <div className="mb-20 max-w-6xl mx-auto border border-primary/30 rounded-2xl overflow-hidden bg-secondary/40">
@@ -203,25 +208,28 @@ const Projects = () => {
           </h3>
           <div className="max-w-2xl mx-auto flex flex-col gap-10 relative">
             {stages.map((s, i) => (
-              <div key={s.title} className="flex gap-6 relative">
-                {i < stages.length - 1 && (
-                  <div
-                    className="absolute left-[22px] top-[22px] w-px bg-border z-0"
-                    style={{ height: 'calc(100% + 2.5rem)' }}
-                  />
-                )}
-                <div className="w-11 h-11 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-space-grotesk font-bold text-sm z-10 flex-shrink-0">
-                  {i + 1}
-                </div>
-                <div className="flex-1 pt-1">
-                  <div className="text-xs font-inter font-semibold tracking-wider text-accent uppercase mb-1">
-                    {s.part}
+              <Reveal key={s.title} delay={i * 150}>
+                <div className="flex gap-6 relative">
+                  {i < stages.length - 1 && (
+                    <div
+                      className="absolute left-[22px] top-[22px] w-px bg-border z-0"
+                      style={{ height: 'calc(100% + 2.5rem)' }}
+                    />
+                  )}
+                  <div className="w-11 h-11 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-space-grotesk font-bold text-sm z-10 flex-shrink-0">
+                    {i + 1}
                   </div>
-                  <h4 className="font-space-grotesk font-bold text-lg text-primary mb-1">{s.title}</h4>
-                  <p className="text-muted-foreground text-sm font-inter leading-relaxed">{s.body}</p>
+                  <div className="flex-1 pt-1">
+                    <div className="text-xs font-inter font-semibold tracking-wider text-accent uppercase mb-1">
+                      {s.part}
+                    </div>
+                    <h4 className="font-space-grotesk font-bold text-lg text-primary mb-1">{s.title}</h4>
+                    <p className="text-muted-foreground text-sm font-inter leading-relaxed">{s.body}</p>
+                  </div>
                 </div>
-              </div>
+              </Reveal>
             ))}
+
           </div>
         </div>
 

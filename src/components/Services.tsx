@@ -1,5 +1,7 @@
 
 import React from 'react';
+import Reveal from './Reveal';
+
 
 const Services = () => {
   const services = [
@@ -36,30 +38,32 @@ const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-secondary rounded-lg p-8 hover:transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl border border-primary/20"
-            >
-              <div className="mb-6">
-                <h3 className="font-space-grotesk font-semibold text-xl text-primary mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-foreground font-inter leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
+            <Reveal key={index} delay={index * 120}>
+              <div
+                className="bg-secondary rounded-lg p-8 hover:transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl border border-primary/20 h-full"
+              >
+                <div className="mb-6">
+                  <h3 className="font-space-grotesk font-semibold text-xl text-primary mb-4">
+                    {service.title}
+                  </h3>
+                  <p className="text-foreground font-inter leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
 
-              <div className="space-y-3">
-                {service.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0"></div>
-                    <span className="text-muted-foreground text-sm font-inter">{feature}</span>
-                  </div>
-                ))}
+                <div className="space-y-3">
+                  {service.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0"></div>
+                      <span className="text-muted-foreground text-sm font-inter">{feature}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
+
       </div>
     </section>
   );

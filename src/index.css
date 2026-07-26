@@ -94,3 +94,55 @@ html { scroll-behavior: smooth; }
 .gradient-card { background: var(--gradient-primary); }
 .gradient-secondary-card { background: var(--gradient-secondary); }
 .gradient-accent-card { background: var(--gradient-accent); }
+
+/* Animated background blobs — soft, drifting, low opacity */
+.pvc-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(80px);
+  will-change: transform;
+  opacity: 0.12;
+}
+.pvc-blob-1 {
+  width: 620px; height: 620px;
+  top: -180px; left: -160px;
+  background: hsl(216 60% 18%);
+  animation: pvc-drift-a 22s ease-in-out infinite;
+}
+.pvc-blob-2 {
+  width: 520px; height: 520px;
+  top: 30%; right: -160px;
+  background: hsl(40 54% 50%);
+  opacity: 0.10;
+  animation: pvc-drift-b 26s ease-in-out infinite;
+}
+.pvc-blob-3 {
+  width: 700px; height: 700px;
+  bottom: -220px; left: 20%;
+  background: hsl(216 60% 18%);
+  opacity: 0.09;
+  animation: pvc-drift-c 30s ease-in-out infinite;
+}
+.pvc-blob-4 {
+  width: 420px; height: 420px;
+  top: 55%; left: -120px;
+  background: hsl(40 54% 50%);
+  opacity: 0.08;
+  animation: pvc-drift-b 34s ease-in-out infinite reverse;
+}
+@keyframes pvc-drift-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(60px, 40px) scale(1.08); }
+}
+@keyframes pvc-drift-b {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(-50px, 30px) scale(1.1); }
+}
+@keyframes pvc-drift-c {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(40px, -50px) scale(1.05); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pvc-blob { animation: none !important; }
+}
+

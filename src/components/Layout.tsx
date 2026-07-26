@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
+import AnimatedBackground from './AnimatedBackground';
 
 const Layout = () => {
   const { pathname } = useLocation();
@@ -10,12 +11,8 @@ const Layout = () => {
   }, [pathname]);
 
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden flex flex-col">
-      <div className="geometric-bg">
-        <div className="geometric-shape w-32 h-32 border-2 border-primary/20 rotate-45"></div>
-        <div className="geometric-shape w-24 h-24 bg-primary/10 rounded-full"></div>
-        <div className="geometric-shape w-20 h-20 border border-accent/10 transform rotate-12"></div>
-      </div>
+    <div className="min-h-screen bg-background relative overflow-x-hidden flex flex-col">
+      <AnimatedBackground />
       <div className="relative z-10 flex flex-col min-h-screen">
         <Header />
         <main className="flex-1 pt-20">
