@@ -9,29 +9,21 @@ const photos = [
 ];
 
 const StudentsInAction = () => (
-  <section className="py-20 bg-secondary/40">
-    <div className="container mx-auto px-6">
-      <div className="text-center mb-12">
-        <div className="text-accent font-inter font-semibold tracking-[0.3em] text-sm mb-4">LIFE AT PVC</div>
-        <h2 className="font-space-grotesk font-bold text-4xl md:text-5xl mb-4 text-primary">Students in Action</h2>
-        <div className="w-20 h-1 bg-primary mx-auto"></div>
-      </div>
-
-      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
-        {photos.map((p, i) => (
-          <Reveal key={p.src} delay={i * 80}>
-            <div className="group relative aspect-[4/3] overflow-hidden rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow duration-300">
-              <img
-                src={p.src}
-                alt={p.alt}
-                loading="lazy"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-          </Reveal>
+  <section className="w-full">
+    <Reveal>
+      <div className="grid grid-cols-2 md:grid-cols-4 w-full">
+        {photos.map((p) => (
+          <div key={p.src} className="relative h-64 md:h-80 overflow-hidden">
+            <img
+              src={p.src}
+              alt={p.alt}
+              loading="lazy"
+              className="w-full h-full object-cover"
+            />
+          </div>
         ))}
       </div>
-    </div>
+    </Reveal>
   </section>
 );
 

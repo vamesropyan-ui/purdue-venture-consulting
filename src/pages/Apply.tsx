@@ -6,8 +6,8 @@ import Application from '@/components/Application';
 
 const Apply = () => (
   <>
-    <WhyJoin />
     <StudentsInAction />
+    <WhyJoin />
     <Admissions />
     <Application />
   </>
