@@ -52,7 +52,7 @@ const Header = () => {
           </div>
 
           <button
-            className="lg:hidden text-primary flex-shrink-0"
+            className="lg:hidden text-white flex-shrink-0"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -63,7 +63,7 @@ const Header = () => {
         </div>
 
         {isMenuOpen && (
-          <div className="lg:hidden mt-4 py-4 border-t border-primary/30">
+          <div className="lg:hidden mt-4 py-4 border-t border-white/10">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <NavLink
