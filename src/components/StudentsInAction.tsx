@@ -11,7 +11,7 @@ const StudentsInAction = () => (
       className="absolute inset-0 z-0 bg-cover bg-no-repeat"
       style={{
         backgroundImage: `url('/lovable-uploads/504d70be-bef1-4524-bcd3-328680f0bc66.png')`,
-        backgroundPosition: 'center 72%',
+        backgroundPosition: 'center 85%',
       }}
       aria-hidden="true"
     />
