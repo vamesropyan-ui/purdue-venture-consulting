@@ -1,25 +1,50 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, Children } from 'react';
+import { motion, useReducedMotion, Variants } from 'framer-motion';
+import { EASE_OUT_EXPO, DURATION } from '@/lib/motion';
+
+export type RevealDirection = 'up' | 'left' | 'right' | 'scale';
 
 interface RevealProps {
   children: React.ReactNode;
   className?: string;
-  delay?: number; // ms
+  /** Delay in milliseconds (kept as ms for backward compatibility). */
+  delay?: number;
+  /** When set with multiple children, each child animates in sequence. Seconds between children. */
+  stagger?: number;
+  direction?: RevealDirection;
   as?: keyof JSX.IntrinsicElements;
 }
 
-/**
- * Fades + slides children up when scrolled into view.
- * Respects prefers-reduced-motion.
- */
-const Reveal: React.FC<RevealProps> = ({ children, className = '', delay = 0, as = 'div' }) => {
+const hiddenFor = (dir: RevealDirection) => {
+  switch (dir) {
+    case 'left':
+      return { opacity: 0, x: -48, y: 0, scale: 1 };
+    case 'right':
+      return { opacity: 0, x: 48, y: 0, scale: 1 };
+    case 'scale':
+      return { opacity: 0, x: 0, y: 0, scale: 0.96 };
+    case 'up':
+    default:
+      return { opacity: 0, x: 0, y: 40, scale: 1 };
+  }
+};
+
+const shown = { opacity: 1, x: 0, y: 0, scale: 1 };
+
+const Reveal: React.FC<RevealProps> = ({
+  children,
+  className = '',
+  delay = 0,
+  stagger,
+  direction = 'up',
+  as = 'div',
+}) => {
   const ref = useRef<HTMLElement | null>(null);
   const [visible, setVisible] = useState(false);
+  const reduced = useReducedMotion();
 
   useEffect(() => {
-    const prefersReduced =
-      typeof window !== 'undefined' &&
-      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReduced) {
+    if (reduced) {
       setVisible(true);
       return;
     }
@@ -34,25 +59,67 @@ const Reveal: React.FC<RevealProps> = ({ children, className = '', delay = 0, as
           }
         });
       },
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
     );
     obs.observe(node);
     return () => obs.disconnect();
-  }, []);
+  }, [reduced]);
 
-  const Tag = as as any;
+  if (reduced) {
+    const Tag = as as any;
+    return <Tag className={className}>{children}</Tag>;
+  }
+
+  const MotionTag = (motion as any)[as] ?? motion.div;
+  const delaySec = (delay || 0) / 1000;
+  const transition = {
+    duration: DURATION.base + 0.1, // ~0.8s
+    ease: EASE_OUT_EXPO as unknown as number[],
+  };
+
+  // Staggered mode: wrap each direct child individually.
+  if (stagger && stagger > 0) {
+    const childArray = Children.toArray(children);
+    const containerVariants: Variants = {
+      hidden: {},
+      show: {
+        transition: {
+          delayChildren: delaySec,
+          staggerChildren: stagger,
+        },
+      },
+    };
+    const itemVariants: Variants = {
+      hidden: hiddenFor(direction),
+      show: { ...shown, transition },
+    };
+    return (
+      <MotionTag
+        ref={ref as any}
+        className={className}
+        variants={containerVariants}
+        initial="hidden"
+        animate={visible ? 'show' : 'hidden'}
+      >
+        {childArray.map((child, i) => (
+          <motion.div key={i} variants={itemVariants}>
+            {child}
+          </motion.div>
+        ))}
+      </MotionTag>
+    );
+  }
+
   return (
-    <Tag
-      ref={ref}
-      style={{ transitionDelay: `${delay}ms` }}
-      className={[
-        'transition-all duration-700 ease-out will-change-transform',
-        visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6',
-        className,
-      ].join(' ')}
+    <MotionTag
+      ref={ref as any}
+      className={className}
+      initial={hiddenFor(direction)}
+      animate={visible ? shown : hiddenFor(direction)}
+      transition={{ ...transition, delay: delaySec }}
     >
       {children}
-    </Tag>
+    </MotionTag>
   );
 };
 
