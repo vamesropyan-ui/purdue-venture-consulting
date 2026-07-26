@@ -286,16 +286,16 @@ const ExecutiveBoardCard = ({ member }: { member: ExecutiveMember }) => (
 
 
 const FoundingCard = ({ member }: { member: FoundingMember }) => (
-  <div className="group relative bg-card rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl border border-border w-full sm:w-64 lg:w-60 xl:w-64">
+  <div className="group relative bg-card rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl border border-border w-full sm:w-52">
     {/* Front of Card */}
-    <div className="group-hover:opacity-0 transition-opacity duration-300 p-6">
+    <div className="group-hover:opacity-0 transition-opacity duration-300 p-5">
       <div className="text-center mb-3">
-        <span className="text-xs font-inter font-semibold text-primary uppercase tracking-wider bg-primary/20 px-3 py-1 rounded-full">
+        <span className="text-[0.65rem] font-inter font-semibold text-primary uppercase tracking-wider bg-primary/20 px-2.5 py-0.5 rounded-full">
           {member.position}
         </span>
       </div>
 
-      <div className="w-36 h-36 mx-auto mb-4 relative">
+      <div className="w-28 h-28 mx-auto mb-3 relative">
         <img
           src={member.image}
           alt={member.name}
@@ -305,14 +305,15 @@ const FoundingCard = ({ member }: { member: FoundingMember }) => (
       </div>
 
       <div className="text-center space-y-1">
-        <h3 className="font-space-grotesk font-bold text-lg text-foreground leading-tight">
+        <h3 className="font-space-grotesk font-bold text-base text-foreground leading-tight">
           {member.name}
         </h3>
-        <p className="text-primary font-inter font-semibold text-sm">
+        <p className="text-primary font-inter font-semibold text-xs">
           {member.major} • {member.year}
         </p>
       </div>
     </div>
+
 
     {/* Back of Card */}
     <div className="absolute inset-0 gradient-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-center">
