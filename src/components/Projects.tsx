@@ -206,7 +206,7 @@ const Projects = () => {
         {/* Engagement Process */}
         <div className="mb-20">
           <h3 className="font-space-grotesk font-bold text-2xl md:text-3xl text-primary text-center mb-10">
-            Our Engagement Process
+            How We Approach a Project
           </h3>
           <div className="max-w-2xl mx-auto flex flex-col gap-10 relative">
             {stages.map((s, i) => (
