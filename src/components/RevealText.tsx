@@ -44,21 +44,22 @@ const RevealText: React.FC<RevealTextProps> = ({
       if (!rows.has(top)) rows.set(top, []);
       rows.get(top)!.push(i);
     });
+    if (rows.size === 0) return;
     const sorted = [...rows.entries()].sort((a, b) => a[0] - b[0]).map(([, v]) => v);
     setLines(sorted);
   };
 
   useIsoLayoutEffect(() => {
-    measure();
-    const ro = new ResizeObserver(() => measure());
-    if (containerRef.current) ro.observe(containerRef.current);
-    window.addEventListener('resize', measure);
-    return () => {
-      ro.disconnect();
-      window.removeEventListener('resize', measure);
-    };
+    // Run measurement whenever we're in the measurement pass (lines === null).
+    if (lines === null) measure();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [text]);
+  }, [lines, text]);
+
+  useEffect(() => {
+    const onResize = () => setLines(null); // re-enter measurement pass
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
 
   // Measurement pass: render words inline so we can compute offsetTop per word.
   // Once we have line groupings, render animated masked lines.
