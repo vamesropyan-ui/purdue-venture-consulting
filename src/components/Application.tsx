@@ -42,13 +42,13 @@ const Application = () => {
   };
 
   return (
-    <div id="application" className="h-full">
-      <div className="text-center mb-10">
-        <h2 className="font-space-grotesk font-bold text-4xl md:text-5xl mb-4 text-primary">
+    <div id="application" className="w-full">
+      <div className="mb-8">
+        <h2 className="font-space-grotesk font-bold text-3xl md:text-4xl mb-4 text-primary">
           Ready to <span className="text-accent">Apply?</span>
         </h2>
-        <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-        <p className="text-foreground text-lg max-w-2xl mx-auto font-inter">
+        <div className="w-16 h-1 bg-primary mb-5"></div>
+        <p className="text-foreground text-base font-inter">
           We select one cohort each fall. If you want to do real strategy work for venture-backed startups, and be held to a professional standard while doing it, we want to hear from you.
         </p>
       </div>
