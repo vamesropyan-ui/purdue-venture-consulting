@@ -268,18 +268,37 @@ const Projects = () => {
             </div>
 
             <div className="overflow-x-auto">
-              <div className="min-w-[800px] px-4 relative">
-                {/* horizontal line */}
-                <div className="absolute left-4 right-4 top-[92px] h-px bg-primary/30" />
-                <div className="grid grid-cols-5 gap-4 relative">
+              <div className="min-w-[800px] px-4">
+                {/* Labels row: fixed height so every dot sits on the same baseline */}
+                <div className="grid grid-cols-5 gap-4">
+                  {milestones.map((m) => (
+                    <div
+                      key={`label-${m.title}`}
+                      className="text-[0.65rem] font-inter font-semibold tracking-widest text-muted-foreground uppercase h-8 flex items-end justify-center whitespace-nowrap"
+                    >
+                      {m.phase}
+                    </div>
+                  ))}
+                </div>
+
+                {/* Dots + connector line row: line is vertically centered through all dot centers */}
+                <div className="relative my-3">
+                  <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-px bg-primary/30" />
+                  <div className="grid grid-cols-5 gap-4 relative">
+                    {milestones.map((m) => (
+                      <div key={`dot-${m.title}`} className="flex justify-center">
+                        <div className="w-4 h-4 rounded-full bg-accent border-2 border-background ring-1 ring-accent/60 z-10" />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Titles + bodies row */}
+                <div className="grid grid-cols-5 gap-4">
                   {milestones.map((m, i) => (
                     <Reveal key={m.title} delay={i * 100}>
                       <div className="flex flex-col items-center text-center">
-                        <div className="text-[0.65rem] font-inter font-semibold tracking-widest text-muted-foreground uppercase mb-3 h-4">
-                          {m.phase}
-                        </div>
-                        <div className="w-4 h-4 rounded-full bg-accent border-2 border-background ring-1 ring-accent/60 z-10" />
-                        <div className="mt-4 font-space-grotesk font-bold text-primary text-sm">{m.title}</div>
+                        <div className="font-space-grotesk font-bold text-primary text-sm">{m.title}</div>
                         <p className="text-muted-foreground text-xs font-inter leading-relaxed mt-1 max-w-[10rem]">{m.body}</p>
                       </div>
                     </Reveal>
