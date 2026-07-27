@@ -269,13 +269,13 @@ const Projects = () => {
 
             <div className="overflow-x-auto">
               <div className="min-w-[800px] px-4 relative">
-                {/* horizontal line */}
-                <div className="absolute left-4 right-4 top-[92px] h-px bg-primary/30" />
+                {/* horizontal line passes through dot centers */}
+                <div className="absolute left-4 right-4 top-[52px] h-px bg-primary/30" />
                 <div className="grid grid-cols-5 gap-4 relative">
                   {milestones.map((m, i) => (
                     <Reveal key={m.title} delay={i * 100}>
                       <div className="flex flex-col items-center text-center">
-                        <div className="text-[0.65rem] font-inter font-semibold tracking-widest text-muted-foreground uppercase mb-3 h-4">
+                        <div className="text-[0.65rem] font-inter font-semibold tracking-widest text-muted-foreground uppercase mb-3 h-8 flex items-end justify-center whitespace-nowrap">
                           {m.phase}
                         </div>
                         <div className="w-4 h-4 rounded-full bg-accent border-2 border-background ring-1 ring-accent/60 z-10" />
