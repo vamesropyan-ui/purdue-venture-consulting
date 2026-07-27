@@ -73,12 +73,18 @@ const quadrants: {
   },
 ];
 
-const stages = [
-  { part: 'Part 1', title: 'Discovery & Scoping', body: 'We align with the founder on the core problem, goals, and success metrics before any work begins.' },
-  { part: 'Part 2', title: 'Market Intelligence', body: 'Market sizing, competitive analysis, and customer discovery to ground the strategy in evidence.' },
-  { part: 'Part 3', title: 'Strategy & Validation', body: "Business model, positioning, and financial validation, pressure-testing the path forward." },
-  { part: 'Part 4', title: 'Go-To-Market & Product', body: "Actionable GTM, product, and growth recommendations tailored to the startup's stage." },
-  { part: 'Part 5', title: 'Delivery & Handoff', body: 'A final presentation and implementation-ready deliverables the founder can execute immediately.' },
+const structureNodes = [
+  { title: 'Consultants', body: 'A team of 4 to 6 trained consultants runs the research and builds the deliverables.' },
+  { title: 'Project Lead', body: 'An experienced lead manages the engagement and is your main point of contact.' },
+  { title: 'Your Strategy', body: 'One cohesive strategy, delivered as a set of connected deliverables.' },
+];
+
+const milestones = [
+  { phase: 'Pre-semester', title: 'Scoping', body: 'We align on the problem, goals, and success metrics before the semester begins.' },
+  { phase: 'Start', title: 'Kickoff', body: 'Project kickoff and onboarding, with regular check-ins throughout the semester.' },
+  { phase: 'Mid-semester', title: 'Midpoint Review', body: 'A midpoint presentation of progress, findings, and direction.' },
+  { phase: 'End of semester', title: 'Final Presentation', body: 'We present the full strategy and deliverables to your team.' },
+  { phase: 'After', title: 'Handoff', body: 'Implementation-ready deliverables plus a feedback loop.' },
 ];
 
 // Zoom applied to logo images to crop out screenshot padding.
@@ -203,35 +209,84 @@ const Projects = () => {
           </div>
         </div>
 
-        {/* Engagement Process */}
+        {/* Engagement Process — two horizontal diagrams */}
         <div className="mb-20">
-          <h3 className="font-space-grotesk font-bold text-2xl md:text-3xl text-primary text-center mb-10">
+          <h3 className="font-space-grotesk font-bold text-2xl md:text-3xl text-primary text-center mb-12">
             How We Approach a Project
           </h3>
-          <div className="max-w-2xl mx-auto flex flex-col gap-10 relative">
-            {stages.map((s, i) => (
-              <Reveal key={s.title} delay={i * 150}>
-                <div className="flex gap-6 relative">
-                  {i < stages.length - 1 && (
-                    <div
-                      className="absolute left-[22px] top-[22px] w-px bg-border z-0"
-                      style={{ height: 'calc(100% + 2.5rem)' }}
-                    />
-                  )}
-                  <div className="w-11 h-11 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-space-grotesk font-bold text-sm z-10 flex-shrink-0">
-                    {i + 1}
-                  </div>
-                  <div className="flex-1 pt-1">
-                    <div className="text-xs font-inter font-semibold tracking-wider text-accent uppercase mb-1">
-                      {s.part}
-                    </div>
-                    <h4 className="font-space-grotesk font-bold text-lg text-primary mb-1">{s.title}</h4>
-                    <p className="text-muted-foreground text-sm font-inter leading-relaxed">{s.body}</p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
 
+          {/* Diagram 1 — Project Structure */}
+          <div className="max-w-6xl mx-auto mb-20">
+            <div className="text-xs font-inter font-semibold tracking-[0.25em] text-accent uppercase text-center mb-8">
+              Project Structure
+            </div>
+
+            <div className="overflow-x-auto">
+              <div className="min-w-[720px] px-4">
+                {/* Faculty node + arrow down */}
+                <Reveal>
+                  <div className="flex flex-col items-center mb-2">
+                    <div className="border border-accent/60 rounded-full px-5 py-2 bg-background">
+                      <div className="font-space-grotesk font-semibold text-primary text-sm">Faculty & Advisory</div>
+                      <div className="text-muted-foreground text-xs font-inter">Senior guidance throughout</div>
+                    </div>
+                    <div className="w-px h-8 bg-accent/60" />
+                    <div className="w-0 h-0 border-l-4 border-l-transparent border-r-4 border-r-transparent border-t-[6px] border-t-accent/60 -mt-1" />
+                  </div>
+                </Reveal>
+
+                {/* Three horizontal nodes */}
+                <div className="flex items-stretch justify-between gap-2">
+                  {structureNodes.map((n, i) => (
+                    <React.Fragment key={n.title}>
+                      <Reveal delay={i * 120} className="flex-1">
+                        <div className="border border-primary/30 rounded-lg p-5 bg-secondary/40 h-full text-center">
+                          <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground font-space-grotesk font-bold text-xs flex items-center justify-center mx-auto mb-3">
+                            {i + 1}
+                          </div>
+                          <div className="font-space-grotesk font-bold text-primary mb-1">{n.title}</div>
+                          <p className="text-muted-foreground text-xs font-inter leading-relaxed">{n.body}</p>
+                        </div>
+                      </Reveal>
+                      {i < structureNodes.length - 1 && (
+                        <div className="flex items-center flex-shrink-0" aria-hidden="true">
+                          <div className="w-10 h-px bg-primary/40" />
+                          <div className="w-0 h-0 border-t-4 border-t-transparent border-b-4 border-b-transparent border-l-[6px] border-l-primary/40" />
+                        </div>
+                      )}
+                    </React.Fragment>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Diagram 2 — Engagement Timeline */}
+          <div className="max-w-6xl mx-auto">
+            <div className="text-xs font-inter font-semibold tracking-[0.25em] text-accent uppercase text-center mb-8">
+              Engagement Timeline
+            </div>
+
+            <div className="overflow-x-auto">
+              <div className="min-w-[800px] px-4 relative">
+                {/* horizontal line */}
+                <div className="absolute left-4 right-4 top-[92px] h-px bg-primary/30" />
+                <div className="grid grid-cols-5 gap-4 relative">
+                  {milestones.map((m, i) => (
+                    <Reveal key={m.title} delay={i * 100}>
+                      <div className="flex flex-col items-center text-center">
+                        <div className="text-[0.65rem] font-inter font-semibold tracking-widest text-muted-foreground uppercase mb-3 h-4">
+                          {m.phase}
+                        </div>
+                        <div className="w-4 h-4 rounded-full bg-accent border-2 border-background ring-1 ring-accent/60 z-10" />
+                        <div className="mt-4 font-space-grotesk font-bold text-primary text-sm">{m.title}</div>
+                        <p className="text-muted-foreground text-xs font-inter leading-relaxed mt-1 max-w-[10rem]">{m.body}</p>
+                      </div>
+                    </Reveal>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
