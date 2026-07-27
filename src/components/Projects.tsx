@@ -73,12 +73,18 @@ const quadrants: {
   },
 ];
 
-const stages = [
-  { part: 'Part 1', title: 'Discovery & Scoping', body: 'We align with the founder on the core problem, goals, and success metrics before any work begins.' },
-  { part: 'Part 2', title: 'Market Intelligence', body: 'Market sizing, competitive analysis, and customer discovery to ground the strategy in evidence.' },
-  { part: 'Part 3', title: 'Strategy & Validation', body: "Business model, positioning, and financial validation, pressure-testing the path forward." },
-  { part: 'Part 4', title: 'Go-To-Market & Product', body: "Actionable GTM, product, and growth recommendations tailored to the startup's stage." },
-  { part: 'Part 5', title: 'Delivery & Handoff', body: 'A final presentation and implementation-ready deliverables the founder can execute immediately.' },
+const structureNodes = [
+  { title: 'Consultants', body: 'A team of 4 to 6 trained consultants runs the research and builds the deliverables.' },
+  { title: 'Project Lead', body: 'An experienced lead manages the engagement and is your main point of contact.' },
+  { title: 'Your Strategy', body: 'One cohesive strategy, delivered as a set of connected deliverables.' },
+];
+
+const milestones = [
+  { phase: 'Pre-semester', title: 'Scoping', body: 'We align on the problem, goals, and success metrics before the semester begins.' },
+  { phase: 'Start', title: 'Kickoff', body: 'Project kickoff and onboarding, with regular check-ins throughout the semester.' },
+  { phase: 'Mid-semester', title: 'Midpoint Review', body: 'A midpoint presentation of progress, findings, and direction.' },
+  { phase: 'End of semester', title: 'Final Presentation', body: 'We present the full strategy and deliverables to your team.' },
+  { phase: 'After', title: 'Handoff', body: 'Implementation-ready deliverables plus a feedback loop.' },
 ];
 
 // Zoom applied to logo images to crop out screenshot padding.
