@@ -17,9 +17,9 @@ const Application = () => {
   const whatWeLookFor = [
     "Sharp, structured thinking over polished résumés",
     "Genuine curiosity about startups and venture",
-    "Ownership — you follow through on what you start",
+    "Ownership. You follow through on what you start",
     "Coachability and a team-first attitude",
-    "All majors welcome — we value diverse perspectives"
+    "All majors welcome. We value diverse perspectives"
   ];
 
   const faqs = [
@@ -29,7 +29,7 @@ const Application = () => {
     },
     {
       question: "What's the time commitment?",
-      answer: "Plan for roughly 6–10 hours per week during an active project, including team meetings."
+      answer: "Plan for roughly 6 to 10 hours per week during an active project, including team meetings."
     },
     {
       question: "Do I need consulting experience?",
@@ -37,7 +37,7 @@ const Application = () => {
     },
     {
       question: "What will I actually work on?",
-      answer: "Live engagements for real startups — market research, competitive strategy, go-to-market, product, and more."
+      answer: "Live engagements for real startups, including market research, competitive strategy, go-to-market, product, and more."
     }
   ];
 
@@ -52,7 +52,7 @@ const Application = () => {
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
             <p className="text-foreground text-lg max-w-2xl mx-auto font-inter">
-              We select one cohort each fall. If you want to do real strategy work for venture-backed startups — and be held to a professional standard while doing it — we want to hear from you.
+              We select one cohort each fall. If you want to do real strategy work for venture-backed startups, and be held to a professional standard while doing it, we want to hear from you.
             </p>
           </div>
 
@@ -103,7 +103,7 @@ const Application = () => {
                   confirming the next steps in joining the team.
                 </p>
                 <p className="text-accent text-sm font-inter font-medium">
-                  Application Window: August 17 – September 4
+                  Application Window: August 17 to September 4
                 </p>
               </div>
             </div>
