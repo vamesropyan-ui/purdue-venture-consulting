@@ -12,7 +12,7 @@ const Admissions = () => {
     {
       step: "02",
       title: "Group Case Study",
-      description: "Work through a real business problem alongside other candidates. We're evaluating how you think, structure ambiguity, and collaborate — not whether you've memorized frameworks."
+      description: "Work through a real business problem alongside other candidates. We're evaluating how you think, structure ambiguity, and collaborate, not whether you've memorized frameworks."
     },
     {
       step: "03",
@@ -22,17 +22,17 @@ const Admissions = () => {
   ];
 
   return (
-    <section id="admissions" className="py-20 bg-background">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-10">
-          <h2 className="font-space-grotesk font-bold text-4xl md:text-5xl mb-4 text-primary">
-            Admissions <span className="text-accent">Process</span>
-          </h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="text-foreground text-lg max-w-2xl mx-auto font-inter">
-            We run one selective cohort each fall. Applications open August 17 and close September 4.
-          </p>
-        </div>
+    <div id="admissions" className="h-full">
+      <div className="text-center mb-10">
+        <h2 className="font-space-grotesk font-bold text-4xl md:text-5xl mb-4 text-primary">
+          Admissions <span className="text-accent">Process</span>
+        </h2>
+        <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
+        <p className="text-foreground text-lg max-w-2xl mx-auto font-inter">
+          We run one selective cohort each fall. Applications open August 17 and close September 4.
+        </p>
+      </div>
+
 
         {/* Date Banner */}
         <div className="max-w-3xl mx-auto mb-16">
@@ -106,9 +106,8 @@ const Admissions = () => {
               </div>
             </div>
           </div>
-        </div>
       </div>
-    </section>
+    </div>
   );
 };
 
