@@ -7,7 +7,7 @@ import Partners from '@/components/Partners';
 import Reveal from '@/components/Reveal';
 import { Button } from '@/components/ui/button';
 
-const DARK = 'hsl(216 65% 6%)';
+const CREAM = 'hsl(40 40% 98%)';
 
 const AboutPage = () => (
   <>
