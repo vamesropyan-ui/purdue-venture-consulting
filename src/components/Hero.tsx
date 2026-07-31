@@ -61,7 +61,7 @@ const Hero = () => {
         <div className="animate-fade-in">
           <h1 className="font-space-grotesk font-semibold text-4xl md:text-6xl mb-5 leading-tight text-primary">
             Where Strategy
-            <span className="block text-accent">Meets Opportunity</span>
+            <span className="block text-primary">Meets Opportunity</span>
           </h1>
 
           <p className="text-muted-foreground text-lg md:text-xl mb-7 max-w-2xl mx-auto font-inter">
@@ -72,7 +72,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               onClick={() => navigate('/apply')}
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 sm:px-8 py-3 rounded-md transition-all duration-300 text-base sm:text-lg w-full sm:w-auto shadow-lg shadow-accent/20"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 sm:px-8 py-3 rounded-md transition-all duration-300 text-base sm:text-lg w-full sm:w-auto"
             >
               Join Our Community
             </Button>
