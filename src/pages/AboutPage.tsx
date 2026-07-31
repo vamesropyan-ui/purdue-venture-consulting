@@ -14,7 +14,7 @@ const AboutPage = () => (
     <Hero />
 
     {/* Dark -> Light curved divider */}
-    <div aria-hidden="true" className="relative -mt-px leading-none" style={{ background: DARK }}>
+    <div aria-hidden="true" className="relative -mt-px leading-none" style={{ background: 'hsl(217 55% 26%)' }}>
       <svg
         viewBox="0 0 1440 120"
         preserveAspectRatio="none"
