@@ -10,17 +10,21 @@ const founders = [
 ];
 
 const FoundersImage = () => (
-  <figure className="rounded-2xl border border-primary/15 bg-card/70 backdrop-blur-sm p-4 shadow-lg">
+  <figure className="mx-auto max-w-sm rounded-2xl border border-primary/15 bg-card/70 backdrop-blur-sm p-4 shadow-lg">
     <div className="grid grid-cols-2 gap-3">
       {founders.map((f) => (
-        <img
-          key={f.name}
-          src={f.image}
-          alt={`${f.name}, co-founder of Purdue Venture Consulting`}
-          loading="lazy"
-          className="w-full aspect-square object-cover rounded-xl"
-          style={{ objectPosition: 'center 20%' }}
-        />
+        <div key={f.name} className="flex flex-col items-center">
+          <img
+            src={f.image}
+            alt={`${f.name}, co-founder of Purdue Venture Consulting`}
+            loading="lazy"
+            className="w-full aspect-square object-cover rounded-xl"
+            style={{ objectPosition: 'center 20%' }}
+          />
+          <span className="mt-2 text-center text-sm font-medium text-primary font-inter">
+            {f.name}
+          </span>
+        </div>
       ))}
     </div>
     <figcaption className="mt-4 text-center text-xs font-inter uppercase tracking-[0.2em] text-accent">
