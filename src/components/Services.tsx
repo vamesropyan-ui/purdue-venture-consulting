@@ -32,9 +32,10 @@ const Services = () => {
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-foreground text-lg max-w-2xl mx-auto font-inter">
-            Empowering students through hands-on venture consulting experience, professional development, 
-            and exclusive access to industry leaders.
+            We take on real engagements for startups and venture-backed companies, pairing ambitious
+            founders with teams that treat their goals like our own.
           </p>
+
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
