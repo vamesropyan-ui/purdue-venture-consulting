@@ -13,12 +13,36 @@ const AboutPage = () => (
   <>
     <Hero />
 
-    {/* Light spacing into the next light section */}
+    {/* Wavy line divider into the next light section */}
     <div
       aria-hidden="true"
-      className="h-10 md:h-16 w-full"
-      style={{ background: 'linear-gradient(to bottom, hsl(214 32% 95%), hsl(var(--background)))' }}
-    />
+      className="relative w-full h-[90px] md:h-[110px] -mb-px"
+      style={{
+        background:
+          'linear-gradient(to bottom, hsl(214 32% 95%), hsl(var(--background)))',
+      }}
+    >
+      <svg
+        viewBox="0 0 1440 110"
+        preserveAspectRatio="none"
+        className="absolute inset-0 w-full h-full"
+      >
+        <path
+          d="M0,60 C240,20 480,100 720,60 C960,20 1200,100 1440,60"
+          fill="none"
+          stroke="hsl(var(--primary))"
+          strokeWidth="2.5"
+          strokeOpacity="0.5"
+        />
+        <path
+          d="M0,74 C240,34 480,114 720,74 C960,34 1200,114 1440,74"
+          fill="none"
+          stroke="hsl(var(--primary))"
+          strokeWidth="2"
+          strokeOpacity="0.2"
+        />
+      </svg>
+    </div>
 
 
     <Services />
