@@ -11,6 +11,9 @@ const founders = [
 
 const FoundersImage = () => (
   <figure className="mx-auto max-w-sm rounded-2xl border border-primary/15 bg-card/70 backdrop-blur-sm p-4 shadow-lg">
+    <figcaption className="mb-4 text-center text-xs font-inter uppercase tracking-[0.2em] text-accent">
+      Meet Your Founders
+    </figcaption>
     <div className="grid grid-cols-2 gap-3">
       {founders.map((f) => (
         <div key={f.name} className="flex flex-col items-center">
@@ -27,9 +30,6 @@ const FoundersImage = () => (
         </div>
       ))}
     </div>
-    <figcaption className="mt-4 text-center text-xs font-inter uppercase tracking-[0.2em] text-accent">
-      Meet Your Founders
-    </figcaption>
   </figure>
 );
 
