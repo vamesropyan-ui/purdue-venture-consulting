@@ -27,9 +27,9 @@ const Hero = () => {
         minWidth: 200,
         scale: 1,
         scaleMobile: 1,
-        backgroundColor: 0x0a1428,
-        color: 0xc1963c,
-        color2: 0x3b5b8c,
+        backgroundColor: 0x274a7d,
+        color: 0x13294b,
+        color2: 0xc1963c,
         size: 0.9,
       });
       setVantaEffect(effect);
@@ -45,23 +45,24 @@ const Hero = () => {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
         background:
-          'radial-gradient(ellipse at 50% 40%, hsl(216 55% 16%) 0%, hsl(216 62% 9%) 60%, hsl(216 65% 6%) 100%)',
+          'radial-gradient(ellipse at 50% 40%, hsl(214 50% 38%) 0%, hsl(216 52% 30%) 60%, hsl(217 55% 26%) 100%)',
       }}
     >
-      {/* Vignette so text always reads over the animation */}
+      {/* Soft readability scrim behind the text */}
       <div
         aria-hidden="true"
         className="absolute inset-0 z-[1]"
         style={{
           background:
-            'radial-gradient(ellipse at 50% 50%, hsl(216 65% 6% / 0.72) 0%, hsl(216 65% 6% / 0.35) 45%, transparent 75%)',
+            'radial-gradient(ellipse at 50% 50%, hsl(217 55% 22% / 0.35) 0%, hsl(217 55% 22% / 0.18) 45%, transparent 75%)',
         }}
       />
       <div
         aria-hidden="true"
         className="absolute inset-x-0 bottom-0 h-56 z-[1]"
-        style={{ background: 'linear-gradient(to bottom, transparent, hsl(216 65% 6% / 0.85))' }}
+        style={{ background: 'linear-gradient(to bottom, transparent, hsl(217 55% 26% / 0.5))' }}
       />
+
 
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         <div className="animate-fade-in">
