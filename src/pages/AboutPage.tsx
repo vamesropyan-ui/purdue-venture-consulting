@@ -13,19 +13,13 @@ const AboutPage = () => (
   <>
     <Hero />
 
-    {/* Dark -> Light curved divider */}
-    <div aria-hidden="true" className="relative -mt-px leading-none" style={{ background: 'hsl(217 55% 26%)' }}>
-      <svg
-        viewBox="0 0 1440 120"
-        preserveAspectRatio="none"
-        className="block w-full h-[70px] md:h-[120px]"
-      >
-        <path
-          d="M0,24 C320,120 1040,0 1440,72 L1440,120 L0,120 Z"
-          fill="hsl(var(--background))"
-        />
-      </svg>
-    </div>
+    {/* Light spacing into the next light section */}
+    <div
+      aria-hidden="true"
+      className="h-10 md:h-16 w-full"
+      style={{ background: 'linear-gradient(to bottom, hsl(214 32% 95%), hsl(var(--background)))' }}
+    />
+
 
     <Services />
 

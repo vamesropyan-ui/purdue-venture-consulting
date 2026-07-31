@@ -5,6 +5,8 @@ import { ChevronDown } from 'lucide-react';
 import * as THREE from 'three';
 import GLOBE from 'vanta/dist/vanta.globe.min';
 
+const LIGHT_BG = 'linear-gradient(180deg, hsl(210 40% 99%) 0%, hsl(214 32% 95%) 100%)';
+
 const Hero = () => {
   const navigate = useNavigate();
   const vantaRef = useRef<HTMLElement | null>(null);
@@ -27,10 +29,10 @@ const Hero = () => {
         minWidth: 200,
         scale: 1,
         scaleMobile: 1,
-        backgroundColor: 0x274a7d,
+        backgroundColor: 0xf3f6fb,
         color: 0x13294b,
         color2: 0xc1963c,
-        size: 0.9,
+        size: 0.85,
       });
       setVantaEffect(effect);
     }
@@ -42,36 +44,27 @@ const Hero = () => {
   return (
     <section
       ref={vantaRef as React.RefObject<HTMLElement>}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{
-        background:
-          'radial-gradient(ellipse at 50% 40%, hsl(214 50% 38%) 0%, hsl(216 52% 30%) 60%, hsl(217 55% 26%) 100%)',
-      }}
+      className="relative min-h-[70vh] flex items-center justify-center overflow-hidden py-20"
+      style={{ background: LIGHT_BG }}
     >
-      {/* Soft readability scrim behind the text */}
+      {/* Soft light scrim behind the text for readability */}
       <div
         aria-hidden="true"
         className="absolute inset-0 z-[1]"
         style={{
           background:
-            'radial-gradient(ellipse at 50% 50%, hsl(217 55% 22% / 0.35) 0%, hsl(217 55% 22% / 0.18) 45%, transparent 75%)',
+            'radial-gradient(ellipse at 50% 50%, hsl(0 0% 100% / 0.55) 0%, hsl(0 0% 100% / 0.3) 45%, transparent 75%)',
         }}
       />
-      <div
-        aria-hidden="true"
-        className="absolute inset-x-0 bottom-0 h-56 z-[1]"
-        style={{ background: 'linear-gradient(to bottom, transparent, hsl(217 55% 26% / 0.5))' }}
-      />
-
 
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         <div className="animate-fade-in">
-          <h1 className="font-space-grotesk font-semibold text-5xl md:text-7xl mb-6 leading-tight text-white">
+          <h1 className="font-space-grotesk font-semibold text-4xl md:text-6xl mb-5 leading-tight text-primary">
             Where Strategy
             <span className="block text-accent">Meets Opportunity</span>
           </h1>
 
-          <p className="text-slate-200/90 text-lg md:text-xl mb-8 max-w-2xl mx-auto font-inter">
+          <p className="text-muted-foreground text-lg md:text-xl mb-7 max-w-2xl mx-auto font-inter">
             A club that helps motivated students connect with rising startups,
             venture capital firms, and innovation leaders across the nation.
           </p>
@@ -86,7 +79,7 @@ const Hero = () => {
             <Button
               onClick={() => navigate('/work')}
               variant="outline"
-              className="border-white/70 bg-transparent text-white hover:bg-white hover:text-primary font-semibold px-6 sm:px-8 py-3 rounded-md transition-all duration-300 text-base sm:text-lg w-full sm:w-auto"
+              className="border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-6 sm:px-8 py-3 rounded-md transition-all duration-300 text-base sm:text-lg w-full sm:w-auto"
             >
               Learn More
             </Button>
@@ -94,8 +87,8 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
-        <ChevronDown className="w-6 h-6 text-accent" />
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+        <ChevronDown className="w-6 h-6 text-primary" />
       </div>
     </section>
   );
