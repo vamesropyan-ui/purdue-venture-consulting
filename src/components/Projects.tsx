@@ -219,27 +219,20 @@ const Projects = () => {
         </div>
 
         {/* Revolving logo marquee */}
-        <div className="relative overflow-hidden mb-20 max-w-6xl mx-auto rounded-2xl shadow-sm" style={{ background: 'linear-gradient(180deg, hsl(214 44% 27%) 0%, hsl(215 48% 22%) 100%)' }}>
-          <div className="text-center pt-8 pb-1">
-            <p className="text-xs font-inter font-semibold tracking-[0.3em] uppercase text-white/70">We work with the world's best</p>
+        <div className="pvc-marquee overflow-hidden mb-20 max-w-6xl mx-auto border-y border-primary/20 py-6" style={{ background: 'linear-gradient(180deg, hsl(214 46% 96%) 0%, hsl(216 42% 90%) 100%)' }}>
+          <div className="pvc-marquee-track flex gap-10 w-max">
+            {[...marqueeClients, ...marqueeClients].map((c, i) => (
+              <div key={`${c.name}-${i}`} className="flex items-center gap-3 flex-shrink-0 px-2">
+                <LogoSlot name={c.name} logo={c.logo} size={44} />
+                <span className="font-space-grotesk font-semibold text-foreground whitespace-nowrap">{c.name}</span>
+                {c.badge && (
+                  <span className="text-[0.55rem] font-inter font-bold tracking-widest text-accent border border-accent/60 rounded-full px-2 py-0.5">
+                    {c.badge}
+                  </span>
+                )}
+              </div>
+            ))}
           </div>
-          <div className="pvc-marquee overflow-hidden py-8">
-            <div className="pvc-marquee-track flex gap-10 w-max">
-              {[...marqueeClients, ...marqueeClients].map((c, i) => (
-                <div key={`${c.name}-${i}`} className="flex items-center gap-3 flex-shrink-0 px-2">
-                  <LogoSlot name={c.name} logo={c.logo} size={44} />
-                  <span className="font-space-grotesk font-semibold text-slate-100 whitespace-nowrap">{c.name}</span>
-                  {c.badge && (
-                    <span className="text-[0.55rem] font-inter font-bold tracking-widest text-accent border border-accent/60 rounded-full px-2 py-0.5">
-                      {c.badge}
-                    </span>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-          <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-16" style={{ background: 'linear-gradient(90deg, hsl(215 47% 24%), transparent)' }} />
-          <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-16" style={{ background: 'linear-gradient(270deg, hsl(215 47% 24%), transparent)' }} />
         </div>
 
         {/* Engagement Process — two horizontal diagrams */}
