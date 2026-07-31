@@ -37,7 +37,7 @@ const Partners = () => {
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-foreground text-lg max-w-2xl mx-auto font-inter">
             We collaborate with industry-leading consulting firms and Fortune 500 companies 
-            to provide our members with unparalleled opportunities.
+            to provide our members with meaningful, real-world opportunities.
           </p>
         </div>
         
