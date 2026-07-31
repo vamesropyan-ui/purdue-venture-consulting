@@ -16,7 +16,7 @@ const AboutPage = () => (
     {/* Wavy line divider into the next light section */}
     <div
       aria-hidden="true"
-      className="relative w-full h-[90px] md:h-[110px] -mb-px"
+      className="relative w-full h-[44px] md:h-[56px] -mb-px"
       style={{
         background:
           'linear-gradient(to bottom, hsl(214 32% 95%), hsl(var(--background)))',
@@ -50,7 +50,7 @@ const AboutPage = () => (
     {/* Light -> Light soft gradient transition */}
     <div
       aria-hidden="true"
-      className="h-16 md:h-24 w-full"
+      className="h-6 md:h-10 w-full"
       style={{
         background:
           'linear-gradient(to bottom, hsl(var(--background)), hsl(var(--muted)))',

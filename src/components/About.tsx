@@ -47,7 +47,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative overflow-hidden py-20"
+      className="relative overflow-hidden py-12"
       style={{ background: 'linear-gradient(180deg, hsl(40 40% 98%) 0%, hsl(38 36% 96%) 100%)' }}
     >
       <SkylineTexture />
