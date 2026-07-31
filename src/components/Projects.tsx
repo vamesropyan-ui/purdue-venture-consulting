@@ -123,27 +123,27 @@ const Projects = () => {
         <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, hsl(214 46% 95%) 0%, hsl(214 41% 97%) 55%, hsl(var(--background)) 100%)' }} />
         <svg className="absolute inset-0 w-full h-full" style={{ opacity: 0.55 }} viewBox="0 0 1440 640" preserveAspectRatio="xMidYMin slice">
           <g stroke="hsl(216 60% 32%)" strokeWidth="1" fill="none" strokeOpacity="0.5">
-            <line x1="720" y1="130" x2="-400" y2="640" />
-            <line x1="720" y1="130" x2="-150" y2="640" />
-            <line x1="720" y1="130" x2="100" y2="640" />
-            <line x1="720" y1="130" x2="320" y2="640" />
-            <line x1="720" y1="130" x2="500" y2="640" />
-            <line x1="720" y1="130" x2="640" y2="640" />
-            <line x1="720" y1="130" x2="720" y2="640" />
-            <line x1="720" y1="130" x2="800" y2="640" />
-            <line x1="720" y1="130" x2="940" y2="640" />
-            <line x1="720" y1="130" x2="1120" y2="640" />
-            <line x1="720" y1="130" x2="1340" y2="640" />
-            <line x1="720" y1="130" x2="1590" y2="640" />
-            <line x1="720" y1="130" x2="1840" y2="640" />
-            <line x1="0" y1="150" x2="1440" y2="150" />
-            <line x1="0" y1="170" x2="1440" y2="170" />
-            <line x1="0" y1="196" x2="1440" y2="196" />
-            <line x1="0" y1="232" x2="1440" y2="232" />
-            <line x1="0" y1="282" x2="1440" y2="282" />
-            <line x1="0" y1="352" x2="1440" y2="352" />
-            <line x1="0" y1="448" x2="1440" y2="448" />
-            <line x1="0" y1="575" x2="1440" y2="575" />
+            <line x1="720" y1="8" x2="-500" y2="700" />
+            <line x1="720" y1="8" x2="-180" y2="700" />
+            <line x1="720" y1="8" x2="120" y2="700" />
+            <line x1="720" y1="8" x2="330" y2="700" />
+            <line x1="720" y1="8" x2="520" y2="700" />
+            <line x1="720" y1="8" x2="640" y2="700" />
+            <line x1="720" y1="8" x2="720" y2="700" />
+            <line x1="720" y1="8" x2="800" y2="700" />
+            <line x1="720" y1="8" x2="920" y2="700" />
+            <line x1="720" y1="8" x2="1110" y2="700" />
+            <line x1="720" y1="8" x2="1320" y2="700" />
+            <line x1="720" y1="8" x2="1620" y2="700" />
+            <line x1="720" y1="8" x2="1940" y2="700" />
+            <line x1="0" y1="90" x2="1440" y2="90" />
+            <line x1="0" y1="120" x2="1440" y2="120" />
+            <line x1="0" y1="158" x2="1440" y2="158" />
+            <line x1="0" y1="210" x2="1440" y2="210" />
+            <line x1="0" y1="285" x2="1440" y2="285" />
+            <line x1="0" y1="385" x2="1440" y2="385" />
+            <line x1="0" y1="510" x2="1440" y2="510" />
+            <line x1="0" y1="660" x2="1440" y2="660" />
           </g>
         </svg>
         <div className="absolute inset-x-0 bottom-0 h-40" style={{ background: 'linear-gradient(180deg, transparent, hsl(var(--background)))' }} />
