@@ -40,7 +40,7 @@ const Services = () => {
           {services.map((service, index) => (
             <Reveal key={index} delay={index * 120}>
               <div
-                className="bg-secondary rounded-lg p-8 hover:transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl border border-primary/20 h-full"
+                className="bg-card/80 backdrop-blur-sm rounded-xl p-8 hover:-translate-y-1 transition-all duration-300 shadow-[0_1px_2px_rgba(19,41,75,0.06),0_12px_32px_-12px_rgba(19,41,75,0.18)] hover:shadow-[0_2px_4px_rgba(19,41,75,0.08),0_24px_48px_-16px_rgba(19,41,75,0.26)] border border-primary/10 h-full"
               >
                 <div className="mb-6">
                   <h3 className="font-space-grotesk font-semibold text-xl text-primary mb-4">
