@@ -11,15 +11,16 @@ const Services = () => {
       features: ["Market Analysis", "Business Strategy", "Operations Optimization", "Financial Modeling"]
     },
     {
-      title: "Case Interview Prep",
-      description: "Comprehensive training program designed to prepare members for consulting interviews at top-tier firms.",
-      features: ["Mock Interviews", "Case Study Practice", "Personal Coaching", "Industry Insights"]
+      title: "Real Client Work",
+      description: "Our teams tackle live business challenges for startups, from market entry to growth strategy, and deliver work founders can act on.",
+      features: ["Live Engagements", "Market Entry", "Growth Strategy", "Actionable Deliverables"]
     },
     {
-      title: "Exclusive Networking",
-      description: "Connect with industry leaders, alumni, and peers through curated events and professional development opportunities.",
-      features: ["Executive Speakers", "Corporate Events", "Alumni Network", "Professional Mentorship"]
+      title: "Innovation Network",
+      description: "We connect founders, operators, and student consultants through a growing network built around the startup ecosystem.",
+      features: ["Founder Connections", "Operator Insights", "Partner Organizations", "Ecosystem Events"]
     }
+
   ];
 
   return (
