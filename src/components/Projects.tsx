@@ -118,7 +118,26 @@ const LogoSlot: React.FC<{ name: string; logo: string | null; size?: number }> =
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 bg-background">
+    <section id="projects" className="relative overflow-hidden py-20 bg-background">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-[640px] overflow-hidden">
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, hsl(214 48% 94%) 0%, hsl(214 42% 96%) 45%, hsl(var(--background)) 100%)' }} />
+        <div className="absolute -top-24 left-[12%] w-[420px] h-[420px] rounded-full blur-3xl opacity-[0.16]" style={{ background: 'hsl(216 55% 28%)' }} />
+        <div className="absolute top-32 right-[8%] w-[460px] h-[460px] rounded-full blur-3xl opacity-[0.12]" style={{ background: 'hsl(216 55% 28%)' }} />
+        <svg className="absolute inset-0 w-full h-full" style={{ opacity: 0.5 }} viewBox="0 0 1440 640" preserveAspectRatio="none">
+          <g fill="none" stroke="hsl(216 60% 22%)" strokeWidth="1.5">
+            <path d="M-100 320 Q360 190 720 300 T1560 250" strokeOpacity="0.55">
+              <animate attributeName="d" dur="9s" repeatCount="indefinite" values="M-100 320 Q360 190 720 300 T1560 250;M-100 280 Q360 360 720 230 T1560 340;M-100 320 Q360 190 720 300 T1560 250" />
+            </path>
+            <path d="M-100 380 Q360 270 720 370 T1560 320" strokeOpacity="0.4">
+              <animate attributeName="d" dur="11s" repeatCount="indefinite" values="M-100 380 Q360 270 720 370 T1560 320;M-100 340 Q360 440 720 300 T1560 420;M-100 380 Q360 270 720 370 T1560 320" />
+            </path>
+            <path d="M-100 250 Q360 120 720 210 T1560 160" strokeOpacity="0.28">
+              <animate attributeName="d" dur="13s" repeatCount="indefinite" values="M-100 250 Q360 120 720 210 T1560 160;M-100 210 Q360 300 720 140 T1560 250;M-100 250 Q360 120 720 210 T1560 160" />
+            </path>
+          </g>
+        </svg>
+      </div>
+
       <style>{`
         @keyframes pvc-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
         .pvc-marquee-track { animation: pvc-marquee 40s linear infinite; }
@@ -128,7 +147,7 @@ const Projects = () => {
         }
       `}</style>
 
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="text-accent font-inter font-semibold tracking-[0.3em] text-sm mb-4">OUR WORK</div>
