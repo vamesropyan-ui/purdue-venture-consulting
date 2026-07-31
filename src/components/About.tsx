@@ -53,7 +53,7 @@ const About = () => {
       <SkylineTexture />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left Column - Text */}
           <div className="space-y-6">
             <div>
@@ -84,7 +84,12 @@ const About = () => {
               and give Purdue's most driven students the chance to do real work that matters.
             </p>
 
-            <div className="flex items-center space-x-8 pt-6">
+          </div>
+
+          {/* Right Column - Founders photo */}
+          <div className="relative">
+            <FoundersImage />
+            <div className="flex items-center justify-center space-x-8 mt-8 max-w-sm mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-space-grotesk font-bold text-primary">50+</div>
                 <div className="text-muted-foreground text-sm">Active Members</div>
@@ -98,11 +103,6 @@ const About = () => {
                 <div className="text-muted-foreground text-sm">Partner Organizations</div>
               </div>
             </div>
-          </div>
-
-          {/* Right Column - Founders photo */}
-          <div className="relative">
-            <FoundersImage />
           </div>
         </div>
 
