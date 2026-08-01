@@ -137,15 +137,6 @@ const Application = () => {
           </p>
         </div>
 
-        <div className="bg-secondary p-6 rounded-lg border border-primary/20">
-          <h4 className="font-space-grotesk font-semibold text-primary mb-3">Next Steps</h4>
-          <p className="text-foreground text-sm font-inter mb-4">
-            After submitting your application, you'll receive an email within 1 week confirming the next steps in joining the team.
-          </p>
-          <p className="text-accent text-sm font-inter font-medium">
-            Application Window: August 17 to September 4
-          </p>
-        </div>
       </div>
     </div>
   );
