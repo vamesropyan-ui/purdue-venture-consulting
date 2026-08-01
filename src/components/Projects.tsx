@@ -21,7 +21,7 @@ const stats = [
 // Set `logo` to an imported image path when real logos are available.
 const marqueeClients: { name: string; logo: string | null; badge?: string }[] = [
   { name: 'Captain', logo: captainLogo.url, badge: 'YC' },
-  { name: 'Astor', logo: astorLogo.url },
+  { name: 'Astor', logo: astorLogo.url, badge: 'YC' },
   { name: 'Zuri Technologies', logo: zuriLogo.url },
   { name: 'Elisyan Wealth Ventures', logo: elisyanLogo.url },
   { name: 'KOVA', logo: kovaLogo.url },
@@ -50,6 +50,7 @@ const quadrants: {
   {
     name: 'Astor',
     logo: astorLogo.url,
+    yc: true,
     category: 'AI Fintech',
     sentence:
       "Competitive and go-to-market analysis, benchmarking model accuracy against real market data using Porter's Five Forces.",
