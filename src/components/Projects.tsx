@@ -260,7 +260,7 @@ const Projects = () => {
               <div className="min-w-[720px] px-4">
                 {/* Faculty node + arrow down */}
                 <Reveal>
-                  <div className="flex flex-col items-start mb-2">
+                  <div className="flex flex-col items-center mb-2">
                     <div className="border border-accent/60 rounded-full px-5 py-2 bg-background">
                       <div className="font-space-grotesk font-semibold text-primary text-sm">Faculty & Advisory</div>
                       <div className="text-muted-foreground text-xs font-inter">Senior guidance throughout</div>
