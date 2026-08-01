@@ -50,56 +50,65 @@ const Application = () => {
         <div className="w-16 h-1 bg-primary mb-5"></div>
       </div>
 
-      <div className="bg-secondary rounded-lg p-8 border border-primary/20 shadow-lg space-y-6">
-        <p className="text-foreground text-base font-inter">
-          We select one cohort each fall. If you want to do real strategy work for venture-backed startups, and be held to a professional standard while doing it, we want to hear from you.
-        </p>
+      <div className="bg-secondary rounded-lg border border-primary/20 shadow-lg overflow-hidden">
+        <div className="bg-primary py-8 px-6 flex items-center justify-center">
+          <img
+            src="/lovable-uploads/2912c4e7-9d2d-47db-95cc-d511a5ca659d.png"
+            alt="Purdue Venture Consulting"
+            className="h-24 w-auto object-contain"
+          />
+        </div>
+        <div className="p-8 space-y-6">
+          <p className="text-foreground text-base font-inter">
+            We select one cohort each fall. If you want to do real strategy work for venture-backed startups, and be held to a professional standard while doing it, we want to hear from you.
+          </p>
 
-        <div>
-          <h3 className="font-space-grotesk font-semibold text-xl text-primary mb-4">Application Requirements</h3>
-          <div className="space-y-4">
-            <div className="flex items-start space-x-3">
-              <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <h4 className="font-inter font-semibold text-primary">Academic Excellence</h4>
-                <p className="text-muted-foreground text-sm">Minimum 3.0 GPA required</p>
+          <div>
+            <h3 className="font-space-grotesk font-semibold text-xl text-primary mb-4">Application Requirements</h3>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <h4 className="font-inter font-semibold text-primary">Academic Excellence</h4>
+                  <p className="text-muted-foreground text-sm">Minimum 3.0 GPA required</p>
+                </div>
               </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <h4 className="font-inter font-semibold text-primary">Leadership Experience</h4>
-                <p className="text-muted-foreground text-sm">Demonstrated leadership in academics, work, or extracurriculars</p>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <h4 className="font-inter font-semibold text-primary">Leadership Experience</h4>
+                  <p className="text-muted-foreground text-sm">Demonstrated leadership in academics, work, or extracurriculars</p>
+                </div>
               </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <h4 className="font-inter font-semibold text-primary">Professional Interest</h4>
-                <p className="text-muted-foreground text-sm">Genuine passion for venture consulting and business strategy</p>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <h4 className="font-inter font-semibold text-primary">Professional Interest</h4>
+                  <p className="text-muted-foreground text-sm">Genuine passion for venture consulting and business strategy</p>
+                </div>
               </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <h4 className="font-inter font-semibold text-primary">Commitment</h4>
-                <p className="text-muted-foreground text-sm">Ability to dedicate 6 to 10 hours per week to club activities</p>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <h4 className="font-inter font-semibold text-primary">Commitment</h4>
+                  <p className="text-muted-foreground text-sm">Ability to dedicate 6 to 10 hours per week to club activities</p>
+                </div>
               </div>
             </div>
           </div>
+
+          <Button
+            onClick={handleApplicationClick}
+            className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-4 text-lg transition-all duration-300 flex items-center justify-center space-x-2"
+          >
+            <span>Start Application</span>
+            <ExternalLink className="w-5 h-5" />
+          </Button>
+
+          <p className="text-muted-foreground text-xs font-inter opacity-80 text-center">
+            Opens in a new window • Microsoft Forms
+          </p>
         </div>
-
-        <Button
-          onClick={handleApplicationClick}
-          className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-4 text-lg transition-all duration-300 flex items-center justify-center space-x-2"
-        >
-          <span>Start Application</span>
-          <ExternalLink className="w-5 h-5" />
-        </Button>
-
-        <p className="text-muted-foreground text-xs font-inter opacity-80 text-center">
-          Opens in a new window • Microsoft Forms
-        </p>
       </div>
     </div>
   );
