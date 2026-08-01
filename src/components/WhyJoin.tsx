@@ -138,7 +138,7 @@ const WhyJoin = () => {
           </FadeUp>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 sm:gap-8 mt-14">
             {[
-              { value: '10+', label: 'Startups weve worked with' },
+              { value: '10+', label: 'Startups we've worked with' },
               { value: '7', label: 'Industries explored' },
               { value: '50+', label: 'Deliverables shipped' },
             ].map((s, i) => (
