@@ -30,7 +30,7 @@ const StudentsInAction = () => (
             Do real work for real startups.
           </h1>
           <p className="mt-5 text-white/90 text-lg md:text-xl max-w-2xl font-inter">
-            Consult for actual startups, train like a top firm, and build a serious network.
+            A selective fall cohort of Purdue students taking on live startup engagements.
           </p>
         </Reveal>
       </div>
