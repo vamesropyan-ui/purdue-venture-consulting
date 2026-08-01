@@ -242,8 +242,8 @@ const Projects = () => {
           </div>
         </div>
 
-        {/* Engagement Process — two horizontal diagrams */}
-        <div className="mb-20">
+        {/* Engagement Process — full-bleed light band */}
+        <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen mb-20 py-16 px-6" style={{ background: 'linear-gradient(180deg, hsl(214 44% 97%) 0%, hsl(216 40% 94%) 100%)' }}>
           <h3 className="font-space-grotesk font-bold text-2xl md:text-3xl text-primary text-center mb-12">
             How We Approach a Project
           </h3>
