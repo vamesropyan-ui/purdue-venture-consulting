@@ -105,35 +105,35 @@ const Application = () => {
   );
 };
 
-export const ApplicationExtras = () => (
-  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-    <div className="bg-secondary rounded-lg p-8 border border-primary/20">
-      <h3 className="font-space-grotesk font-semibold text-2xl text-primary mb-6">What We Look For</h3>
-      <ul className="space-y-4">
-        {whatWeLookFor.map((item, index) => (
-          <li key={index} className="flex items-start space-x-3">
-            <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-            <span className="text-foreground font-inter">{item}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
+export const WhatWeLookFor = () => (
+  <div className="bg-secondary rounded-lg p-8 border border-primary/20">
+    <h3 className="font-space-grotesk font-semibold text-2xl text-primary mb-6">What We Look For</h3>
+    <ul className="space-y-4">
+      {whatWeLookFor.map((item, index) => (
+        <li key={index} className="flex items-start space-x-3">
+          <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+          <span className="text-foreground font-inter">{item}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+);
 
-    <div className="bg-secondary rounded-lg p-8 border border-primary/20">
-      <h3 className="font-space-grotesk font-semibold text-2xl text-primary mb-6">FAQ</h3>
-      <Accordion type="single" collapsible className="w-full">
-        {faqs.map((faq, index) => (
-          <AccordionItem key={index} value={`item-${index}`} className="border-border">
-            <AccordionTrigger className="text-left text-foreground font-inter font-medium hover:text-accent hover:no-underline">
-              {faq.question}
-            </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground font-inter">
-              {faq.answer}
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
-    </div>
+export const Faq = () => (
+  <div className="bg-secondary rounded-lg p-8 border border-primary/20">
+    <h3 className="font-space-grotesk font-semibold text-2xl text-primary mb-6">FAQ</h3>
+    <Accordion type="single" collapsible className="w-full">
+      {faqs.map((faq, index) => (
+        <AccordionItem key={index} value={`item-${index}`} className="border-border">
+          <AccordionTrigger className="text-left text-foreground font-inter font-medium hover:text-accent hover:no-underline">
+            {faq.question}
+          </AccordionTrigger>
+          <AccordionContent className="text-muted-foreground font-inter">
+            {faq.answer}
+          </AccordionContent>
+        </AccordionItem>
+      ))}
+    </Accordion>
   </div>
 );
 
