@@ -222,13 +222,13 @@ const Projects = () => {
             <p className="text-accent font-inter font-semibold tracking-[0.25em] uppercase text-sm">Here are our other clients</p>
           </div>
 
-          {/* Revolving logo marquee (light strip on the navy) */}
-          <div className="pvc-marquee relative overflow-hidden max-w-5xl mx-auto rounded-2xl shadow-sm py-6" style={{ background: 'linear-gradient(180deg, hsl(214 46% 96%) 0%, hsl(216 42% 90%) 100%)' }}>
-            <div className="pvc-marquee-track flex gap-10 w-max">
+          {/* Revolving logo marquee — directly on the navy */}
+          <div className="pvc-marquee relative overflow-hidden max-w-6xl mx-auto py-2">
+            <div className="pvc-marquee-track flex items-center gap-12 w-max">
               {[...marqueeClients, ...marqueeClients].map((c, i) => (
-                <div key={`${c.name}-${i}`} className="group flex items-center gap-3 flex-shrink-0 px-2">
-                  <LogoSlot name={c.name} logo={c.logo} size={44} square imgClassName="grayscale group-hover:grayscale-0 transition duration-300" />
-                  <span className="font-space-grotesk font-semibold text-foreground whitespace-nowrap">{c.name}</span>
+                <div key={`${c.name}-${i}`} className="flex items-center gap-3 flex-shrink-0 px-2">
+                  <LogoSlot name={c.name} logo={c.logo} size={64} square />
+                  <span className="font-space-grotesk font-semibold text-slate-100 whitespace-nowrap">{c.name}</span>
                   {c.badge && (
                     <span className="text-[0.55rem] font-inter font-bold tracking-widest text-accent border border-accent/60 rounded-full px-2 py-0.5">
                       {c.badge}
@@ -237,8 +237,8 @@ const Projects = () => {
                 </div>
               ))}
             </div>
-            <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-24 z-10" style={{ background: 'linear-gradient(90deg, hsl(215 44% 93%), transparent)' }} />
-            <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-24 z-10" style={{ background: 'linear-gradient(270deg, hsl(215 44% 93%), transparent)' }} />
+            <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-24 z-10" style={{ background: 'linear-gradient(90deg, hsl(216 55% 13%), transparent)' }} />
+            <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-24 z-10" style={{ background: 'linear-gradient(270deg, hsl(215 58% 11%), transparent)' }} />
           </div>
         </div>
 
