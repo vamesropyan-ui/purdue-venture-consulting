@@ -176,9 +176,10 @@ const Projects = () => {
 
 
         {/* Featured projects + other clients — full-bleed dark navy band */}
-        <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen mb-20 py-12" style={{ background: 'linear-gradient(160deg, hsl(216 55% 14%) 0%, hsl(215 60% 10%) 100%)' }}>
-          <div className="max-w-5xl mx-auto px-6">
-            <div className="border border-primary/30 rounded-2xl overflow-hidden bg-secondary">
+        <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-12" style={{ background: 'radial-gradient(ellipse 70% 55% at 50% 0%, hsl(214 52% 24%) 0%, transparent 60%), linear-gradient(160deg, hsl(216 55% 14%) 0%, hsl(215 60% 10%) 100%)' }}>
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 opacity-[0.12]" style={{ backgroundImage: 'linear-gradient(hsl(210 45% 65%) 1px, transparent 1px), linear-gradient(90deg, hsl(210 45% 65%) 1px, transparent 1px)', backgroundSize: '44px 44px' }} />
+          <div className="max-w-5xl mx-auto px-6 relative z-10">
+            <div className="border border-primary/30 rounded-2xl overflow-hidden bg-secondary shadow-2xl" style={{ boxShadow: '0 35px 60px -15px rgba(0,0,0,0.55)' }}>
               <div className="grid grid-cols-1 md:grid-cols-2">
                 {quadrants.map((q, i) => {
                   const isRight = i % 2 === 1;
@@ -217,13 +218,13 @@ const Projects = () => {
           </div>
 
           {/* Other clients heading (on the navy) */}
-          <div className="max-w-5xl mx-auto px-6 text-center mt-14 mb-7">
+          <div className="max-w-5xl mx-auto px-6 text-center mt-14 mb-7 relative z-10">
             <div className="mx-auto mb-5 h-px w-24 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
             <p className="text-accent font-inter font-semibold tracking-[0.25em] uppercase text-sm">Here are our other clients</p>
           </div>
 
           {/* Revolving logo marquee — directly on the navy */}
-          <div className="pvc-marquee relative overflow-hidden max-w-6xl mx-auto py-2">
+          <div className="pvc-marquee relative overflow-hidden max-w-6xl mx-auto py-2 relative z-10">
             <div className="pvc-marquee-track flex items-center gap-12 w-max">
               {[...marqueeClients, ...marqueeClients].map((c, i) => (
                 <div key={`${c.name}-${i}`} className="flex items-center gap-3 flex-shrink-0 px-2">
