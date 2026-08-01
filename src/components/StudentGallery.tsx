@@ -16,10 +16,10 @@ const photos = [
 const loop = [...photos, ...photos];
 
 const StudentGallery = () => (
-  <section className="w-full py-16 md:py-20 bg-background overflow-hidden">
+  <section className="w-full py-10 md:py-12 bg-background overflow-hidden">
     <Reveal>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-        <div className="mb-10 md:mb-12 text-center">
+        <div className="mb-6 md:mb-8 text-center">
           <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent mb-2">Life at PVC</p>
           <h2 className="text-2xl md:text-3xl font-space-grotesk font-semibold text-foreground">Students in Action</h2>
         </div>
