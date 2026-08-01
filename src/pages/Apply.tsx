@@ -14,11 +14,11 @@ const Apply = () => (
       <div className="container mx-auto px-6">
         <Admissions />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mt-16 md:mt-20">
+          <Application />
           <div className="space-y-12">
-            <Application />
             <WhatWeLookFor />
+            <Faq />
           </div>
-          <Faq />
         </div>
       </div>
     </section>
