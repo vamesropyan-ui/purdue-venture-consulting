@@ -81,22 +81,21 @@ const WhyJoin = () => {
           </FadeUp>
           <FadeUp delay={0.08}>
             <h2 className="font-space-grotesk font-bold text-primary text-4xl md:text-6xl lg:text-[4.25rem] leading-[1.05] tracking-tight max-w-4xl">
-              You already know the theory.
+              Plenty of clubs do consulting.
               <br className="hidden md:block" />{' '}
-              <span className="text-accent">Here's where you use it.</span>
+              <span className="text-accent">We do it with startups.</span>
             </h2>
           </FadeUp>
           <FadeUp delay={0.2}>
             <p className="text-muted-foreground font-inter text-lg md:text-xl leading-relaxed max-w-2xl mt-10">
-              PVC is a student team at Purdue that consults for real startups. You'll spend the
-              semester on live problems with founders who are counting on your work, alongside people
-              who are just as curious as you are.
+              That's the difference. PVC works directly with founders who are building something new
+              right now, real companies making real decisions, not old case studies. You help startups
+              figure out what comes next.
             </p>
           </FadeUp>
           <FadeUp delay={0.3}>
             <p className="text-primary/80 font-inter text-base md:text-lg leading-relaxed max-w-2xl mt-5">
-              No consulting experience required. Just curiosity and the willingness to figure things
-              out.
+              No consulting experience required. Just curiosity and the urge to build.
             </p>
           </FadeUp>
         </div>
@@ -158,17 +157,18 @@ const WhyJoin = () => {
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <FadeUp>
             <h3 className="font-space-grotesk font-bold text-primary text-3xl md:text-5xl leading-[1.1] tracking-tight">
-              The people you do it with matter as much as the work.
+              You'll find your people here.
             </h3>
           </FadeUp>
           <FadeUp delay={0.12} className="space-y-5">
             <p className="font-inter text-muted-foreground text-lg leading-relaxed">
               PVC members come from engineering, business, econ, CS, and design. Different majors,
-              same energy: people who'd rather build something than wait for permission.
+              one thing in common: they're drawn to startups and would rather build something than
+              just talk about it.
             </p>
             <p className="font-inter text-muted-foreground text-lg leading-relaxed">
-              You'll leave with sharper judgment, work you're proud to talk about, and a group of
-              friends who push you.
+              You'll spend the semester with students who are as curious and driven as you are, and
+              leave with friends who push you.
             </p>
             <p className="font-space-grotesk font-semibold text-primary text-lg">
               That's the part people tell us they didn't expect.
