@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThumbsUp, Briefcase, Users, TrendingUp } from 'lucide-react';
+import { Rocket, Target, Users, Compass } from 'lucide-react';
 import Reveal from './Reveal';
 
 const HL: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -8,47 +8,44 @@ const HL: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 
 const items = [
   {
-    icon: ThumbsUp,
-    title: 'Real Startup Experience',
+    icon: Rocket,
+    title: 'Startups, not case studies.',
     body: (
       <>
-        From day one, our consultants work directly with <HL>real startups</HL>, not hypothetical
-        case studies. You take on live problems like market research, positioning, and go-to-market,
-        and turn them into recommendations the company can actually use. It's <HL>hands-on work</HL>{' '}
-        that builds judgment you can't get in a classroom.
+        Every project is a live engagement with a real startup. From <HL>market research to
+        go-to-market</HL>, you dig into problems that don't have an answer key and hand the founders
+        something they can actually use.
       </>
     ),
   },
   {
-    icon: Briefcase,
-    title: 'Training & Recruiting',
+    icon: Target,
+    title: 'You own the problem.',
     body: (
       <>
-        We prepare members for careers in consulting, venture, product, and startups through{' '}
-        <HL>case prep, frameworks, and mentorship</HL>. You'll build a portfolio of real work and
-        get connected to founders and alumni across the startup community.
+        No fetching coffee, no watching from the sidelines. On a small team you <HL>research it, form
+        a point of view, and deliver</HL>, the same way a real consulting team would.
       </>
     ),
   },
   {
     icon: Users,
-    title: 'A Community of Builders',
+    title: 'You find your people.',
     body: (
       <>
-        PVC is more than a club. Our members come from every major but share one thing: they'd
-        rather <HL>build something</HL> than just talk about it. You'll work alongside curious,
-        driven students and leave with friends who push you.
+        Engineers, econ majors, designers, business students, all in one room because they'd rather{' '}
+        <HL>build something than talk about it</HL>. The projects end. The friendships don't.
       </>
     ),
   },
   {
-    icon: TrendingUp,
-    title: 'Your Path Forward',
+    icon: Compass,
+    title: 'Try it before you commit.',
     body: (
       <>
-        Whether you're exploring consulting for the first time or sharpening your skills, PVC gives
-        you room to grow. You'll gain practical experience, sharper judgment, and the{' '}
-        <HL>confidence that comes from real impact</HL>, all before you graduate.
+        Curious about consulting, venture, or startups but not sure yet? PVC is a{' '}
+        <HL>low-risk way to try the work</HL>, sharpen your instincts, and figure out what actually
+        fits, before you graduate.
       </>
     ),
   },
@@ -59,7 +56,7 @@ const WhyUs = () => (
     <div className="container mx-auto px-6 max-w-6xl">
       <Reveal>
         <h2 className="font-space-grotesk font-bold text-4xl md:text-5xl text-primary text-center mb-14 md:mb-16">
-          Why <span className="text-accent">PVC?</span>
+          What it's <span className="text-accent">actually like</span>
         </h2>
       </Reveal>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-14">
