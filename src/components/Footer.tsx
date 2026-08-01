@@ -39,7 +39,7 @@ const Footer = () => {
             <div className="space-y-2 text-foreground font-inter">
               <p>Purdue University</p>
               <p>West Lafayette, IN 47907</p>
-              <p>info@purdueventureconsulting.com</p>
+              <p>vmesropy@purdue.edu</p>
             </div>
           </div>
         </div>
