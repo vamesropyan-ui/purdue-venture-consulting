@@ -274,7 +274,7 @@ const Projects = () => {
                   {structureNodes.map((n, i) => (
                     <React.Fragment key={n.title}>
                       <Reveal delay={i * 120} className="flex-1">
-                        <div className="border border-primary/30 rounded-lg p-5 bg-secondary/40 h-full text-center">
+                        <div className="border border-primary/30 rounded-lg p-4 bg-secondary/40 h-full text-center">
                           <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground font-space-grotesk font-bold text-xs flex items-center justify-center mx-auto mb-3">
                             {i + 1}
                           </div>
@@ -297,7 +297,7 @@ const Projects = () => {
 
           {/* Diagram 2 — Engagement Timeline */}
           <div className="max-w-6xl mx-auto">
-            <div className="text-xs font-inter font-semibold tracking-[0.25em] text-accent uppercase text-center mb-8">
+            <div className="text-xs font-inter font-semibold tracking-[0.25em] text-accent uppercase text-center mb-5">
               Engagement Timeline
             </div>
 
