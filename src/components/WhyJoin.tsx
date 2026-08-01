@@ -40,15 +40,25 @@ const WhyJoin = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        className="max-w-3xl md:ml-auto"
+        className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center"
       >
-        <div className="w-12 h-1 bg-accent mb-6" />
-        <p className="text-foreground font-inter text-lg md:text-xl leading-relaxed">
-          At Purdue Venture Consulting, we bring together students who are eager to challenge
-          themselves, think differently, and learn by solving real business problems. By partnering
-          with innovative startups, our members gain hands-on experience, develop practical skills,
-          and build the confidence that comes from making a real impact.
-        </p>
+        <div className="rounded-2xl overflow-hidden shadow-lg border border-border">
+          <img
+            src="/lovable-uploads/present_2.jpeg"
+            alt="Purdue Venture Consulting students presenting"
+            loading="lazy"
+            className="w-full h-full object-cover aspect-[4/3]"
+          />
+        </div>
+        <div>
+          <div className="w-12 h-1 bg-accent mb-6" />
+          <p className="text-foreground font-inter text-lg md:text-xl leading-relaxed">
+            At Purdue Venture Consulting, we bring together students who are eager to challenge
+            themselves, think differently, and learn by solving real business problems. By partnering
+            with innovative startups, our members gain hands-on experience, develop practical skills,
+            and build the confidence that comes from making a real impact.
+          </p>
+        </div>
       </motion.div>
     </div>
   </section>
