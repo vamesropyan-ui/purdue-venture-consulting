@@ -250,8 +250,8 @@ const Projects = () => {
           </h3>
 
           {/* Diagram 1 — Project Structure */}
-          <div className="max-w-6xl mx-auto mb-20">
-            <div className="text-xs font-inter font-semibold tracking-[0.25em] text-accent uppercase text-center mb-8">
+          <div className="max-w-6xl mx-auto mb-10">
+            <div className="text-xs font-inter font-semibold tracking-[0.25em] text-accent uppercase text-center mb-5">
               Project Structure
             </div>
 
@@ -264,7 +264,7 @@ const Projects = () => {
                       <div className="font-space-grotesk font-semibold text-primary text-sm">Faculty & Advisory</div>
                       <div className="text-muted-foreground text-xs font-inter">Senior guidance throughout</div>
                     </div>
-                    <div className="w-px h-8 bg-accent/60" />
+                    <div className="w-px h-5 bg-accent/60" />
                     <div className="w-0 h-0 border-l-4 border-l-transparent border-r-4 border-r-transparent border-t-[6px] border-t-accent/60 -mt-1" />
                   </div>
                 </Reveal>
