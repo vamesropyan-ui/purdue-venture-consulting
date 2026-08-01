@@ -176,40 +176,42 @@ const Projects = () => {
 
 
         {/* Featured quadrants */}
-        <div className="mb-20 max-w-6xl mx-auto border border-primary/30 rounded-2xl overflow-hidden bg-secondary/40">
-          <div className="grid grid-cols-1 md:grid-cols-2">
-            {quadrants.map((q, i) => {
-              const isRight = i % 2 === 1;
-              const isBottom = i >= 2;
-              return (
-                <div
-                  key={q.name}
-                  className={[
-                    'p-8 flex flex-col items-center text-center',
-                    !isRight ? 'md:border-r md:border-primary/30' : '',
-                    !isBottom ? 'border-b border-primary/30' : '',
-                    isBottom && i === 2 ? 'md:border-b-0' : '',
-                  ].join(' ')}
-                >
-                  <LogoSlot name={q.name} logo={q.logo} />
-                  {q.yc && (
-                    <div className="mt-3 text-[0.6rem] font-inter font-bold tracking-widest text-accent border border-accent/60 rounded-full px-3 py-1">
-                      Y COMBINATOR BACKED
+        <div className="mb-20 max-w-6xl mx-auto rounded-3xl p-4 md:p-8" style={{ background: 'linear-gradient(160deg, hsl(216 55% 14%) 0%, hsl(215 60% 10%) 100%)' }}>
+          <div className="border border-primary/30 rounded-2xl overflow-hidden bg-secondary">
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              {quadrants.map((q, i) => {
+                const isRight = i % 2 === 1;
+                const isBottom = i >= 2;
+                return (
+                  <div
+                    key={q.name}
+                    className={[
+                      'p-8 flex flex-col items-center text-center',
+                      !isRight ? 'md:border-r md:border-primary/30' : '',
+                      !isBottom ? 'border-b border-primary/30' : '',
+                      isBottom && i === 2 ? 'md:border-b-0' : '',
+                    ].join(' ')}
+                  >
+                    <LogoSlot name={q.name} logo={q.logo} />
+                    {q.yc && (
+                      <div className="mt-3 text-[0.6rem] font-inter font-bold tracking-widest text-accent border border-accent/60 rounded-full px-3 py-1">
+                        Y COMBINATOR BACKED
+                      </div>
+                    )}
+                    <h3 className="font-space-grotesk font-bold text-2xl text-primary mt-4">{q.name}</h3>
+                    <div className="text-accent font-inter text-sm mt-1 mb-3">{q.category}</div>
+                    <p className="text-foreground font-inter text-sm leading-relaxed max-w-sm">{q.sentence}</p>
+                    <div className="flex flex-wrap gap-2 justify-center mt-4">
+                      {q.tags.map((t) => (
+                        <span key={t} className="text-xs font-inter text-muted-foreground border border-primary/30 rounded-full px-3 py-1">
+                          {t}
+                        </span>
+                      ))}
                     </div>
-                  )}
-                  <h3 className="font-space-grotesk font-bold text-2xl text-primary mt-4">{q.name}</h3>
-                  <div className="text-accent font-inter text-sm mt-1 mb-3">{q.category}</div>
-                  <p className="text-foreground font-inter text-sm leading-relaxed max-w-sm">{q.sentence}</p>
-                  <div className="flex flex-wrap gap-2 justify-center mt-4">
-                    {q.tags.map((t) => (
-                      <span key={t} className="text-xs font-inter text-muted-foreground border border-primary/30 rounded-full px-3 py-1">
-                        {t}
-                      </span>
-                    ))}
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
 
