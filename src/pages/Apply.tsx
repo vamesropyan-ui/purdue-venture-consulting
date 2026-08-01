@@ -1,5 +1,6 @@
 import React from 'react';
 import WhyJoin from '@/components/WhyJoin';
+import WhyUs from '@/components/WhyUs';
 import StudentsInAction from '@/components/StudentsInAction';
 import Admissions from '@/components/Admissions';
 import Application, { ApplicationExtras } from '@/components/Application';
