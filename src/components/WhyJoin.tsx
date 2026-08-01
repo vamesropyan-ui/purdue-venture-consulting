@@ -89,7 +89,7 @@ const WhyJoin = () => {
           <FadeUp delay={0.2}>
             <p className="text-muted-foreground font-inter text-lg md:text-xl leading-relaxed max-w-2xl mt-10">
               That's the difference. PVC works directly with founders who are building something new
-              right now — real companies making real decisions, not old case studies. You help startups
+              right now, real companies making real decisions, not old case studies. You help startups
               figure out what comes next.
             </p>
           </FadeUp>
