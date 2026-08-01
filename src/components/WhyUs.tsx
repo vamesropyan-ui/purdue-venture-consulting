@@ -2,9 +2,7 @@ import React from 'react';
 import { Rocket, Target, Users, Compass } from 'lucide-react';
 import Reveal from './Reveal';
 
-const HL: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <span className="bg-accent/30 text-primary rounded-[3px] px-1 box-decoration-clone">{children}</span>
-);
+const HL: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
 
 const items = [
   {

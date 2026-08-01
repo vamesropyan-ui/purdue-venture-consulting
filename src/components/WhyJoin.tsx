@@ -11,6 +11,8 @@ const photos = [
   { src: '/lovable-uploads/f0c899db-a668-412c-80f6-b18377d4e717.png', alt: 'Elisyan Wealth Ventures team presenting' },
   { src: '/lovable-uploads/present_2.jpeg', alt: 'PVC team presenting to audience' },
   { src: '/lovable-uploads/Kova_present.jpeg', alt: 'KOVA final presentation' },
+  { src: '/lovable-uploads/gaus_team_2026.png', alt: 'Gaus project team' },
+  { src: '/lovable-uploads/zuri_team_2026.png', alt: 'Zuri Technologies project team' },
 ];
 
 const PER_PAGE = 4;
