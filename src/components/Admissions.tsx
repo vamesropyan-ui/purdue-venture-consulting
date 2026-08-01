@@ -52,31 +52,23 @@ const Admissions = () => {
         </div>
       </div>
 
-      <div className="space-y-8">
-        {steps.map((step, index) => (
-          <div key={index} className="relative">
-            {index < steps.length - 1 && (
-              <div className="absolute left-6 top-14 w-px h-16 bg-gradient-to-b from-primary to-primary/20"></div>
-            )}
-            <div className="flex items-start gap-5">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-space-grotesk font-bold text-base shadow-lg">
-                  {step.step}
-                </div>
+      <div className="relative">
+        <div className="hidden sm:block absolute left-[16.66%] right-[16.66%] top-6 h-px bg-primary/30"></div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-4">
+          {steps.map((step, index) => (
+            <div key={index} className="relative flex flex-col items-center text-center">
+              <div className="w-12 h-12 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-space-grotesk font-bold text-base shadow-lg ring-4 ring-background z-10 mb-4">
+                {step.step}
               </div>
-              <div className="flex-1 min-w-0">
-                <div className="bg-secondary rounded-lg p-5 shadow-lg border border-primary/20">
-                  <h3 className="font-space-grotesk font-semibold text-lg text-primary mb-2">
-                    {step.title}
-                  </h3>
-                  <p className="text-foreground font-inter text-sm leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
-              </div>
+              <h3 className="font-space-grotesk font-semibold text-base text-primary mb-2">
+                {step.title}
+              </h3>
+              <p className="text-muted-foreground font-inter text-sm leading-relaxed">
+                {step.description}
+              </p>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
       <div className="mt-10 bg-secondary p-6 rounded-lg shadow-lg border border-primary/20">
