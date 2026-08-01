@@ -2,38 +2,55 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const WhyJoin = () => (
-  <section className="relative overflow-hidden py-20 md:py-24 bg-background">
+  <section
+    className="relative overflow-hidden py-20 md:py-24"
+    style={{ background: 'linear-gradient(180deg, hsl(214 42% 96%) 0%, hsl(215 38% 93%) 100%)' }}
+  >
+    <div aria-hidden="true" className="pointer-events-none absolute -top-24 left-[8%] w-[440px] h-[440px] rounded-full blur-3xl opacity-[0.14]" style={{ background: 'hsl(216 55% 30%)' }} />
+    <div aria-hidden="true" className="pointer-events-none absolute -bottom-28 right-[6%] w-[480px] h-[480px] rounded-full blur-3xl opacity-[0.12]" style={{ background: 'hsl(216 55% 30%)' }} />
+
     <svg aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full" style={{ opacity: 0.5 }} viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice">
+      <g stroke="#13294b" strokeWidth="1" strokeOpacity="0.35">
+        <line x1="80" y1="70" x2="240" y2="140" />
+        <line x1="240" y1="140" x2="150" y2="300" />
+        <line x1="240" y1="140" x2="380" y2="90" />
+        <line x1="380" y1="90" x2="520" y2="180" />
+        <line x1="330" y1="260" x2="520" y2="180" />
+        <line x1="150" y1="300" x2="330" y2="260" />
+        <line x1="520" y1="180" x2="470" y2="340" />
+        <line x1="520" y1="180" x2="650" y2="90" />
+        <line x1="650" y1="90" x2="840" y2="160" />
+        <line x1="700" y1="280" x2="840" y2="160" />
+        <line x1="470" y1="340" x2="700" y2="280" />
+        <line x1="840" y1="160" x2="960" y2="90" />
+        <line x1="840" y1="160" x2="1080" y2="220" />
+        <line x1="960" y1="90" x2="1150" y2="110" />
+        <line x1="920" y1="300" x2="1080" y2="220" />
+        <line x1="1080" y1="220" x2="1150" y2="110" />
+        <line x1="520" y1="180" x2="600" y2="250" />
+        <line x1="600" y1="250" x2="700" y2="280" />
+      </g>
+      <g fill="#13294b">
+        <circle cx="80" cy="70" r="4" />
+        <circle cx="150" cy="300" r="4" />
+        <circle cx="380" cy="90" r="4" />
+        <circle cx="330" cy="260" r="4" />
+        <circle cx="470" cy="340" r="4" />
+        <circle cx="650" cy="90" r="4" />
+        <circle cx="700" cy="280" r="4" />
+        <circle cx="960" cy="90" r="4" />
+        <circle cx="920" cy="300" r="4" />
+        <circle cx="1150" cy="110" r="4" />
+        <circle cx="600" cy="250" r="3.5" />
+      </g>
       <g fill="#c9a24a">
-        <circle cx="70" cy="80" r="5" />
-        <circle cx="230" cy="300" r="4" />
-        <circle cx="430" cy="120" r="5" />
-        <circle cx="160" cy="210" r="4" />
-        <circle cx="350" cy="350" r="4" />
-        <circle cx="600" cy="90" r="4" />
-      </g>
-      <g fill="#13294b" fillOpacity="0.55">
-        <circle cx="120" cy="140" r="4" />
-        <circle cx="300" cy="240" r="4" />
-        <circle cx="95" cy="330" r="4" />
-        <circle cx="520" cy="300" r="4" />
-        <circle cx="700" cy="160" r="3.5" />
-      </g>
-      <g stroke="#c9a24a" strokeWidth="2.5" strokeLinecap="round">
-        <path d="M270 70 v14 M263 77 h14" />
-        <path d="M470 330 v14 M463 337 h14" />
-        <path d="M560 190 v12 M554 196 h12" />
-      </g>
-      <g stroke="#13294b" strokeOpacity="0.5" strokeWidth="2.5" strokeLinecap="round">
-        <path d="M190 360 v12 M184 366 h12" />
-        <path d="M640 60 v12 M634 66 h12" />
-      </g>
-      <g fill="#c9a24a">
-        <path d="M340 55 l2.5 7 7 2.5 -7 2.5 -2.5 7 -2.5 -7 -7 -2.5 7 -2.5z" />
-        <path d="M150 375 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2z" />
-        <path d="M500 235 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2z" />
+        <circle cx="240" cy="140" r="5"><animate attributeName="r" values="5;6.5;5" dur="3.5s" repeatCount="indefinite" /></circle>
+        <circle cx="520" cy="180" r="5"><animate attributeName="r" values="5;6.5;5" dur="4s" repeatCount="indefinite" /></circle>
+        <circle cx="840" cy="160" r="5"><animate attributeName="r" values="5;6.5;5" dur="3s" repeatCount="indefinite" /></circle>
+        <circle cx="1080" cy="220" r="5" />
       </g>
     </svg>
+
     <div className="container mx-auto px-6 max-w-6xl relative z-10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
