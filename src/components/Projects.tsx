@@ -50,6 +50,7 @@ const quadrants: {
   {
     name: 'Astor',
     logo: astorLogo.url,
+    yc: true,
     category: 'AI Fintech',
     sentence:
       "Competitive and go-to-market analysis, benchmarking model accuracy against real market data using Porter's Five Forces.",
