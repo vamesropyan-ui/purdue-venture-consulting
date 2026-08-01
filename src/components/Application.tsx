@@ -7,7 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { ExternalLink, CheckCircle, Clock, Users, Trophy } from 'lucide-react';
+import { ExternalLink, CheckCircle } from 'lucide-react';
 
 const whatWeLookFor = [
   "Sharp, structured thinking over polished résumés",
@@ -48,14 +48,15 @@ const Application = () => {
           Ready to <span className="text-accent">Apply?</span>
         </h2>
         <div className="w-16 h-1 bg-primary mb-5"></div>
+      </div>
+
+      <div className="bg-secondary rounded-lg p-8 border border-primary/20 shadow-lg space-y-6">
         <p className="text-foreground text-base font-inter">
           We select one cohort each fall. If you want to do real strategy work for venture-backed startups, and be held to a professional standard while doing it, we want to hear from you.
         </p>
-      </div>
 
-      <div className="space-y-8">
         <div>
-          <h3 className="font-space-grotesk font-semibold text-2xl text-primary mb-4">Application Requirements</h3>
+          <h3 className="font-space-grotesk font-semibold text-xl text-primary mb-4">Application Requirements</h3>
           <div className="space-y-4">
             <div className="flex items-start space-x-3">
               <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
@@ -88,55 +89,17 @@ const Application = () => {
           </div>
         </div>
 
-        <div className="bg-secondary rounded-lg p-8 flex flex-col justify-center items-center text-center space-y-6 border border-primary/20">
-          <div className="w-40 h-24 flex items-center justify-center mb-4">
-            <img
-              src="/lovable-uploads/2912c4e7-9d2d-47db-95cc-d511a5ca659d.png"
-              alt="Purdue Venture Consulting Logo"
-              className="w-full h-full object-cover"
-            />
-          </div>
+        <Button
+          onClick={handleApplicationClick}
+          className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-4 text-lg transition-all duration-300 flex items-center justify-center space-x-2"
+        >
+          <span>Start Application</span>
+          <ExternalLink className="w-5 h-5" />
+        </Button>
 
-          <h3 className="font-space-grotesk font-bold text-2xl text-primary">
-            Official Application Portal
-          </h3>
-
-          <p className="text-muted-foreground font-inter text-sm leading-relaxed">
-            Complete your application through our secure online portal. The form includes sections for personal information, academic background, leadership experience, and essay responses.
-          </p>
-
-          <div className="grid grid-cols-2 gap-4 w-full my-2">
-            <div className="flex flex-col items-center space-y-2">
-              <CheckCircle className="w-6 h-6 text-accent" />
-              <span className="text-muted-foreground text-xs font-inter">Secure</span>
-            </div>
-            <div className="flex flex-col items-center space-y-2">
-              <Clock className="w-6 h-6 text-accent" />
-              <span className="text-muted-foreground text-xs font-inter">15 min</span>
-            </div>
-            <div className="flex flex-col items-center space-y-2">
-              <Users className="w-6 h-6 text-accent" />
-              <span className="text-muted-foreground text-xs font-inter">Inclusive</span>
-            </div>
-            <div className="flex flex-col items-center space-y-2">
-              <Trophy className="w-6 h-6 text-accent" />
-              <span className="text-muted-foreground text-xs font-inter">Excellence</span>
-            </div>
-          </div>
-
-          <Button
-            onClick={handleApplicationClick}
-            className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-4 text-lg transition-all duration-300 flex items-center justify-center space-x-2"
-          >
-            <span>Start Application</span>
-            <ExternalLink className="w-5 h-5" />
-          </Button>
-
-          <p className="text-muted-foreground text-xs font-inter opacity-80">
-            Opens in a new window • Microsoft Forms
-          </p>
-        </div>
-
+        <p className="text-muted-foreground text-xs font-inter opacity-80 text-center">
+          Opens in a new window • Microsoft Forms
+        </p>
       </div>
     </div>
   );
