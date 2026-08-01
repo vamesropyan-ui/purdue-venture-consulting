@@ -34,7 +34,7 @@ const fullBleed = 'relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen';
 const doing = [
   {
     icon: Rocket,
-    title: 'Work with founders',
+    title: 'Work with real startups',
     body: "You're on a small team supporting a real startup, including a Y Combinator backed company, for the semester.",
   },
   {
@@ -45,7 +45,7 @@ const doing = [
   {
     icon: LineChart,
     title: 'Make the call',
-    body: "You research it, form a point of view, and present it to the people who'll actually act on it.",
+    body: 'You research it, form a point of view, and turn it into a recommendation the startup can use.',
   },
   {
     icon: Users,
@@ -88,9 +88,9 @@ const WhyJoin = () => {
           </FadeUp>
           <FadeUp delay={0.2}>
             <p className="text-muted-foreground font-inter text-lg md:text-xl leading-relaxed max-w-2xl mt-10">
-              That's the difference. PVC works directly with founders who are building something new
-              right now, real companies making real decisions, not old case studies. You help startups
-              figure out what comes next.
+              That's the difference. PVC works with startups that are building something new right
+              now, real companies making real decisions, not old case studies. You help them figure
+              out what comes next.
             </p>
           </FadeUp>
           <FadeUp delay={0.3}>
@@ -171,7 +171,7 @@ const WhyJoin = () => {
               leave with friends who push you.
             </p>
             <p className="font-space-grotesk font-semibold text-primary text-lg">
-              That's the part people tell us they didn't expect.
+              That community is the part most people don't expect.
             </p>
           </FadeUp>
         </div>
