@@ -91,22 +91,17 @@ const milestones = [
 // Tune this single value to make logos fill their square slots.
 const LOGO_ZOOM = 1.2;
 
-const LogoSlot: React.FC<{ name: string; logo: string | null; size?: number }> = ({ name, logo, size = 64 }) => (
+const LogoSlot: React.FC<{ name: string; logo: string | null; size?: number; square?: boolean; imgClassName?: string }> = ({ name, logo, size = 64, square = false, imgClassName = '' }) => (
   <div
-    className="flex items-center justify-center rounded-lg bg-white border border-primary/30 overflow-hidden flex-shrink-0"
+    className={`flex items-center justify-center ${square ? 'rounded-none' : 'rounded-lg'} bg-white border border-primary/30 overflow-hidden flex-shrink-0`}
     style={{ width: size, height: size }}
   >
     {logo ? (
       <img
         src={logo}
         alt={`${name} logo`}
-        className="w-full h-full"
-        style={{
-          objectFit: 'cover',
-          objectPosition: 'center',
-          transform: `scale(${LOGO_ZOOM})`,
-          transformOrigin: 'center',
-        }}
+        className={`w-full h-full ${imgClassName}`}
+        style={{ objectFit: 'cover', objectPosition: 'center', transform: `scale(${LOGO_ZOOM})`, transformOrigin: 'center' }}
       />
     ) : (
       <span className="font-space-grotesk font-bold text-accent" style={{ fontSize: size * 0.4 }}>
