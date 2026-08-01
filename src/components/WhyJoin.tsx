@@ -36,18 +36,18 @@ const stats = [
 const blocks = [
   {
     num: '01',
-    title: 'The work is real.',
-    body: 'You consult for actual startups, including a Y Combinator company, not case studies. When you present, a founder is listening.',
+    title: 'Real client work.',
+    body: "You'll consult for actual startups, including a Y Combinator backed company, not practice cases.",
   },
   {
     num: '02',
-    title: 'The standard is the firm, not the club.',
-    body: 'We prep cases, build frameworks, and mentor to the bar set by top consulting and venture firms. We train like the places we send people.',
+    title: 'Real training.',
+    body: 'We prep cases, teach frameworks, and mentor you toward careers in consulting, venture, and startups.',
   },
   {
     num: '03',
-    title: 'The network compounds.',
-    body: "Your teammates today become the founders, investors, and operators you'll build with tomorrow.",
+    title: 'A lasting network.',
+    body: "You'll build relationships with founders, investors, and driven students across the startup community.",
   },
 ];
 
@@ -60,7 +60,7 @@ const WhyJoin = () => {
 
   return (
     <section className="overflow-hidden">
-      {/* 1 — Opening statement */}
+      {/* 1 - Opening statement */}
       <div className={`${fullBleed} bg-background py-24`}>
         <div className="max-w-5xl mx-auto px-6">
           <FadeUp>
@@ -70,30 +70,30 @@ const WhyJoin = () => {
           </FadeUp>
           <FadeUp delay={0.1}>
             <h2 className="font-space-grotesk font-bold text-primary text-4xl md:text-6xl lg:text-7xl leading-[1.02] tracking-tight max-w-4xl">
-              Most students wait until graduation to do work that matters.
+              Consulting experience,
             </h2>
           </FadeUp>
           <FadeUp delay={0.35}>
             <p className="font-space-grotesk font-bold text-accent text-4xl md:text-6xl lg:text-7xl leading-[1.02] tracking-tight mt-2">
-              Ours don't.
+              while you're still in school.
             </p>
           </FadeUp>
           <FadeUp delay={0.5}>
             <p className="text-muted-foreground font-inter text-lg md:text-xl leading-relaxed max-w-2xl mt-10">
-              Purdue Venture Consulting is a team of students taking on live engagements for
-              venture-backed startups. Real clients. Real deadlines. Real decisions that ship. If
-              you're looking for a club, this isn't it.
+              We're a team of Purdue students taking on real projects for startups, from market
+              research to go-to-market strategy. You learn by doing the work, with training and
+              mentorship along the way.
             </p>
           </FadeUp>
         </div>
       </div>
 
-      {/* 2 — Stats */}
+      {/* 2 - Stats */}
       <div className={`${fullBleed} py-24`} style={{ background: NAVY_BAND }}>
         <div className="max-w-5xl mx-auto px-6">
           <FadeUp>
             <p className="text-accent font-inter font-semibold tracking-[0.28em] uppercase text-xs mb-14 text-center">
-              The work speaks for itself.
+              What we've done so far.
             </p>
           </FadeUp>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-14 sm:gap-8">
@@ -109,25 +109,24 @@ const WhyJoin = () => {
         </div>
       </div>
 
-      {/* 3 — Editorial outcome */}
+      {/* 3 - Editorial outcome */}
       <div className={`${fullBleed} bg-background py-24`}>
         <div className="max-w-5xl mx-auto px-6">
           <FadeUp>
             <p className="font-space-grotesk font-bold text-primary text-3xl md:text-5xl leading-[1.1] tracking-tight max-w-3xl">
-              Before most students finish sophomore year, our consultants have already presented
-              recommendations to startup founders.
+              Our consultants work directly with startup founders, presenting real recommendations,
+              not hypothetical case studies.
             </p>
           </FadeUp>
           <FadeUp delay={0.15}>
             <p className="text-muted-foreground font-inter text-lg leading-relaxed max-w-2xl mt-8">
-              You won't practice on hypothetical cases. You'll solve problems that decide where a
-              company goes next.
+              You'll work on problems that actually matter to the companies we partner with.
             </p>
           </FadeUp>
         </div>
       </div>
 
-      {/* 4 — Three premium blocks */}
+      {/* 4 - Three premium blocks */}
       <div className={`${fullBleed} py-24`} style={{ background: NAVY_BAND }}>
         <div className="max-w-5xl mx-auto px-6 space-y-16">
           {blocks.map((b, i) => (
@@ -150,12 +149,12 @@ const WhyJoin = () => {
         </div>
       </div>
 
-      {/* 5 — Pull quote */}
+      {/* 5 - Pull quote */}
       <div className={`${fullBleed} bg-background py-24`}>
         <div className="max-w-4xl mx-auto px-6 text-center">
           <FadeUp>
             <blockquote className="font-space-grotesk italic font-medium text-primary text-3xl md:text-5xl leading-[1.15] tracking-tight">
-              "We didn't start a club. We started a firm that happens to be run by students."
+              "We built this for students who want to do real work and be held to a real standard."
             </blockquote>
           </FadeUp>
           <FadeUp delay={0.15}>
@@ -164,12 +163,12 @@ const WhyJoin = () => {
         </div>
       </div>
 
-      {/* 6 — CTA */}
+      {/* 6 - CTA */}
       <div className={`${fullBleed} py-24`} style={{ background: NAVY_BAND }}>
         <div className="max-w-4xl mx-auto px-6 text-center">
           <FadeUp>
             <h2 className="font-space-grotesk font-bold text-white text-4xl md:text-6xl tracking-tight leading-tight">
-              Ready to do real work?
+              Interested in joining?
             </h2>
           </FadeUp>
           <FadeUp delay={0.12}>
