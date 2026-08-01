@@ -1,5 +1,5 @@
 import React from 'react';
-import { CalendarDays, ArrowRight } from 'lucide-react';
+import { CalendarDays } from 'lucide-react';
 
 const Admissions = () => {
   const steps = [
@@ -32,22 +32,25 @@ const Admissions = () => {
         </p>
       </div>
 
-      {/* Date Banner */}
-      <div className="mb-10 bg-secondary rounded-2xl p-5 md:p-6 border border-primary/20 shadow-lg">
-        <div className="flex items-center space-x-2 text-accent mb-4">
-          <CalendarDays className="w-5 h-5" />
-          <span className="font-space-grotesk font-semibold text-xs uppercase tracking-wider">Fall Cohort Timeline</span>
+      {/* Fall Cohort Timeline */}
+      <div className="mb-12 max-w-lg mx-auto">
+        <div className="flex items-center justify-center gap-2 text-accent mb-8">
+          <CalendarDays className="w-4 h-4" />
+          <span className="font-space-grotesk font-semibold text-xs uppercase tracking-[0.25em]">Fall Cohort Timeline</span>
         </div>
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="text-center">
-            <div className="text-2xl md:text-3xl font-space-grotesk font-bold text-primary mb-1">Aug 17</div>
-            <div className="text-muted-foreground font-inter text-sm">Applications Open</div>
-          </div>
-          <ArrowRight className="hidden sm:block w-5 h-5 text-accent shrink-0" />
-          <ArrowRight className="sm:hidden w-5 h-5 text-accent rotate-90" />
-          <div className="text-center">
-            <div className="text-2xl md:text-3xl font-space-grotesk font-bold text-primary mb-1">Sept 4</div>
-            <div className="text-muted-foreground font-inter text-sm">Applications Close</div>
+        <div className="relative">
+          <div className="absolute top-[7px] left-1/4 right-1/4 h-0.5 bg-gradient-to-r from-accent to-accent/60"></div>
+          <div className="relative grid grid-cols-2">
+            <div className="flex flex-col items-center text-center">
+              <div className="w-4 h-4 rounded-full bg-accent"></div>
+              <div className="mt-5 font-space-grotesk font-bold text-2xl md:text-3xl text-primary">Aug 17</div>
+              <div className="text-muted-foreground font-inter text-sm mt-1">Applications Open</div>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <div className="w-4 h-4 rounded-full bg-accent"></div>
+              <div className="mt-5 font-space-grotesk font-bold text-2xl md:text-3xl text-primary">Sept 4</div>
+              <div className="text-muted-foreground font-inter text-sm mt-1">Applications Close</div>
+            </div>
           </div>
         </div>
       </div>
