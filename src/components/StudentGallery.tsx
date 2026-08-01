@@ -10,6 +10,8 @@ const photos = [
   { src: '/lovable-uploads/kova_present_2.jpeg', alt: 'KOVA client introduction', cls: '' },
   { src: '/lovable-uploads/f0c899db-a668-412c-80f6-b18377d4e717.png', alt: 'Elisyan Wealth Ventures team presenting', cls: '' },
   { src: '/lovable-uploads/Kova_present.jpeg', alt: 'KOVA final presentation', cls: 'col-span-2' },
+  { src: '/lovable-uploads/rounds_team_2026.png', alt: 'PVC x Rounds consulting project team, Spring 2026', cls: 'col-span-2 row-span-2' },
+  { src: '/lovable-uploads/polistock_team_2026.png', alt: 'Polistock mid-semester presentation team, Spring 2026', cls: 'col-span-2 row-span-2' },
 ];
 
 const StudentGallery = () => (
