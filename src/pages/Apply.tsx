@@ -12,8 +12,8 @@ const Apply = () => (
     <WhyUs />
     <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          <Admissions />
+        <Admissions />
+        <div className="max-w-2xl mx-auto mt-16 md:mt-20">
           <Application />
         </div>
         <div className="mt-20">
