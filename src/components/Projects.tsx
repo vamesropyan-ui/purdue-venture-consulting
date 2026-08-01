@@ -175,42 +175,44 @@ const Projects = () => {
         </div>
 
 
-        {/* Featured quadrants */}
-        <div className="mb-20 max-w-6xl mx-auto rounded-3xl p-4 md:p-8" style={{ background: 'linear-gradient(160deg, hsl(216 55% 14%) 0%, hsl(215 60% 10%) 100%)' }}>
-          <div className="border border-primary/30 rounded-2xl overflow-hidden bg-secondary">
-            <div className="grid grid-cols-1 md:grid-cols-2">
-              {quadrants.map((q, i) => {
-                const isRight = i % 2 === 1;
-                const isBottom = i >= 2;
-                return (
-                  <div
-                    key={q.name}
-                    className={[
-                      'p-8 flex flex-col items-center text-center',
-                      !isRight ? 'md:border-r md:border-primary/30' : '',
-                      !isBottom ? 'border-b border-primary/30' : '',
-                      isBottom && i === 2 ? 'md:border-b-0' : '',
-                    ].join(' ')}
-                  >
-                    <LogoSlot name={q.name} logo={q.logo} />
-                    {q.yc && (
-                      <div className="mt-3 text-[0.6rem] font-inter font-bold tracking-widest text-accent border border-accent/60 rounded-full px-3 py-1">
-                        Y COMBINATOR BACKED
+        {/* Featured quadrants — full-bleed dark navy band */}
+        <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen mb-20 py-10" style={{ background: 'linear-gradient(160deg, hsl(216 55% 14%) 0%, hsl(215 60% 10%) 100%)' }}>
+          <div className="max-w-5xl mx-auto px-6">
+            <div className="border border-primary/30 rounded-2xl overflow-hidden bg-secondary">
+              <div className="grid grid-cols-1 md:grid-cols-2">
+                {quadrants.map((q, i) => {
+                  const isRight = i % 2 === 1;
+                  const isBottom = i >= 2;
+                  return (
+                    <div
+                      key={q.name}
+                      className={[
+                        'p-5 flex flex-col items-center text-center',
+                        !isRight ? 'md:border-r md:border-primary/30' : '',
+                        !isBottom ? 'border-b border-primary/30' : '',
+                        isBottom && i === 2 ? 'md:border-b-0' : '',
+                      ].join(' ')}
+                    >
+                      <LogoSlot name={q.name} logo={q.logo} size={44} />
+                      {q.yc && (
+                        <div className="mt-2 text-[0.55rem] font-inter font-bold tracking-widest text-accent border border-accent/60 rounded-full px-2.5 py-0.5">
+                          Y COMBINATOR BACKED
+                        </div>
+                      )}
+                      <h3 className="font-space-grotesk font-bold text-lg text-primary mt-2">{q.name}</h3>
+                      <div className="text-accent font-inter text-xs mt-0.5 mb-2">{q.category}</div>
+                      <p className="text-foreground font-inter text-xs leading-relaxed max-w-sm">{q.sentence}</p>
+                      <div className="flex flex-wrap gap-2 justify-center mt-3">
+                        {q.tags.map((t) => (
+                          <span key={t} className="text-[0.7rem] font-inter text-muted-foreground border border-primary/30 rounded-full px-2.5 py-0.5">
+                            {t}
+                          </span>
+                        ))}
                       </div>
-                    )}
-                    <h3 className="font-space-grotesk font-bold text-2xl text-primary mt-4">{q.name}</h3>
-                    <div className="text-accent font-inter text-sm mt-1 mb-3">{q.category}</div>
-                    <p className="text-foreground font-inter text-sm leading-relaxed max-w-sm">{q.sentence}</p>
-                    <div className="flex flex-wrap gap-2 justify-center mt-4">
-                      {q.tags.map((t) => (
-                        <span key={t} className="text-xs font-inter text-muted-foreground border border-primary/30 rounded-full px-3 py-1">
-                          {t}
-                        </span>
-                      ))}
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
