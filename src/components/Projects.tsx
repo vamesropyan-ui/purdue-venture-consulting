@@ -244,14 +244,14 @@ const Projects = () => {
         </div>
 
         {/* Engagement Process — full-bleed light band */}
-        <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen mb-20 py-16 px-6" style={{ background: 'linear-gradient(180deg, hsl(214 44% 97%) 0%, hsl(216 40% 94%) 100%)' }}>
-          <h3 className="font-space-grotesk font-bold text-2xl md:text-3xl text-primary text-center mb-12">
+        <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen mb-20 py-8 px-6" style={{ background: 'linear-gradient(180deg, hsl(214 44% 97%) 0%, hsl(216 40% 94%) 100%)' }}>
+          <h3 className="font-space-grotesk font-bold text-2xl md:text-3xl text-primary text-center mb-6">
             How We Approach a Project
           </h3>
 
           {/* Diagram 1 — Project Structure */}
-          <div className="max-w-6xl mx-auto mb-20">
-            <div className="text-xs font-inter font-semibold tracking-[0.25em] text-accent uppercase text-center mb-8">
+          <div className="max-w-6xl mx-auto mb-10">
+            <div className="text-xs font-inter font-semibold tracking-[0.25em] text-accent uppercase text-center mb-5">
               Project Structure
             </div>
 
@@ -264,7 +264,7 @@ const Projects = () => {
                       <div className="font-space-grotesk font-semibold text-primary text-sm">Faculty & Advisory</div>
                       <div className="text-muted-foreground text-xs font-inter">Senior guidance throughout</div>
                     </div>
-                    <div className="w-px h-8 bg-accent/60" />
+                    <div className="w-px h-5 bg-accent/60" />
                     <div className="w-0 h-0 border-l-4 border-l-transparent border-r-4 border-r-transparent border-t-[6px] border-t-accent/60 -mt-1" />
                   </div>
                 </Reveal>
@@ -274,7 +274,7 @@ const Projects = () => {
                   {structureNodes.map((n, i) => (
                     <React.Fragment key={n.title}>
                       <Reveal delay={i * 120} className="flex-1">
-                        <div className="border border-primary/30 rounded-lg p-5 bg-secondary/40 h-full text-center">
+                        <div className="border border-primary/30 rounded-lg p-4 bg-secondary/40 h-full text-center">
                           <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground font-space-grotesk font-bold text-xs flex items-center justify-center mx-auto mb-3">
                             {i + 1}
                           </div>
@@ -297,7 +297,7 @@ const Projects = () => {
 
           {/* Diagram 2 — Engagement Timeline */}
           <div className="max-w-6xl mx-auto">
-            <div className="text-xs font-inter font-semibold tracking-[0.25em] text-accent uppercase text-center mb-8">
+            <div className="text-xs font-inter font-semibold tracking-[0.25em] text-accent uppercase text-center mb-5">
               Engagement Timeline
             </div>
 
