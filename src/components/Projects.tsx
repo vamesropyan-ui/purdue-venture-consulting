@@ -91,22 +91,17 @@ const milestones = [
 // Tune this single value to make logos fill their square slots.
 const LOGO_ZOOM = 1.2;
 
-const LogoSlot: React.FC<{ name: string; logo: string | null; size?: number }> = ({ name, logo, size = 64 }) => (
+const LogoSlot: React.FC<{ name: string; logo: string | null; size?: number; square?: boolean; imgClassName?: string }> = ({ name, logo, size = 64, square = false, imgClassName = '' }) => (
   <div
-    className="flex items-center justify-center rounded-lg bg-white border border-primary/30 overflow-hidden flex-shrink-0"
+    className={`flex items-center justify-center ${square ? 'rounded-none' : 'rounded-lg'} bg-white border border-primary/30 overflow-hidden flex-shrink-0`}
     style={{ width: size, height: size }}
   >
     {logo ? (
       <img
         src={logo}
         alt={`${name} logo`}
-        className="w-full h-full"
-        style={{
-          objectFit: 'cover',
-          objectPosition: 'center',
-          transform: `scale(${LOGO_ZOOM})`,
-          transformOrigin: 'center',
-        }}
+        className={`w-full h-full ${imgClassName}`}
+        style={{ objectFit: 'cover', objectPosition: 'center', transform: `scale(${LOGO_ZOOM})`, transformOrigin: 'center' }}
       />
     ) : (
       <span className="font-space-grotesk font-bold text-accent" style={{ fontSize: size * 0.4 }}>
@@ -181,49 +176,57 @@ const Projects = () => {
 
 
         {/* Featured quadrants */}
-        <div className="mb-20 max-w-6xl mx-auto border border-primary/30 rounded-2xl overflow-hidden bg-secondary/40">
-          <div className="grid grid-cols-1 md:grid-cols-2">
-            {quadrants.map((q, i) => {
-              const isRight = i % 2 === 1;
-              const isBottom = i >= 2;
-              return (
-                <div
-                  key={q.name}
-                  className={[
-                    'p-8 flex flex-col items-center text-center',
-                    !isRight ? 'md:border-r md:border-primary/30' : '',
-                    !isBottom ? 'border-b border-primary/30' : '',
-                    isBottom && i === 2 ? 'md:border-b-0' : '',
-                  ].join(' ')}
-                >
-                  <LogoSlot name={q.name} logo={q.logo} />
-                  {q.yc && (
-                    <div className="mt-3 text-[0.6rem] font-inter font-bold tracking-widest text-accent border border-accent/60 rounded-full px-3 py-1">
-                      Y COMBINATOR BACKED
+        <div className="mb-20 max-w-6xl mx-auto rounded-3xl p-4 md:p-8" style={{ background: 'linear-gradient(160deg, hsl(216 55% 14%) 0%, hsl(215 60% 10%) 100%)' }}>
+          <div className="border border-primary/30 rounded-2xl overflow-hidden bg-secondary">
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              {quadrants.map((q, i) => {
+                const isRight = i % 2 === 1;
+                const isBottom = i >= 2;
+                return (
+                  <div
+                    key={q.name}
+                    className={[
+                      'p-8 flex flex-col items-center text-center',
+                      !isRight ? 'md:border-r md:border-primary/30' : '',
+                      !isBottom ? 'border-b border-primary/30' : '',
+                      isBottom && i === 2 ? 'md:border-b-0' : '',
+                    ].join(' ')}
+                  >
+                    <LogoSlot name={q.name} logo={q.logo} />
+                    {q.yc && (
+                      <div className="mt-3 text-[0.6rem] font-inter font-bold tracking-widest text-accent border border-accent/60 rounded-full px-3 py-1">
+                        Y COMBINATOR BACKED
+                      </div>
+                    )}
+                    <h3 className="font-space-grotesk font-bold text-2xl text-primary mt-4">{q.name}</h3>
+                    <div className="text-accent font-inter text-sm mt-1 mb-3">{q.category}</div>
+                    <p className="text-foreground font-inter text-sm leading-relaxed max-w-sm">{q.sentence}</p>
+                    <div className="flex flex-wrap gap-2 justify-center mt-4">
+                      {q.tags.map((t) => (
+                        <span key={t} className="text-xs font-inter text-muted-foreground border border-primary/30 rounded-full px-3 py-1">
+                          {t}
+                        </span>
+                      ))}
                     </div>
-                  )}
-                  <h3 className="font-space-grotesk font-bold text-2xl text-primary mt-4">{q.name}</h3>
-                  <div className="text-accent font-inter text-sm mt-1 mb-3">{q.category}</div>
-                  <p className="text-foreground font-inter text-sm leading-relaxed max-w-sm">{q.sentence}</p>
-                  <div className="flex flex-wrap gap-2 justify-center mt-4">
-                    {q.tags.map((t) => (
-                      <span key={t} className="text-xs font-inter text-muted-foreground border border-primary/30 rounded-full px-3 py-1">
-                        {t}
-                      </span>
-                    ))}
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
 
+        {/* Other clients heading */}
+        <div className="max-w-6xl mx-auto text-center mb-8">
+          <div className="mx-auto mb-5 h-px w-24 bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+          <p className="text-accent font-inter font-semibold tracking-[0.25em] uppercase text-sm">Here are our other clients</p>
+        </div>
+
         {/* Revolving logo marquee */}
-        <div className="pvc-marquee overflow-hidden mb-20 max-w-6xl mx-auto border-y border-primary/20 py-6" style={{ background: 'linear-gradient(180deg, hsl(214 46% 96%) 0%, hsl(216 42% 90%) 100%)' }}>
+        <div className="pvc-marquee relative overflow-hidden mb-20 max-w-6xl mx-auto border-y border-primary/20 py-6" style={{ background: 'linear-gradient(180deg, hsl(214 46% 96%) 0%, hsl(216 42% 90%) 100%)' }}>
           <div className="pvc-marquee-track flex gap-10 w-max">
             {[...marqueeClients, ...marqueeClients].map((c, i) => (
-              <div key={`${c.name}-${i}`} className="flex items-center gap-3 flex-shrink-0 px-2">
-                <LogoSlot name={c.name} logo={c.logo} size={44} />
+              <div key={`${c.name}-${i}`} className="group flex items-center gap-3 flex-shrink-0 px-2">
+                <LogoSlot name={c.name} logo={c.logo} size={44} square imgClassName="grayscale group-hover:grayscale-0 transition duration-300" />
                 <span className="font-space-grotesk font-semibold text-foreground whitespace-nowrap">{c.name}</span>
                 {c.badge && (
                   <span className="text-[0.55rem] font-inter font-bold tracking-widest text-accent border border-accent/60 rounded-full px-2 py-0.5">
@@ -233,6 +236,8 @@ const Projects = () => {
               </div>
             ))}
           </div>
+          <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-24 z-10" style={{ background: 'linear-gradient(90deg, hsl(215 44% 93%), transparent)' }} />
+          <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-24 z-10" style={{ background: 'linear-gradient(270deg, hsl(215 44% 93%), transparent)' }} />
         </div>
 
         {/* Engagement Process — two horizontal diagrams */}
