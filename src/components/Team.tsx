@@ -11,7 +11,7 @@ const leadership = [
   {
     name: "Victoria Mesropyan",
     position: "President",
-    major: "Integrated Business & Engineering",
+    major: "Industrial Engineering",
     bio: "Victoria leads PVC's strategy, operations, and client partnerships. She has consulted for venture-backed startups including Captain (Y Combinator backed), driving market strategy and growth.",
     linkedin: "https://www.linkedin.com/in/victoria-mesropyan/",
     image: "/victoria-mesropyan.jpg",
@@ -286,9 +286,9 @@ const ExecutiveBoardCard = ({ member }: { member: ExecutiveMember }) => (
 
 
 const FoundingCard = ({ member }: { member: FoundingMember }) => (
-  <div className="group relative bg-card rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl border border-border w-full sm:w-52">
+  <div className="group relative bg-card rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl border border-border w-full sm:w-56 min-h-[380px]">
     {/* Front of Card */}
-    <div className="group-hover:opacity-0 transition-opacity duration-300 p-5">
+    <div className="group-hover:opacity-0 transition-opacity duration-300 p-5 h-full flex flex-col justify-center">
       <div className="text-center mb-3">
         <span className="text-[0.65rem] font-inter font-semibold text-primary uppercase tracking-wider bg-primary/20 px-2.5 py-0.5 rounded-full">
           {member.position}
@@ -314,11 +314,10 @@ const FoundingCard = ({ member }: { member: FoundingMember }) => (
       </div>
     </div>
 
-
     {/* Back of Card */}
-    <div className="absolute inset-0 gradient-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-center">
-      <div className="text-center space-y-3">
-        <div className="w-20 h-20 mx-auto mb-2">
+    <div className="absolute inset-0 gradient-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-center overflow-y-auto">
+      <div className="text-center space-y-2">
+        <div className="w-16 h-16 mx-auto">
           <img
             src={member.image}
             alt={member.name}
@@ -327,30 +326,30 @@ const FoundingCard = ({ member }: { member: FoundingMember }) => (
           />
         </div>
 
-        <div className="space-y-1">
-          <h3 className="font-space-grotesk font-bold text-lg text-white">
+        <div className="space-y-0.5">
+          <h3 className="font-space-grotesk font-bold text-base text-white leading-tight">
             {member.name}
           </h3>
-          <p className="text-white font-inter font-semibold text-sm">
+          <p className="text-white font-inter font-semibold text-xs">
             {member.position}
           </p>
-          <p className="text-white font-inter text-xs opacity-80">
+          <p className="text-white font-inter text-[11px] opacity-80">
             {member.major} • {member.year}
           </p>
         </div>
 
-        <div className="w-12 h-px bg-white/50 mx-auto"></div>
+        <div className="w-10 h-px bg-white/50 mx-auto"></div>
 
-        <p className="text-white text-xs font-inter leading-relaxed">
+        <p className="text-white text-[11px] font-inter leading-snug">
           {member.bio}
         </p>
 
         <a
           href={member.linkedin}
-          className="inline-flex items-center space-x-2 text-white hover:text-accent transition-colors duration-300 mt-2"
+          className="inline-flex items-center space-x-2 text-white hover:text-accent transition-colors duration-300 mt-1"
         >
           <Linkedin className="w-4 h-4" />
-          <span className="text-sm font-inter font-medium">Connect</span>
+          <span className="text-xs font-inter font-medium">Connect</span>
         </a>
       </div>
     </div>
