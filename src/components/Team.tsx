@@ -359,8 +359,30 @@ const FoundingCard = ({ member }: { member: FoundingMember }) => (
 
 const Team = () => {
   return (
-    <section id="team" className="py-20 bg-background">
-      <div className="container mx-auto px-6">
+    <section id="team" className="relative overflow-hidden py-20" style={{ background: 'linear-gradient(180deg, hsl(214 44% 97%) 0%, hsl(215 40% 95%) 100%)' }}>
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+        <svg className="w-full h-full" viewBox="0 0 1440 1400" preserveAspectRatio="xMidYMid slice" fill="none">
+          <g stroke="#2c405d" strokeWidth="1.4" opacity="0.14">
+            <path d="M-40 40 Q 360 -15 720 40 T 1480 40" />
+            <path d="M-40 125 Q 360 70 720 125 T 1480 125" />
+            <path d="M-40 210 Q 360 155 720 210 T 1480 210" />
+            <path d="M-40 295 Q 360 240 720 295 T 1480 295" />
+            <path d="M-40 380 Q 360 325 720 380 T 1480 380" />
+            <path d="M-40 465 Q 360 410 720 465 T 1480 465" />
+            <path d="M-40 635 Q 360 580 720 635 T 1480 635" />
+            <path d="M-40 720 Q 360 665 720 720 T 1480 720" />
+            <path d="M-40 805 Q 360 750 720 805 T 1480 805" />
+            <path d="M-40 890 Q 360 835 720 890 T 1480 890" />
+            <path d="M-40 975 Q 360 920 720 975 T 1480 975" />
+            <path d="M-40 1060 Q 360 1005 720 1060 T 1480 1060" />
+            <path d="M-40 1145 Q 360 1090 720 1145 T 1480 1145" />
+            <path d="M-40 1230 Q 360 1175 720 1230 T 1480 1230" />
+            <path d="M-40 1315 Q 360 1260 720 1315 T 1480 1315" />
+          </g>
+          <path d="M-40 550 Q 360 495 720 550 T 1480 550" stroke="#c99a2e" strokeWidth="1.8" opacity="0.5" />
+        </svg>
+      </div>
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-12">
           <h2 className="font-space-grotesk font-bold text-4xl md:text-5xl mb-4 text-primary">
             Our <span className="text-accent">Team</span>
