@@ -57,23 +57,25 @@ const Application = () => {
 
   return (
     <div id="application" className="w-full space-y-8">
-      <div className="rounded-2xl p-8 md:p-10 text-center shadow-xl" style={{ background: 'linear-gradient(160deg, hsl(216 55% 14%) 0%, hsl(215 60% 10%) 100%)' }}>
-        <img
-          src="/lovable-uploads/2912c4e7-9d2d-47db-95cc-d511a5ca659d.png"
-          alt="Purdue Venture Consulting"
-          className="h-28 w-auto object-contain mx-auto mb-8"
-        />
-        <h3 className="font-space-grotesk font-bold text-3xl md:text-4xl text-white mb-5">
+      <div className="bg-secondary rounded-2xl p-8 md:p-10 text-center border border-primary/15 shadow-lg">
+        <div className="inline-flex items-center justify-center rounded-2xl px-6 py-5 mb-8" style={{ background: 'linear-gradient(160deg, hsl(216 55% 14%) 0%, hsl(215 60% 10%) 100%)' }}>
+          <img
+            src="/lovable-uploads/2912c4e7-9d2d-47db-95cc-d511a5ca659d.png"
+            alt="Purdue Venture Consulting"
+            className="h-20 w-auto object-contain"
+          />
+        </div>
+        <h3 className="font-space-grotesk font-bold text-3xl md:text-4xl text-primary mb-5">
           Official Application Portal
         </h3>
-        <p className="font-inter text-base md:text-lg leading-relaxed max-w-md mx-auto mb-10 text-slate-300">
+        <p className="font-inter text-base md:text-lg leading-relaxed max-w-md mx-auto mb-10 text-muted-foreground">
           Complete your application through our secure online portal. The form includes sections for personal information, academic background, leadership experience, and essay responses.
         </p>
         <div className="grid grid-cols-2 gap-x-4 gap-y-8 max-w-xs mx-auto mb-10">
           {badges.map((b) => (
             <div key={b.label} className="flex flex-col items-center gap-2">
               <b.icon className="w-7 h-7 text-accent" strokeWidth={1.75} />
-              <span className="font-inter text-sm text-slate-300">{b.label}</span>
+              <span className="font-inter text-sm text-muted-foreground">{b.label}</span>
             </div>
           ))}
         </div>
@@ -84,7 +86,7 @@ const Application = () => {
           <span>Start Application</span>
           <ExternalLink className="w-5 h-5" />
         </button>
-        <p className="font-inter text-xs mt-5 text-slate-400">
+        <p className="font-inter text-xs mt-5 text-muted-foreground">
           Opens in a new window • Microsoft Forms
         </p>
       </div>
