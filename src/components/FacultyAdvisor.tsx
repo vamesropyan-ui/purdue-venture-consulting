@@ -6,8 +6,12 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 
 const FacultyAdvisor = () => {
   return (
-    <section id="faculty-advisor" className="py-16 bg-background">
-      <div className="container mx-auto px-6">
+    <section id="faculty-advisor" className="relative overflow-hidden py-16" style={{ background: 'linear-gradient(180deg, hsl(215 40% 95%) 0%, hsl(214 44% 97%) 100%)' }}>
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -top-24 -left-16 w-96 h-96 rounded-full blur-3xl" style={{ background: 'radial-gradient(circle, hsl(216 50% 30% / 0.14), transparent 70%)' }} />
+        <div className="absolute -bottom-28 -right-10 w-96 h-96 rounded-full blur-3xl" style={{ background: 'radial-gradient(circle, hsl(43 60% 45% / 0.16), transparent 70%)' }} />
+      </div>
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-12">
           <h2 className="font-space-grotesk font-bold text-4xl md:text-5xl mb-4 text-primary">
             Faculty <span className="text-accent">Advisor</span>
