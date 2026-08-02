@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 import {
@@ -8,14 +7,6 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { ExternalLink, CheckCircle, Clock, Users, Trophy } from 'lucide-react';
-
-const whatWeLookFor = [
-  "Sharp, structured thinking over polished résumés",
-  "Genuine curiosity about startups and venture",
-  "Ownership. You follow through on what you start",
-  "Coachability and a team-first attitude",
-  "All majors welcome. We value diverse perspectives",
-];
 
 const faqs = [
   {
@@ -36,6 +27,13 @@ const faqs = [
   },
 ];
 
+const requirements = [
+  { title: 'Academic Excellence', desc: 'Minimum 3.0 GPA required' },
+  { title: 'Leadership Experience', desc: 'Demonstrated leadership in academics, work, or extracurriculars' },
+  { title: 'Professional Interest', desc: 'Genuine passion for venture consulting and business strategy' },
+  { title: 'Commitment', desc: 'Ability to dedicate 6 to 10 hours per week to club activities' },
+];
+
 const Application = () => {
   const handleApplicationClick = () => {
     window.open('https://forms.cloud.microsoft/r/JCFPANQ1wu', '_blank');
@@ -48,15 +46,8 @@ const Application = () => {
     { icon: Trophy, label: 'Excellence' },
   ];
 
-  const requirements = [
-    { title: 'Academic Excellence', desc: 'Minimum 3.0 GPA required' },
-    { title: 'Leadership Experience', desc: 'Demonstrated leadership in academics, work, or extracurriculars' },
-    { title: 'Professional Interest', desc: 'Genuine passion for venture consulting and business strategy' },
-    { title: 'Commitment', desc: 'Ability to dedicate 6 to 10 hours per week to club activities' },
-  ];
-
   return (
-    <div id="application" className="w-full space-y-8">
+    <div id="application" className="w-full">
       <div className="bg-secondary rounded-2xl p-8 md:p-10 text-center border border-primary/15 shadow-lg">
         <div className="inline-flex items-center justify-center rounded-2xl px-6 py-5 mb-8" style={{ background: 'linear-gradient(160deg, hsl(216 55% 14%) 0%, hsl(215 60% 10%) 100%)' }}>
           <img
@@ -90,36 +81,30 @@ const Application = () => {
           Opens in a new window • Microsoft Forms
         </p>
       </div>
-
-      <div className="bg-secondary rounded-lg p-8 border border-primary/20">
-        <h3 className="font-space-grotesk font-semibold text-xl text-primary mb-5">Application Requirements</h3>
-        <div className="space-y-4">
-          {requirements.map((r) => (
-            <div key={r.title} className="flex items-start space-x-3">
-              <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <h4 className="font-inter font-semibold text-primary">{r.title}</h4>
-                <p className="text-muted-foreground text-sm">{r.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
     </div>
   );
 };
 
-export const WhatWeLookFor = () => (
-  <div className="bg-secondary rounded-lg p-8 border border-primary/20">
-    <h3 className="font-space-grotesk font-semibold text-2xl text-primary mb-6">What We Look For</h3>
-    <ul className="space-y-4">
-      {whatWeLookFor.map((item, index) => (
-        <li key={index} className="flex items-start space-x-3">
+export const ApplicationRequirements = () => (
+  <div>
+    <h2 className="font-space-grotesk font-bold text-3xl md:text-4xl text-primary mb-3">
+      Ready to <span className="text-accent">Apply</span>?
+    </h2>
+    <div className="w-16 h-1 bg-primary mb-6"></div>
+    <p className="text-muted-foreground font-inter mb-8 max-w-md">
+      Here's what we look for in every applicant.
+    </p>
+    <div className="space-y-5">
+      {requirements.map((r) => (
+        <div key={r.title} className="flex items-start gap-3">
           <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-          <span className="text-foreground font-inter">{item}</span>
-        </li>
+          <div>
+            <h4 className="font-inter font-semibold text-primary">{r.title}</h4>
+            <p className="text-muted-foreground text-sm">{r.desc}</p>
+          </div>
+        </div>
       ))}
-    </ul>
+    </div>
   </div>
 );
 
