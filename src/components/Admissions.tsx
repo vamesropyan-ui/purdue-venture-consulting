@@ -32,26 +32,15 @@ const Admissions = () => {
         </p>
       </div>
 
-      {/* Fall Cohort Timeline */}
-      <div className="mb-12 max-w-lg mx-auto">
-        <div className="flex items-center justify-center gap-2 text-accent mb-8">
-          <CalendarDays className="w-4 h-4" />
-          <span className="font-space-grotesk font-semibold text-xs uppercase tracking-[0.25em]">Fall Cohort Timeline</span>
-        </div>
-        <div className="relative">
-          <div className="absolute top-[7px] left-1/4 right-1/4 h-0.5 bg-gradient-to-r from-accent to-accent/60"></div>
-          <div className="relative grid grid-cols-2">
-            <div className="flex flex-col items-center text-center">
-              <div className="w-4 h-4 rounded-full bg-accent"></div>
-              <div className="mt-5 font-space-grotesk font-bold text-2xl md:text-3xl text-primary">Aug 17</div>
-              <div className="text-muted-foreground font-inter text-sm mt-1">Applications Open</div>
-            </div>
-            <div className="flex flex-col items-center text-center">
-              <div className="w-4 h-4 rounded-full bg-accent"></div>
-              <div className="mt-5 font-space-grotesk font-bold text-2xl md:text-3xl text-primary">Sept 4</div>
-              <div className="text-muted-foreground font-inter text-sm mt-1">Applications Close</div>
-            </div>
-          </div>
+      {/* Fall Cohort Timeline — compact pill */}
+      <div className="mb-12 flex justify-center">
+        <div className="inline-flex items-center gap-4 bg-primary rounded-full px-7 py-3.5 shadow-md text-white">
+          <span className="flex items-center gap-2">
+            <CalendarDays className="w-[18px] h-[18px] text-accent" />
+            <span className="font-inter text-[15px]"><span className="font-semibold">Opens</span> Aug 17</span>
+          </span>
+          <span className="w-6 h-px bg-white/30"></span>
+          <span className="font-inter text-[15px]"><span className="font-semibold">Closes</span> Sept 4</span>
         </div>
       </div>
 
