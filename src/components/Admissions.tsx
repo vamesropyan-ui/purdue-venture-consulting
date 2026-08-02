@@ -33,7 +33,7 @@ const Admissions = () => {
           </h2>
           <div className="w-16 h-1 bg-primary mb-5"></div>
           <p className="text-foreground text-base font-inter max-w-xl">
-            We run one selective cohort each fall. Applications open August 17 and close September 4.
+            Our open application process welcomes all students eager to grow, while our strike policy ensures commitment and accountability throughout their venture consulting journey.
           </p>
         </div>
         <div className="flex-shrink-0 md:pt-1">
