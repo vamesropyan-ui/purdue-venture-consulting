@@ -86,7 +86,7 @@ const Application = () => {
 };
 
 export const ApplicationRequirements = () => (
-  <div className="bg-secondary rounded-2xl p-8 md:p-10 border border-primary/15 shadow-lg h-full flex flex-col justify-center">
+  <div className="bg-secondary rounded-2xl p-8 md:p-10 border border-primary/15 shadow-lg h-full">
     <h2 className="font-space-grotesk font-bold text-3xl md:text-4xl text-primary mb-3">
       Ready to <span className="text-accent">Apply</span>?
     </h2>
