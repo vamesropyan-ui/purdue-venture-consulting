@@ -46,7 +46,6 @@ const Admissions = () => {
             <span className="font-inter text-[15px]"><span className="font-semibold">Closes</span> Sept 4</span>
           </div>
         </div>
-: true
       </div>
 
       {/* Lively 3-step process */}
