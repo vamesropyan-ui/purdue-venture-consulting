@@ -18,11 +18,11 @@ const Apply = () => (
     </section>
     <section className="py-16 md:py-20 bg-background">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           <ApplicationRequirements />
           <Application />
         </div>
-        <div className="mt-12 md:mt-16 max-w-3xl mx-auto">
+        <div className="mt-12 md:mt-16">
           <Faq />
         </div>
       </div>

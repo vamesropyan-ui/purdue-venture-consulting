@@ -47,8 +47,8 @@ const Application = () => {
   ];
 
   return (
-    <div id="application" className="w-full">
-      <div className="bg-secondary rounded-2xl p-8 md:p-10 text-center border border-primary/15 shadow-lg">
+    <div id="application" className="w-full h-full">
+      <div className="bg-secondary rounded-2xl p-8 md:p-10 text-center border border-primary/15 shadow-lg h-full">
         <div className="inline-flex items-center justify-center rounded-2xl px-6 py-5 mb-8" style={{ background: 'linear-gradient(160deg, hsl(216 55% 14%) 0%, hsl(215 60% 10%) 100%)' }}>
           <img
             src="/lovable-uploads/2912c4e7-9d2d-47db-95cc-d511a5ca659d.png"
@@ -86,7 +86,7 @@ const Application = () => {
 };
 
 export const ApplicationRequirements = () => (
-  <div>
+  <div className="bg-secondary rounded-2xl p-8 md:p-10 border border-primary/15 shadow-lg h-full flex flex-col justify-center">
     <h2 className="font-space-grotesk font-bold text-3xl md:text-4xl text-primary mb-3">
       Ready to <span className="text-accent">Apply</span>?
     </h2>
@@ -109,7 +109,7 @@ export const ApplicationRequirements = () => (
 );
 
 export const Faq = () => (
-  <div className="bg-secondary rounded-lg p-8 border border-primary/20">
+  <div className="bg-secondary p-8 border border-primary/20 rounded-none">
     <h3 className="font-space-grotesk font-semibold text-2xl text-primary mb-6">FAQ</h3>
     <Accordion type="single" collapsible className="w-full">
       {faqs.map((faq, index) => (
