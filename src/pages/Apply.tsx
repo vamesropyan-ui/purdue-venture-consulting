@@ -3,7 +3,7 @@ import WhyJoin from '@/components/WhyJoin';
 import WhyUs from '@/components/WhyUs';
 import StudentsInAction from '@/components/StudentsInAction';
 import Admissions from '@/components/Admissions';
-import Application, { WhatWeLookFor, Faq } from '@/components/Application';
+import Application, { ApplicationRequirements, Faq } from '@/components/Application';
 
 const Apply = () => (
   <>
@@ -18,12 +18,12 @@ const Apply = () => (
     </section>
     <section className="py-16 md:py-20 bg-background">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <ApplicationRequirements />
           <Application />
-          <div className="space-y-12">
-            <WhatWeLookFor />
-            <Faq />
-          </div>
+        </div>
+        <div className="mt-12 md:mt-16 max-w-3xl mx-auto">
+          <Faq />
         </div>
       </div>
     </section>
