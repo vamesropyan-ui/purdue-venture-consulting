@@ -16,11 +16,14 @@ const Header = () => {
 
   const linkClass = ({ isActive }: { isActive: boolean }) =>
     `transition-colors duration-300 font-inter font-medium text-[15px] whitespace-nowrap ${
-      isActive ? 'text-accent' : 'text-slate-600 hover:text-primary'
+      isActive ? 'text-accent' : 'text-slate-200 hover:text-white'
     }`;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-[0_1px_12px_rgba(15,23,42,0.05)]">
+    <header
+      className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 shadow-lg backdrop-blur-md"
+      style={{ background: 'linear-gradient(180deg, hsl(217 30% 30%) 0%, hsl(217 33% 26%) 100%)' }}
+    >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-3 mr-auto">
@@ -29,7 +32,7 @@ const Header = () => {
               alt="Purdue Venture Consulting Logo"
               className="w-16 h-16 object-cover"
             />
-            <div className="hidden lg:block font-space-grotesk font-bold text-lg text-primary whitespace-nowrap">
+            <div className="hidden lg:block font-space-grotesk font-bold text-lg text-white whitespace-nowrap">
               Purdue Venture Consulting
             </div>
           </Link>
@@ -42,14 +45,14 @@ const Header = () => {
             ))}
             <Button
               onClick={() => navigate('/apply')}
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 py-2 rounded-full transition-all duration-300 shadow-md shadow-accent/20 hover:-translate-y-0.5 whitespace-nowrap flex-shrink-0"
+              className="bg-[hsl(191_70%_50%)] hover:bg-[hsl(191_70%_45%)] text-[hsl(200_80%_12%)] font-semibold px-6 py-2 rounded-full transition-all duration-300 shadow-md hover:-translate-y-0.5 whitespace-nowrap flex-shrink-0"
             >
               Apply Now
             </Button>
           </nav>
 
           <button
-            className="lg:hidden text-primary flex-shrink-0"
+            className="lg:hidden text-white flex-shrink-0"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -60,7 +63,7 @@ const Header = () => {
         </div>
 
         {isMenuOpen && (
-          <div className="lg:hidden mt-4 py-4 border-t border-slate-200">
+          <div className="lg:hidden mt-4 py-4 border-t border-white/10">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <NavLink
@@ -77,7 +80,7 @@ const Header = () => {
                   setIsMenuOpen(false);
                   navigate('/apply');
                 }}
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 py-2 rounded-full transition-all duration-300 w-fit whitespace-nowrap"
+                className="bg-[hsl(191_70%_50%)] hover:bg-[hsl(191_70%_45%)] text-[hsl(200_80%_12%)] font-semibold px-6 py-2 rounded-full transition-all duration-300 w-fit whitespace-nowrap"
               >
                 Apply Now
               </Button>
