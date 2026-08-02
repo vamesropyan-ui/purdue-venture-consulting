@@ -31,8 +31,20 @@ const AdvisoryBoard = () => {
   ];
 
   return (
-    <section id="advisory-board" className="py-20 bg-background">
-      <div className="container mx-auto px-6">
+    <section id="advisory-board" className="relative overflow-hidden py-20" style={{ background: 'linear-gradient(180deg, hsl(214 44% 97%) 0%, hsl(215 40% 95%) 100%)' }}>
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+        <svg className="w-full h-full" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice" fill="none">
+          <circle cx="120" cy="110" r="46" stroke="#2c405d" strokeWidth="2" opacity="0.16" />
+          <circle cx="1320" cy="560" r="60" stroke="#c99a2e" strokeWidth="2" opacity="0.22" />
+          <path d="M240 600 l24 -40 l24 40 z" stroke="#c99a2e" strokeWidth="2" opacity="0.22" />
+          <path d="M1200 90 l22 -34 l22 34 z" stroke="#2c405d" strokeWidth="2" opacity="0.16" />
+          <g stroke="#2c405d" strokeWidth="2" opacity="0.18"><line x1="700" y1="40" x2="700" y2="68" /><line x1="686" y1="54" x2="714" y2="54" /></g>
+          <g stroke="#c99a2e" strokeWidth="2" opacity="0.25"><line x1="960" y1="620" x2="960" y2="648" /><line x1="946" y1="634" x2="974" y2="634" /></g>
+          <g fill="#2c405d" opacity="0.2"><circle cx="430" cy="120" r="5" /><circle cx="455" cy="135" r="5" /><circle cx="480" cy="120" r="5" /></g>
+          <g fill="#c99a2e" opacity="0.28"><circle cx="1080" cy="150" r="5" /><circle cx="1105" cy="135" r="5" /></g>
+        </svg>
+      </div>
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-space-grotesk font-bold text-4xl md:text-5xl mb-4 text-primary">
             Advisory <span className="text-accent">Board</span>
