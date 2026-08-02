@@ -6,13 +6,13 @@ const photos = [
   { src: '/lovable-uploads/mudlabs_present.jpeg', alt: 'MudLabs final presentation team' },
   { src: '/lovable-uploads/rounds_team_2026.png', alt: 'Rounds project team' },
   { src: '/lovable-uploads/kova_present_2.jpeg', alt: 'KOVA client introduction' },
+  { src: '/lovable-uploads/gaus_team_2026.png', alt: 'Gaus project team' },
   { src: '/lovable-uploads/507f86fa-3d7a-4fce-9d85-9ca49108655b.png', alt: 'Captain project team presenting' },
   { src: '/lovable-uploads/polistock_team_2026.png', alt: 'PoliStock project team' },
-  { src: '/lovable-uploads/f0c899db-a668-412c-80f6-b18377d4e717.png', alt: 'Elisyan Wealth Ventures team presenting' },
   { src: '/lovable-uploads/present_2.jpeg', alt: 'PVC team presenting to audience' },
-  { src: '/lovable-uploads/Kova_present.jpeg', alt: 'KOVA final presentation' },
-  { src: '/lovable-uploads/gaus_team_2026.png', alt: 'Gaus project team' },
   { src: '/lovable-uploads/zuri_team_2026.png', alt: 'Zuri Technologies project team' },
+  { src: '/lovable-uploads/Kova_present.jpeg', alt: 'KOVA final presentation' },
+  { src: '/lovable-uploads/f0c899db-a668-412c-80f6-b18377d4e717.png', alt: 'Elisyan Wealth Ventures team presenting' },
 ];
 
 const PER_PAGE = 4;
