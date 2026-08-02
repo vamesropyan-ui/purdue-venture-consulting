@@ -7,7 +7,7 @@ const Admissions = () => {
       step: "01",
       icon: FileText,
       title: "Online Application",
-      description: "A short written application covering your background, interests, and why PVC. Takes about 15 minutes. No prior consulting experience required."
+      description: "A short written application covering your background, interests, and why PVC. No prior consulting experience required."
     },
     {
       step: "02",
