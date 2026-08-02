@@ -48,39 +48,60 @@ const Application = () => {
     { icon: Trophy, label: 'Excellence' },
   ];
 
+  const requirements = [
+    { title: 'Academic Excellence', desc: 'Minimum 3.0 GPA required' },
+    { title: 'Leadership Experience', desc: 'Demonstrated leadership in academics, work, or extracurriculars' },
+    { title: 'Professional Interest', desc: 'Genuine passion for venture consulting and business strategy' },
+    { title: 'Commitment', desc: 'Ability to dedicate 6 to 10 hours per week to club activities' },
+  ];
+
   return (
-    <div id="application" className="w-full">
-      <div className="rounded-2xl p-8 md:p-10 text-center shadow-xl" style={{ backgroundColor: 'hsl(216 22% 18%)' }}>
+    <div id="application" className="w-full space-y-8">
+      <div className="rounded-2xl p-8 md:p-10 text-center shadow-xl" style={{ background: 'linear-gradient(160deg, hsl(216 55% 14%) 0%, hsl(215 60% 10%) 100%)' }}>
         <img
           src="/lovable-uploads/2912c4e7-9d2d-47db-95cc-d511a5ca659d.png"
           alt="Purdue Venture Consulting"
           className="h-28 w-auto object-contain mx-auto mb-8"
         />
-        <h3 className="font-space-grotesk font-bold text-3xl md:text-4xl mb-5" style={{ color: 'hsl(200 68% 54%)' }}>
+        <h3 className="font-space-grotesk font-bold text-3xl md:text-4xl text-white mb-5">
           Official Application Portal
         </h3>
-        <p className="font-inter text-base md:text-lg leading-relaxed max-w-md mx-auto mb-10" style={{ color: 'hsl(214 14% 72%)' }}>
+        <p className="font-inter text-base md:text-lg leading-relaxed max-w-md mx-auto mb-10 text-slate-300">
           Complete your application through our secure online portal. The form includes sections for personal information, academic background, leadership experience, and essay responses.
         </p>
         <div className="grid grid-cols-2 gap-x-4 gap-y-8 max-w-xs mx-auto mb-10">
           {badges.map((b) => (
             <div key={b.label} className="flex flex-col items-center gap-2">
-              <b.icon className="w-7 h-7" strokeWidth={1.75} style={{ color: 'hsl(200 68% 56%)' }} />
-              <span className="font-inter text-sm" style={{ color: 'hsl(214 14% 74%)' }}>{b.label}</span>
+              <b.icon className="w-7 h-7 text-accent" strokeWidth={1.75} />
+              <span className="font-inter text-sm text-slate-300">{b.label}</span>
             </div>
           ))}
         </div>
         <button
           onClick={handleApplicationClick}
-          className="w-full rounded-xl text-white font-space-grotesk font-semibold py-5 text-lg flex items-center justify-center gap-2 transition-all duration-300 hover:brightness-110"
-          style={{ backgroundColor: 'hsl(228 82% 64%)' }}
+          className="w-full rounded-xl bg-accent hover:bg-accent/90 text-accent-foreground font-space-grotesk font-semibold py-5 text-lg flex items-center justify-center gap-2 transition-all duration-300"
         >
           <span>Start Application</span>
           <ExternalLink className="w-5 h-5" />
         </button>
-        <p className="font-inter text-xs mt-5" style={{ color: 'hsl(214 12% 55%)' }}>
+        <p className="font-inter text-xs mt-5 text-slate-400">
           Opens in a new window • Microsoft Forms
         </p>
+      </div>
+
+      <div className="bg-secondary rounded-lg p-8 border border-primary/20">
+        <h3 className="font-space-grotesk font-semibold text-xl text-primary mb-5">Application Requirements</h3>
+        <div className="space-y-4">
+          {requirements.map((r) => (
+            <div key={r.title} className="flex items-start space-x-3">
+              <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <h4 className="font-inter font-semibold text-primary">{r.title}</h4>
+                <p className="text-muted-foreground text-sm">{r.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
