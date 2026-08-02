@@ -1,13 +1,13 @@
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
+
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { ExternalLink, CheckCircle } from 'lucide-react';
+import { ExternalLink, CheckCircle, Clock, Users, Trophy } from 'lucide-react';
 
 const whatWeLookFor = [
   "Sharp, structured thinking over polished résumés",
@@ -41,74 +41,46 @@ const Application = () => {
     window.open('https://forms.cloud.microsoft/r/JCFPANQ1wu', '_blank');
   };
 
+  const badges = [
+    { icon: CheckCircle, label: 'Secure' },
+    { icon: Clock, label: '15 min' },
+    { icon: Users, label: 'Inclusive' },
+    { icon: Trophy, label: 'Excellence' },
+  ];
+
   return (
     <div id="application" className="w-full">
-      <div className="mb-8">
-        <h2 className="font-space-grotesk font-bold text-3xl md:text-4xl mb-4 text-primary">
-          Ready to <span className="text-accent">Apply?</span>
-        </h2>
-        <div className="w-16 h-1 bg-primary mb-5"></div>
-      </div>
-
-      <div className="bg-secondary rounded-lg border border-primary/20 shadow-lg overflow-hidden">
-        <div className="bg-primary py-8 px-6 flex items-center justify-center">
-          <img
-            src="/lovable-uploads/2912c4e7-9d2d-47db-95cc-d511a5ca659d.png"
-            alt="Purdue Venture Consulting"
-            className="h-24 w-auto object-contain"
-          />
-        </div>
-        <div className="p-8 space-y-6">
-          <p className="text-foreground text-base font-inter">
-            We select one cohort each fall. If you want to do real strategy work for venture-backed startups, and be held to a professional standard while doing it, we want to hear from you.
-          </p>
-
-          <div>
-            <h3 className="font-space-grotesk font-semibold text-xl text-primary mb-4">Application Requirements</h3>
-            <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h4 className="font-inter font-semibold text-primary">Academic Excellence</h4>
-                  <p className="text-muted-foreground text-sm">Minimum 3.0 GPA required</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h4 className="font-inter font-semibold text-primary">Leadership Experience</h4>
-                  <p className="text-muted-foreground text-sm">Demonstrated leadership in academics, work, or extracurriculars</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h4 className="font-inter font-semibold text-primary">Professional Interest</h4>
-                  <p className="text-muted-foreground text-sm">Genuine passion for venture consulting and business strategy</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h4 className="font-inter font-semibold text-primary">Commitment</h4>
-                  <p className="text-muted-foreground text-sm">Ability to dedicate 6 to 10 hours per week to club activities</p>
-                </div>
-              </div>
+      <div className="rounded-2xl p-8 md:p-10 text-center shadow-xl" style={{ backgroundColor: 'hsl(216 22% 18%)' }}>
+        <img
+          src="/lovable-uploads/2912c4e7-9d2d-47db-95cc-d511a5ca659d.png"
+          alt="Purdue Venture Consulting"
+          className="h-28 w-auto object-contain mx-auto mb-8"
+        />
+        <h3 className="font-space-grotesk font-bold text-3xl md:text-4xl mb-5" style={{ color: 'hsl(200 68% 54%)' }}>
+          Official Application Portal
+        </h3>
+        <p className="font-inter text-base md:text-lg leading-relaxed max-w-md mx-auto mb-10" style={{ color: 'hsl(214 14% 72%)' }}>
+          Complete your application through our secure online portal. The form includes sections for personal information, academic background, leadership experience, and essay responses.
+        </p>
+        <div className="grid grid-cols-2 gap-x-4 gap-y-8 max-w-xs mx-auto mb-10">
+          {badges.map((b) => (
+            <div key={b.label} className="flex flex-col items-center gap-2">
+              <b.icon className="w-7 h-7" strokeWidth={1.75} style={{ color: 'hsl(200 68% 56%)' }} />
+              <span className="font-inter text-sm" style={{ color: 'hsl(214 14% 74%)' }}>{b.label}</span>
             </div>
-          </div>
-
-          <Button
-            onClick={handleApplicationClick}
-            className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-4 text-lg transition-all duration-300 flex items-center justify-center space-x-2"
-          >
-            <span>Start Application</span>
-            <ExternalLink className="w-5 h-5" />
-          </Button>
-
-          <p className="text-muted-foreground text-xs font-inter opacity-80 text-center">
-            Opens in a new window • Microsoft Forms
-          </p>
+          ))}
         </div>
+        <button
+          onClick={handleApplicationClick}
+          className="w-full rounded-xl text-white font-space-grotesk font-semibold py-5 text-lg flex items-center justify-center gap-2 transition-all duration-300 hover:brightness-110"
+          style={{ backgroundColor: 'hsl(228 82% 64%)' }}
+        >
+          <span>Start Application</span>
+          <ExternalLink className="w-5 h-5" />
+        </button>
+        <p className="font-inter text-xs mt-5" style={{ color: 'hsl(214 12% 55%)' }}>
+          Opens in a new window • Microsoft Forms
+        </p>
       </div>
     </div>
   );
