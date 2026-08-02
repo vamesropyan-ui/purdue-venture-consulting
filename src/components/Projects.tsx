@@ -13,7 +13,7 @@ import bewealtherLogo from '@/assets/clients/bewealther.png.asset.json';
 
 const stats = [
   { number: '10+', label: 'Startups Served' },
-  { number: '1', label: 'YC-Backed Client' },
+  { number: '2', label: 'YC-Backed Clients' },
   { number: '7', label: 'Industries' },
   { number: '50+', label: 'Deliverables Shipped' },
 ];
