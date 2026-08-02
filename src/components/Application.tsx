@@ -49,13 +49,11 @@ const Application = () => {
   return (
     <div id="application" className="w-full h-full">
       <div className="bg-secondary rounded-2xl p-8 md:p-10 text-center border border-primary/15 shadow-lg h-full">
-        <div className="inline-flex items-center justify-center rounded-2xl px-6 py-5 mb-8" style={{ background: 'linear-gradient(160deg, hsl(216 55% 14%) 0%, hsl(215 60% 10%) 100%)' }}>
-          <img
-            src="/lovable-uploads/2912c4e7-9d2d-47db-95cc-d511a5ca659d.png"
-            alt="Purdue Venture Consulting"
-            className="h-20 w-auto object-contain"
-          />
-        </div>
+        <img
+          src="/lovable-uploads/2912c4e7-9d2d-47db-95cc-d511a5ca659d.png"
+          alt="Purdue Venture Consulting"
+          className="h-32 w-auto object-contain inline-block mb-8"
+        />
         <h3 className="font-space-grotesk font-bold text-3xl md:text-4xl text-primary mb-5">
           Official Application Portal
         </h3>
