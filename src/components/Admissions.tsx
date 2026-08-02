@@ -29,7 +29,7 @@ const Admissions = () => {
       <div className="mb-10 flex flex-col md:flex-row md:items-start md:justify-between gap-6">
         <div>
           <h2 className="font-space-grotesk font-bold text-3xl md:text-4xl mb-4 text-primary">
-            Admissions <span className="text-accent">Process</span>
+            Admissions Process
           </h2>
           <div className="w-16 h-1 bg-primary mb-5"></div>
           <p className="text-foreground text-base font-inter max-w-xl">
