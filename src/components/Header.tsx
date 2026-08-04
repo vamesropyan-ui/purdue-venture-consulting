@@ -24,10 +24,11 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-3 mr-auto">
-            <img
-              src="/lovable-uploads/2912c4e7-9d2d-47db-95cc-d511a5ca659d.png"
-              alt="Purdue Venture Consulting Logo"
-              className="w-16 h-16 object-cover"
+            <div
+              role="img"
+              aria-label="Purdue Venture Consulting Logo"
+              className="w-14 h-14 bg-no-repeat flex-shrink-0"
+              style={{ backgroundImage: "url('/lovable-uploads/2912c4e7-9d2d-47db-95cc-d511a5ca659d.png')", backgroundSize: '150%', backgroundPosition: 'center 30%' }}
             />
             <div className="hidden lg:block font-space-grotesk font-bold text-lg text-primary whitespace-nowrap">
               Purdue Venture Consulting

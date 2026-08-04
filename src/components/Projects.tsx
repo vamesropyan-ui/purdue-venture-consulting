@@ -225,7 +225,7 @@ const Projects = () => {
           </div>
 
           {/* Revolving logo marquee — directly on the navy */}
-          <div className="pvc-marquee relative overflow-hidden max-w-6xl mx-auto py-2 relative z-10">
+          <div className="pvc-marquee relative overflow-hidden w-full py-2 relative z-10">
             <div className="pvc-marquee-track flex items-center gap-12 w-max">
               {[...marqueeClients, ...marqueeClients].map((c, i) => (
                 <div key={`${c.name}-${i}`} className="flex items-center gap-3 flex-shrink-0 px-2">

@@ -20,7 +20,9 @@ const pageCount = Math.ceil(photos.length / PER_PAGE);
 
 const WhyJoin = () => {
   const [page, setPage] = useState(0);
-  const current = photos.slice(page * PER_PAGE, page * PER_PAGE + PER_PAGE);
+  const start = page * PER_PAGE;
+  const fullSlice = photos.slice(start, start + PER_PAGE);
+  const current = fullSlice.length === PER_PAGE ? fullSlice : photos.slice(Math.max(0, photos.length - PER_PAGE));
   const next = () => setPage((p) => (p + 1) % pageCount);
   const prev = () => setPage((p) => (p - 1 + pageCount) % pageCount);
 
