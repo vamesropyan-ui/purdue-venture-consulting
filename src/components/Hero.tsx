@@ -1,53 +1,18 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ChevronDown } from 'lucide-react';
-import * as THREE from 'three';
-import GLOBE from 'vanta/dist/vanta.globe.min';
 
 const LIGHT_BG = 'linear-gradient(180deg, hsl(210 40% 99%) 0%, hsl(214 32% 95%) 100%)';
 
 const Hero = () => {
   const navigate = useNavigate();
-  const vantaRef = useRef<HTMLElement | null>(null);
-  const [vantaEffect, setVantaEffect] = useState<{ destroy: () => void } | null>(null);
-
-  useEffect(() => {
-    const prefersReduced =
-      typeof window !== 'undefined' &&
-      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReduced) return;
-
-    if (!vantaEffect && vantaRef.current) {
-      const effect = GLOBE({
-        el: vantaRef.current,
-        THREE,
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200,
-        minWidth: 200,
-        scale: 1,
-        scaleMobile: 1,
-        backgroundColor: 0xf3f6fb,
-        color: 0x13294b,
-        color2: 0xc1963c,
-        size: 0.85,
-      });
-      setVantaEffect(effect);
-    }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy();
-    };
-  }, [vantaEffect]);
 
   return (
     <section
-      ref={vantaRef as React.RefObject<HTMLElement>}
       className="relative min-h-[70vh] flex items-center justify-center overflow-hidden py-20"
       style={{ background: LIGHT_BG }}
     >
-      {/* Soft light scrim behind the text for readability */}
       <div
         aria-hidden="true"
         className="absolute inset-0 z-[1]"
