@@ -329,25 +329,25 @@ const Projects = () => {
         {/* Closing CTA */}
         <div className="bg-gradient-to-br from-secondary to-background border border-accent/40 rounded-lg p-10 text-center max-w-4xl mx-auto">
           <h3 className="font-space-grotesk font-bold text-2xl md:text-3xl text-primary mb-3">
-            Have a startup that needs a strategy team?
+            Working on something that needs a strategy team?
           </h3>
           <p className="text-foreground font-inter mb-6 max-w-2xl mx-auto">
             We take on a limited number of engagements each semester.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <div className="flex justify-center">
             <a
               href="mailto:vmesropy@purdue.edu"
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-inter font-semibold px-6 py-3 rounded-md transition-all duration-300"
             >
               Work With Us
             </a>
-            <Link
-              to="/apply"
-              className="border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary font-inter font-semibold px-6 py-3 rounded-md transition-all duration-300"
-            >
-              Want to do this work? Apply
-            </Link>
           </div>
+          <p className="text-muted-foreground font-inter text-sm mt-6">
+            Interested in joining PVC?{' '}
+            <Link to="/apply" className="text-primary font-medium underline underline-offset-4 hover:text-accent transition-colors duration-300">
+              Apply here
+            </Link>
+          </p>
         </div>
       </div>
     </section>
