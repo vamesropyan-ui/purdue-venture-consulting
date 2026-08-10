@@ -58,7 +58,7 @@ const Application = () => {
           Official Application Portal
         </h3>
         <p className="font-inter text-base md:text-lg leading-relaxed max-w-md mx-auto mb-10 text-muted-foreground">
-          Complete your application through our secure online portal. The form includes sections for personal information, academic background, leadership experience, and essay responses.
+          Apply through our secure online portal. The form covers your background, leadership experience, and essay responses.
         </p>
         <div className="grid grid-cols-2 gap-x-4 gap-y-8 max-w-xs mx-auto mb-10">
           {badges.map((b) => (

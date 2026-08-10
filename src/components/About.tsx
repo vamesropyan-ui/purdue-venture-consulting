@@ -61,27 +61,25 @@ const About = () => {
                 Our Story
               </p>
               <h2 className="font-space-grotesk font-bold text-4xl md:text-5xl mb-4 text-primary">
-                Built by founders, for founders
+                We build strategy for startups
               </h2>
               <div className="w-20 h-1 bg-primary mb-6"></div>
             </div>
 
             <p className="text-foreground text-lg leading-relaxed font-inter">
-              Purdue Venture Consulting was founded in 2025 by four students, Pedro Garcia Farias,
-              Mehdi El Mansar, Nikhai Tonwar, and Hassan Berbich, who felt something was missing at
-              Purdue. Innovation was moving faster than ever, yet there was no student group
-              dedicated to helping startups turn bold ideas into real strategy.
+              Four students founded Purdue Venture Consulting in 2025: Pedro Garcia Farias, Mehdi El
+              Mansar, Nikhai Tonwar, and Hassan Berbich. Startups around them needed strategy help,
+              and no student group at Purdue offered it.
             </p>
 
             <p className="text-foreground text-lg leading-relaxed font-inter">
-              So they built one. What started as a small team with a shared conviction has grown
-              into a consulting group that partners with founders and venture-backed companies
-              across this new era of innovation.
+              They built one. That small team now serves founders and venture-backed companies as a
+              working consulting group.
             </p>
 
             <p className="text-foreground text-lg leading-relaxed font-inter">
-              Today, we bring the same rigor top firms do to the problems founders actually face,
-              and give Purdue's most driven students the chance to do real work that matters.
+              We take on the problems founders bring us: market entry, growth, competitive strategy,
+              and product direction. Our teams deliver work founders can put to use.
             </p>
 
             <div className="flex items-center space-x-8 pt-6">

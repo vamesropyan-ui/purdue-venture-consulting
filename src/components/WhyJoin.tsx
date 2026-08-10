@@ -109,10 +109,9 @@ const WhyJoin = () => {
           <div className="rounded-2xl bg-background/80 backdrop-blur-sm border border-border/60 shadow-md p-6 md:p-8">
             <div className="w-12 h-1 bg-accent mb-6" />
             <p className="text-foreground font-inter text-lg md:text-xl leading-relaxed">
-              At Purdue Venture Consulting, we bring together students who are eager to challenge
-              themselves, think differently, and learn by solving real business problems. By partnering
-              with innovative startups, our members gain hands-on experience, develop practical skills,
-              and build the confidence that comes from making a real impact.
+              Purdue Venture Consulting brings together students who want to solve live business
+              problems. Our members work with startups, build practical skills, and see their
+              recommendations put to use.
             </p>
           </div>
         </motion.div>

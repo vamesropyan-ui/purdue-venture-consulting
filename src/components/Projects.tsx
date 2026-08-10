@@ -159,7 +159,7 @@ const Projects = () => {
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-foreground text-lg max-w-3xl mx-auto font-inter">
-            We work with venture-backed founders across AI, fintech, and consumer.
+            We work with venture-backed founders in AI, fintech, and consumer.
           </p>
         </div>
 
