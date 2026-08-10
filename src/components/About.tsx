@@ -61,25 +61,28 @@ const About = () => {
                 Our Story
               </p>
               <h2 className="font-space-grotesk font-bold text-4xl md:text-5xl mb-4 text-primary">
-                We build strategy for startups
+                Strategy built for startups
               </h2>
               <div className="w-20 h-1 bg-primary mb-6"></div>
             </div>
 
             <p className="text-foreground text-lg leading-relaxed font-inter">
-              Four students founded Purdue Venture Consulting in 2025: Pedro Garcia Farias, Mehdi El
-              Mansar, Nikhai Tonwar, and Hassan Berbich. Startups around them needed strategy help,
-              and no student group at Purdue offered it.
+              Purdue Venture Consulting was founded in 2025 by four students, Pedro Garcia Farias,
+              Mehdi El Mansar, Nikhai Tonwar, and Hassan Berbich, who saw founders around them
+              building quickly and without support. Innovation was moving faster than ever, yet no
+              student group at Purdue was dedicated to helping startups turn bold ideas into
+              strategy they could act on.
             </p>
 
             <p className="text-foreground text-lg leading-relaxed font-inter">
-              They built one. That small team now serves founders and venture-backed companies as a
-              working consulting group.
+              So they built one. What started as a small team has grown into a consulting group that
+              partners with founders and venture-backed companies across every stage of the journey.
             </p>
 
             <p className="text-foreground text-lg leading-relaxed font-inter">
-              We take on the problems founders bring us: market entry, growth, competitive strategy,
-              and product direction. Our teams deliver work founders can put to use.
+              We take on the challenges founders are working through, from market entry and growth
+              strategy to competitive positioning and product direction, and our teams deliver work
+              they can put straight to use.
             </p>
 
             <div className="flex items-center space-x-8 pt-6">
