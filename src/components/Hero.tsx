@@ -26,7 +26,7 @@ const Hero = () => {
         <div className="animate-fade-in">
           <h1 className="font-space-grotesk font-semibold text-4xl md:text-6xl mb-5 leading-tight text-primary">
             Where Strategy
-            <span className="block text-primary">Meets Opportunity</span>
+            <span className="block" style={{ color: 'hsl(191 79% 39%)' }}>Meets Opportunity</span>
           </h1>
 
           <p className="text-muted-foreground text-lg md:text-xl mb-7 max-w-2xl mx-auto font-inter">
