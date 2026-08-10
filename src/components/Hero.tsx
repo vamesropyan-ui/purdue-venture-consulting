@@ -30,8 +30,8 @@ const Hero = () => {
           </h1>
 
           <p className="text-muted-foreground text-lg md:text-xl mb-7 max-w-2xl mx-auto font-inter">
-            We help startups solve the problems that decide their next stage of growth, with the same
-            rigor top firms bring to their clients.
+            We partner with startups to solve the problems that shape their next stage of growth,
+            bringing the same rigor top firms bring to their clients.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
