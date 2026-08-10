@@ -11,8 +11,8 @@ const Footer = () => {
           <div>
             <h3 className="font-space-grotesk font-bold text-2xl text-primary mb-4">Purdue Venture Consulting</h3>
             <p className="text-foreground font-inter leading-relaxed mb-4">
-              Purdue Venture Consulting - Where Innovation Meets Opportunity. 
-              Connecting exceptional students with the world's leading venture capital firms and startups.
+              Purdue Venture Consulting builds strategy for startups and venture-backed companies,
+              and trains Purdue students to do the work.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-foreground hover:text-primary transition-colors duration-300">

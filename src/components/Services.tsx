@@ -7,17 +7,17 @@ const Services = () => {
   const services = [
     {
       title: "Strategic Consulting",
-      description: "Work directly with startups and established companies to solve complex business challenges and drive growth initiatives.",
+      description: "We work with startups to solve hard business problems and grow.",
       features: ["Market Analysis", "Business Strategy", "Operations Optimization", "Financial Modeling"]
     },
     {
       title: "Real Client Work",
-      description: "Our teams tackle live business challenges for startups, from market entry to growth strategy, and deliver work founders can act on.",
+      description: "Our teams handle live problems for startups, from market entry to growth strategy. Founders can act on what we deliver.",
       features: ["Live Engagements", "Market Entry", "Growth Strategy", "Actionable Deliverables"]
     },
     {
       title: "Innovation Network",
-      description: "We connect founders, operators, and student consultants through a growing network built around the startup ecosystem.",
+      description: "We connect founders and operators with our student consultants through a growing startup network.",
       features: ["Founder Connections", "Operator Insights", "Partner Organizations", "Ecosystem Events"]
     }
 
@@ -32,8 +32,8 @@ const Services = () => {
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-foreground text-lg max-w-2xl mx-auto font-inter">
-            We take on real engagements for startups and venture-backed companies, pairing ambitious
-            founders with teams that treat their goals like our own.
+            We take on live engagements for startups and venture-backed companies, and we treat each
+            founder's goals as our own.
           </p>
 
         </div>

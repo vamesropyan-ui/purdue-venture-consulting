@@ -30,8 +30,8 @@ const Hero = () => {
           </h1>
 
           <p className="text-muted-foreground text-lg md:text-xl mb-7 max-w-2xl mx-auto font-inter">
-            Today, we bring the same rigor as top firms to the challenges founders actually face,
-            while giving Purdue's most driven students the opportunity to do meaningful, high-impact work.
+            We help startups solve the problems that decide their next stage of growth, with the same
+            rigor top firms bring to their clients.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
