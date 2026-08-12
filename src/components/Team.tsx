@@ -3,6 +3,7 @@ import { Linkedin } from 'lucide-react';
 import samPaulAsset from '@/assets/sam-paul.jpg.asset.json';
 import jordanHanfordAsset from '@/assets/jordan-hanford.jpg.asset.json';
 import siddhantHaralkarAsset from '@/assets/siddhant-haralkar.jpg.asset.json';
+import noahBrucculeriAsset from '@/assets/noah-brucculeri.jpg.asset.json';
 
 
 
@@ -68,8 +69,11 @@ const executiveBoard = [
     name: "Noah Brucculeri",
     position: "Director of Growth",
     initials: "NB",
-    linkedin: "#"
-  }
+    linkedin: "https://www.linkedin.com/in/noah-brucculeri-303481330",
+    image: noahBrucculeriAsset.url,
+    major: "Integrated Business and Engineering",
+    bio: "Integrated Business & Engineering student and former Corporate Law Intern with experience in software development, finance, and leadership. Passionate about entrepreneurship and building innovative solutions."
+  },
 ];
 
 const foundingTeam = [
@@ -128,6 +132,7 @@ interface ExecutiveMember {
   linkedin: string;
   image?: string;
   bio?: string;
+  major?: string;
 }
 
 interface FoundingMember {
@@ -263,6 +268,11 @@ const ExecutiveBoardCard = ({ member }: { member: ExecutiveMember }) => (
         <p className="text-primary font-inter font-semibold text-xs">
           {member.position}
         </p>
+        {member.major && (
+          <p className="text-muted-foreground font-inter text-xs">
+            {member.major}
+          </p>
+        )}
       </div>
     </div>
 
@@ -293,6 +303,11 @@ const ExecutiveBoardCard = ({ member }: { member: ExecutiveMember }) => (
           <p className="text-white font-inter font-semibold text-xs">
             {member.position}
           </p>
+          {member.major && (
+            <p className="text-white font-inter text-xs opacity-80">
+              {member.major}
+            </p>
+          )}
         </div>
 
         <div className="w-10 h-px bg-white/50 mx-auto"></div>
