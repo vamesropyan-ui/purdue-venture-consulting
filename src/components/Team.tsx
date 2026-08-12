@@ -51,7 +51,9 @@ const executiveBoard = [
     name: "Jordan Hanford",
     position: "Director of Venture Operations",
     initials: "JH",
-    linkedin: "#"
+    linkedin: "https://www.linkedin.com/in/jordan-hanford-5990a8327",
+    image: jordanHanfordAsset.url,
+    bio: "Jordan is an Integrated Business and Engineering student at Purdue University with a focus on strategy, operations, and analytics. He enjoys applying structured thinking to complex challenges and collaborating with others to develop practical, data-informed solutions."
   },
   {
     name: "Letizia Echevarria",
