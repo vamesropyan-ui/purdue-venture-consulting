@@ -4,6 +4,7 @@ import samPaulAsset from '@/assets/sam-paul.jpg.asset.json';
 import jordanHanfordAsset from '@/assets/jordan-hanford.jpg.asset.json';
 import siddhantHaralkarAsset from '@/assets/siddhant-haralkar.jpg.asset.json';
 import noahBrucculeriAsset from '@/assets/noah-brucculeri.jpg.asset.json';
+import shariqKapadiaAsset from '@/assets/shariq-kapadia.png.asset.json';
 
 
 
@@ -43,7 +44,9 @@ const executiveBoard = [
     name: "Shariq Kapadia",
     position: "Director of Finance",
     initials: "SK",
-    linkedin: "#"
+    linkedin: "https://www.linkedin.com/in/shariq-kapadia/",
+    image: shariqKapadiaAsset.url,
+    bio: "Shariq is a junior, pursuing a Bachelor's degree in Integrated Business and Engineering. With a passion for finance and consulting, he looks to grow his skills through related work experiences and student organizations. He is eager to apply his knowledge in a dynamic environment and continue expanding his professional skill set as he starts his career. In his free time, he enjoys playing basketball and golf."
   },
   {
     name: "Adrian Valdez",
