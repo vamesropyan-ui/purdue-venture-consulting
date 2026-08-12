@@ -3,6 +3,7 @@ import { Linkedin } from 'lucide-react';
 import samPaulAsset from '@/assets/sam-paul.jpg.asset.json';
 import jordanHanfordAsset from '@/assets/jordan-hanford.jpg.asset.json';
 import siddhantHaralkarAsset from '@/assets/siddhant-haralkar.jpg.asset.json';
+import noahBrucculeriAsset from '@/assets/noah-brucculeri.jpg.asset.json';
 
 
 
