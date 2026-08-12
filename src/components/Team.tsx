@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { Linkedin } from 'lucide-react';
 import samPaulAsset from '@/assets/sam-paul.jpg.asset.json';
+import jordanHanfordAsset from '@/assets/jordan-hanford.jpg.asset.json';
 
 
 
@@ -51,7 +51,9 @@ const executiveBoard = [
     name: "Jordan Hanford",
     position: "Director of Venture Operations",
     initials: "JH",
-    linkedin: "#"
+    linkedin: "https://www.linkedin.com/in/jordan-hanford-5990a8327",
+    image: jordanHanfordAsset.url,
+    bio: "Jordan is an Integrated Business and Engineering student at Purdue University with a focus on strategy, operations, and analytics. He enjoys applying structured thinking to complex challenges and collaborating with others to develop practical, data-informed solutions."
   },
   {
     name: "Letizia Echevarria",
@@ -121,6 +123,8 @@ interface ExecutiveMember {
   position: string;
   initials: string;
   linkedin: string;
+  image?: string;
+  bio?: string;
 }
 
 interface FoundingMember {
@@ -233,11 +237,20 @@ const ExecutiveBoardCard = ({ member }: { member: ExecutiveMember }) => (
       </div>
 
       <div className="w-24 h-24 mx-auto mb-4 relative">
-        <div className="w-full h-full rounded-full border-2 border-accent/40 bg-secondary flex items-center justify-center shadow-md">
-          <span className="font-space-grotesk font-bold text-3xl text-primary">
-            {member.initials}
-          </span>
-        </div>
+        {member.image ? (
+          <img
+            src={member.image}
+            alt={member.name}
+            className="w-full h-full object-cover rounded-full border-2 border-accent/40 shadow-md"
+            style={{ objectPosition: 'center 20%' }}
+          />
+        ) : (
+          <div className="w-full h-full rounded-full border-2 border-accent/40 bg-secondary flex items-center justify-center shadow-md">
+            <span className="font-space-grotesk font-bold text-3xl text-primary">
+              {member.initials}
+            </span>
+          </div>
+        )}
       </div>
 
       <div className="text-center space-y-1">
@@ -254,11 +267,20 @@ const ExecutiveBoardCard = ({ member }: { member: ExecutiveMember }) => (
     <div className="absolute inset-0 gradient-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-center">
       <div className="text-center space-y-3">
         <div className="w-20 h-20 mx-auto">
-          <div className="w-full h-full rounded-full border-2 border-white/60 bg-white/10 flex items-center justify-center">
-            <span className="font-space-grotesk font-bold text-2xl text-white">
-              {member.initials}
-            </span>
-          </div>
+          {member.image ? (
+            <img
+              src={member.image}
+              alt={member.name}
+              className="w-full h-full object-cover rounded-full border-2 border-white/60"
+              style={{ objectPosition: 'center 20%' }}
+            />
+          ) : (
+            <div className="w-full h-full rounded-full border-2 border-white/60 bg-white/10 flex items-center justify-center">
+              <span className="font-space-grotesk font-bold text-2xl text-white">
+                {member.initials}
+              </span>
+            </div>
+          )}
         </div>
 
         <div className="space-y-1">
@@ -271,6 +293,12 @@ const ExecutiveBoardCard = ({ member }: { member: ExecutiveMember }) => (
         </div>
 
         <div className="w-10 h-px bg-white/50 mx-auto"></div>
+
+        {member.bio && (
+          <p className="text-white text-xs font-inter leading-relaxed">
+            {member.bio}
+          </p>
+        )}
 
         <a
           href={member.linkedin}
