@@ -34,7 +34,9 @@ const executiveBoard = [
     name: "Siddhant Haralkar",
     position: "Director of Operations",
     initials: "SH",
-    linkedin: "#"
+    linkedin: "https://www.linkedin.com/in/siddhant-haralkar",
+    image: siddhantHaralkarAsset.url,
+    bio: "Sid is a Computer Engineering student with interests in technology, product strategy and consulting. He enjoys working on problems at the intersection of business and technology. Outside of school, he enjoys working out, playing sports, and listening to music."
   },
   {
     name: "Shariq Kapadia",
