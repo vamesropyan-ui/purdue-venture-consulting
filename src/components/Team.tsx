@@ -132,6 +132,7 @@ interface ExecutiveMember {
   linkedin: string;
   image?: string;
   bio?: string;
+  major?: string;
 }
 
 interface FoundingMember {
