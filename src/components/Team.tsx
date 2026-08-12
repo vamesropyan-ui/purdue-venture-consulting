@@ -123,6 +123,8 @@ interface ExecutiveMember {
   position: string;
   initials: string;
   linkedin: string;
+  image?: string;
+  bio?: string;
 }
 
 interface FoundingMember {
