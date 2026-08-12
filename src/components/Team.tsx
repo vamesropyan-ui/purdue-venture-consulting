@@ -268,6 +268,11 @@ const ExecutiveBoardCard = ({ member }: { member: ExecutiveMember }) => (
         <p className="text-primary font-inter font-semibold text-xs">
           {member.position}
         </p>
+        {member.major && (
+          <p className="text-muted-foreground font-inter text-xs">
+            {member.major}
+          </p>
+        )}
       </div>
     </div>
 
