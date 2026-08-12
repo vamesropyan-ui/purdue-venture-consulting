@@ -69,8 +69,11 @@ const executiveBoard = [
     name: "Noah Brucculeri",
     position: "Director of Growth",
     initials: "NB",
-    linkedin: "#"
-  }
+    linkedin: "https://www.linkedin.com/in/noah-brucculeri-303481330",
+    image: noahBrucculeriAsset.url,
+    major: "Integrated Business and Engineering",
+    bio: "Integrated Business & Engineering student and former Corporate Law Intern with experience in software development, finance, and leadership. Passionate about entrepreneurship and building innovative solutions."
+  },
 ];
 
 const foundingTeam = [
