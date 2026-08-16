@@ -1,7 +1,5 @@
 
 import React from 'react';
-import polistockLogo from '@/assets/clients/polistock.png.asset.json';
-import roundsLogo from '@/assets/clients/rounds.png.asset.json';
 
 const Partners = () => {
   const partners = [
@@ -19,11 +17,11 @@ const Partners = () => {
     },
     {
       name: "PoliStock",
-      logo: polistockLogo.url
+      logo: '/client-logos/polistock.png'
     },
     {
       name: "Rounds",
-      logo: roundsLogo.url
+      logo: '/client-logos/rounds.png'
     }
   ];
 
