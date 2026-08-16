@@ -276,7 +276,7 @@ const ExecutiveBoardCard = ({ member }: { member: ExecutiveMember }) => (
     </div>
 
     {/* Back of Card */}
-    <div className="absolute inset-0 gradient-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-center">
+    <div className="absolute inset-0 gradient-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-center overflow-y-auto">
       <div className="text-center space-y-3">
         <div className="w-20 h-20 mx-auto">
           {member.image ? (
