@@ -1,14 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Reveal from './Reveal';
-import captainLogo from '@/assets/clients/captain.png.asset.json';
-import astorLogo from '@/assets/clients/astor.png.asset.json';
-import zuriLogo from '@/assets/clients/zuri.png.asset.json';
-import elisyanLogo from '@/assets/clients/elisyan.png.asset.json';
-import kovaLogo from '@/assets/clients/kova.png.asset.json';
-import polistockLogo from '@/assets/clients/polistock.png.asset.json';
-import roundsLogo from '@/assets/clients/rounds.png.asset.json';
-import bewealtherLogo from '@/assets/clients/bewealther.png.asset.json';
 
 
 const stats = [
@@ -20,14 +12,14 @@ const stats = [
 
 // Set `logo` to an imported image path when real logos are available.
 const marqueeClients: { name: string; logo: string | null; badge?: string }[] = [
-  { name: 'Captain', logo: captainLogo.url, badge: 'YC' },
-  { name: 'Astor', logo: astorLogo.url, badge: 'YC' },
-  { name: 'Zuri Technologies', logo: zuriLogo.url },
-  { name: 'Elisyan Wealth Ventures', logo: elisyanLogo.url },
-  { name: 'KOVA', logo: kovaLogo.url },
-  { name: 'BeWealther', logo: bewealtherLogo.url },
-  { name: 'Rounds', logo: roundsLogo.url },
-  { name: 'PoliStock', logo: polistockLogo.url },
+  { name: 'Captain', logo: '/client-logos/captain.png', badge: 'YC' },
+  { name: 'Astor', logo: '/client-logos/astor.png', badge: 'YC' },
+  { name: 'Zuri Technologies', logo: '/client-logos/zuri.png' },
+  { name: 'Elisyan Wealth Ventures', logo: '/client-logos/elisyan.png' },
+  { name: 'KOVA', logo: '/client-logos/kova.png' },
+  { name: 'BeWealther', logo: '/client-logos/bewealther.png' },
+  { name: 'Rounds', logo: '/client-logos/rounds.png' },
+  { name: 'PoliStock', logo: '/client-logos/polistock.png' },
 ];
 
 const quadrants: {
@@ -40,7 +32,7 @@ const quadrants: {
 }[] = [
   {
     name: 'Captain',
-    logo: captainLogo.url,
+    logo: '/client-logos/captain.png',
     yc: true,
     category: 'AI Infrastructure',
     sentence:
@@ -49,7 +41,7 @@ const quadrants: {
   },
   {
     name: 'Astor',
-    logo: astorLogo.url,
+    logo: '/client-logos/astor.png',
     yc: true,
     category: 'AI Fintech',
     sentence:
@@ -58,7 +50,7 @@ const quadrants: {
   },
   {
     name: 'Zuri Technologies',
-    logo: zuriLogo.url,
+    logo: '/client-logos/zuri.png',
     category: 'Consumer Social',
     sentence:
       'Full three-stage engagement covering market sizing, ICP and competitor matrix, business-model validation, and MVP prioritization.',
@@ -66,7 +58,7 @@ const quadrants: {
   },
   {
     name: 'Elisyan Wealth Ventures',
-    logo: elisyanLogo.url,
+    logo: '/client-logos/elisyan.png',
     category: 'Global WealthTech',
     sentence:
       'Marketing, SEO, and AI product strategy. We built the GTM and content engine, then prototyped an AI wealth-assistant MVP.',

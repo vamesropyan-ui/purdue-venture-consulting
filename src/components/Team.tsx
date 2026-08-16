@@ -1,10 +1,5 @@
 import React from 'react';
 import { Linkedin } from 'lucide-react';
-import samPaulAsset from '@/assets/sam-paul.jpg.asset.json';
-import jordanHanfordAsset from '@/assets/jordan-hanford.jpg.asset.json';
-import siddhantHaralkarAsset from '@/assets/siddhant-haralkar.jpg.asset.json';
-import noahBrucculeriAsset from '@/assets/noah-brucculeri.jpg.asset.json';
-import shariqKapadiaAsset from '@/assets/shariq-kapadia.png.asset.json';
 
 
 
@@ -26,7 +21,7 @@ const leadership = [
     major: "Industrial Engineering & Integrated Business",
     bio: "Sam oversees PVC's consulting projects and delivery quality. He has led engagements for startups including Zuri Technologies and BeWealther across market strategy, business modeling, and product.",
     linkedin: "https://www.linkedin.com/in/samuelpaul31/",
-    image: samPaulAsset.url,
+    image: '/team/sam-paul.jpg',
     initials: "SP"
   }
 ];
@@ -37,7 +32,7 @@ const executiveBoard = [
     position: "Director of Operations",
     initials: "SH",
     linkedin: "https://www.linkedin.com/in/siddhant-haralkar",
-    image: siddhantHaralkarAsset.url,
+    image: '/team/siddhant-haralkar.jpg',
     bio: "Sid is a Computer Engineering student with interests in technology, product strategy and consulting. He enjoys working on problems at the intersection of business and technology. Outside of school, he enjoys working out, playing sports, and listening to music."
   },
   {
@@ -45,7 +40,7 @@ const executiveBoard = [
     position: "Director of Finance",
     initials: "SK",
     linkedin: "https://www.linkedin.com/in/shariq-kapadia/",
-    image: shariqKapadiaAsset.url,
+    image: '/team/shariq-kapadia.png',
     bio: "Shariq is a junior, pursuing a Bachelor's degree in Integrated Business and Engineering. With a passion for finance and consulting, he looks to grow his skills through related work experiences and student organizations. He is eager to apply his knowledge in a dynamic environment and continue expanding his professional skill set as he starts his career. In his free time, he enjoys playing basketball and golf."
   },
   {
@@ -59,7 +54,7 @@ const executiveBoard = [
     position: "Director of Venture Operations",
     initials: "JH",
     linkedin: "https://www.linkedin.com/in/jordan-hanford-5990a8327",
-    image: jordanHanfordAsset.url,
+    image: '/team/jordan-hanford.jpg',
     bio: "Jordan is an Integrated Business and Engineering student at Purdue University with a focus on strategy, operations, and analytics. He enjoys applying structured thinking to complex challenges and collaborating with others to develop practical, data-informed solutions."
   },
   {
@@ -73,7 +68,7 @@ const executiveBoard = [
     position: "Director of Growth",
     initials: "NB",
     linkedin: "https://www.linkedin.com/in/noah-brucculeri-303481330",
-    image: noahBrucculeriAsset.url,
+    image: '/team/noah-brucculeri.jpg',
     major: "Integrated Business and Engineering",
     bio: "Integrated Business & Engineering student and former Corporate Law Intern with experience in software development, finance, and leadership. Passionate about entrepreneurship and building innovative solutions."
   },
