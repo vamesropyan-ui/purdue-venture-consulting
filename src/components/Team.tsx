@@ -234,9 +234,9 @@ const LeadershipCard = ({ member }: { member: LeadershipMember }) => (
 
 
 const ExecutiveBoardCard = ({ member }: { member: ExecutiveMember }) => (
-  <div className="group relative bg-card rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl border border-border w-full">
+  <div className="group relative bg-card rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl border border-border w-full min-h-[340px]">
     {/* Front of Card */}
-    <div className="group-hover:opacity-0 transition-opacity duration-300 p-5">
+    <div className="group-hover:opacity-0 transition-opacity duration-300 p-5 h-full flex flex-col justify-center">
       <div className="text-center mb-4">
         <span className="text-[0.65rem] font-inter font-semibold text-primary uppercase tracking-wider bg-primary/20 px-2.5 py-0.5 rounded-full">
           {member.position}
