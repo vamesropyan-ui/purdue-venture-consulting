@@ -312,13 +312,15 @@ const ExecutiveBoardCard = ({ member }: { member: ExecutiveMember }) => (
         <div className="w-10 h-px bg-white/50 mx-auto"></div>
 
         {member.bio && (
-          <p className="text-white text-xs font-inter leading-relaxed">
+          <p className="text-white text-[11px] font-inter leading-snug">
             {member.bio}
           </p>
         )}
 
         <a
           href={member.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center space-x-2 text-white hover:text-accent transition-colors duration-300 mt-1"
         >
           <Linkedin className="w-4 h-4" />
