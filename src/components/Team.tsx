@@ -48,6 +48,7 @@ const executiveBoard = [
     position: "Director of External Relations",
     initials: "AV",
     linkedin: "https://www.linkedin.com/in/adrian-valdez-7a8588243",
+    image: '/team/adrian-valdez.jpg',
     bio: "Adrian is a Finance student with experience in consulting, marketing, and growth strategy. He has helped clients generate tens of millions of views, build communities of millions of users, and contribute to campaigns that supported millions of dollars in funding."
   },
   {
