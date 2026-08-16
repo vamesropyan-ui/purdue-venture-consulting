@@ -47,7 +47,8 @@ const executiveBoard = [
     name: "Adrian Valdez",
     position: "Director of External Relations",
     initials: "AV",
-    linkedin: "#"
+    linkedin: "https://www.linkedin.com/in/adrian-valdez-7a8588243",
+    bio: "Adrian is a Finance student with experience in consulting, marketing, and growth strategy. He has helped clients generate tens of millions of views, build communities of millions of users, and contribute to campaigns that supported millions of dollars in funding."
   },
   {
     name: "Jordan Hanford",
@@ -233,9 +234,9 @@ const LeadershipCard = ({ member }: { member: LeadershipMember }) => (
 
 
 const ExecutiveBoardCard = ({ member }: { member: ExecutiveMember }) => (
-  <div className="group relative bg-card rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl border border-border w-full">
+  <div className="group relative bg-card rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl border border-border w-full min-h-[340px]">
     {/* Front of Card */}
-    <div className="group-hover:opacity-0 transition-opacity duration-300 p-5">
+    <div className="group-hover:opacity-0 transition-opacity duration-300 p-5 h-full flex flex-col justify-center">
       <div className="text-center mb-4">
         <span className="text-[0.65rem] font-inter font-semibold text-primary uppercase tracking-wider bg-primary/20 px-2.5 py-0.5 rounded-full">
           {member.position}
@@ -275,7 +276,7 @@ const ExecutiveBoardCard = ({ member }: { member: ExecutiveMember }) => (
     </div>
 
     {/* Back of Card */}
-    <div className="absolute inset-0 gradient-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-center">
+    <div className="absolute inset-0 gradient-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-center overflow-y-auto">
       <div className="text-center space-y-3">
         <div className="w-20 h-20 mx-auto">
           {member.image ? (
@@ -311,13 +312,15 @@ const ExecutiveBoardCard = ({ member }: { member: ExecutiveMember }) => (
         <div className="w-10 h-px bg-white/50 mx-auto"></div>
 
         {member.bio && (
-          <p className="text-white text-xs font-inter leading-relaxed">
+          <p className="text-white text-[11px] font-inter leading-snug">
             {member.bio}
           </p>
         )}
 
         <a
           href={member.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center space-x-2 text-white hover:text-accent transition-colors duration-300 mt-1"
         >
           <Linkedin className="w-4 h-4" />
