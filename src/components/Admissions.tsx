@@ -40,7 +40,7 @@ const Admissions = () => {
           <div className="inline-flex items-center gap-4 bg-primary rounded-full px-7 py-3.5 shadow-md text-white">
             <span className="flex items-center gap-2">
               <CalendarDays className="w-[18px] h-[18px] text-accent" />
-              <span className="font-inter text-[15px]"><span className="font-semibold">Opens</span> Aug 17</span>
+              <span className="font-inter text-[15px]"><span className="font-semibold">Opens</span> Aug 24</span>
             </span>
             <span className="w-6 h-px bg-white/30"></span>
             <span className="font-inter text-[15px]"><span className="font-semibold">Closes</span> Sept 4</span>
