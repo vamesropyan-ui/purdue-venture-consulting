@@ -36,7 +36,7 @@ const requirements = [
 
 const Application = () => {
   const handleApplicationClick = () => {
-    window.open('https://forms.cloud.microsoft/r/JCFPANQ1wu', '_blank');
+    window.open('https://forms.cloud.microsoft/r/3EKcrSvHz0', '_blank');
   };
 
   const badges = [
