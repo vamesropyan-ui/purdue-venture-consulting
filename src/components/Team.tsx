@@ -63,7 +63,10 @@ const executiveBoard = [
     name: "Letizia Echevarria",
     position: "Director of Talent",
     initials: "LE",
-    linkedin: "#"
+    linkedin: "https://www.linkedin.com/in/letiziaechevarria/",
+    image: '/team/letizia-echevarria.png',
+    major: "Industrial Engineering",
+    bio: "Letizia is an Industrial Engineering student at Purdue with a passion for people operations, talent strategy, and building community. She leads PVC's recruitment and member development, working to bring together students who are eager to learn, collaborate, and make an impact for startups."
   },
   {
     name: "Noah Brucculeri",
